@@ -1,7 +1,3 @@
-import { Josefin_Sans } from "next/font/google";
-
-const Jose = Josefin_Sans({ subsets: ["latin"] });
-
 import { useState, useRef, MutableRefObject, useEffect } from "react";
 
 import Image from "next/image";
@@ -48,7 +44,7 @@ const Index = () => {
       className=" h-[800px] w-full bg-bgExplore  bg-cover px-[32px] py-[80px] xlm:h-auto 
   lgm:bg-center lgm:px-[24px] lgm:py-[60px] smm:h-auto smm:bg-contain smm:px-0 smm:py-[9.3vw]"
     >
-      <div className={"xlm::mx-auto max-w-[1920px] " + Jose.className}>
+      <div className={"xlm::mx-auto max-w-[1920px] "}>
         <div className="smm:px-[4.3vw]">
           <div
             className="flex flex-col items-start justify-start 

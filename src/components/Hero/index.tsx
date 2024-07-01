@@ -2,10 +2,6 @@ import { useRef, useEffect, useState } from "react";
 
 import { useInViewport } from "react-in-viewport";
 
-import { Josefin_Sans } from "next/font/google";
-
-const Jose = Josefin_Sans({ subsets: ["latin"] });
-
 import Link from "next/link";
 
 const Index = () => {
@@ -31,10 +27,8 @@ const Index = () => {
     <section
       ref={triggerRef as React.RefObject<HTMLDivElement>}
       id="Card"
-      className={
-        `relative m-auto h-[800px] w-full
-  xlm:flex xlm:items-center smm:h-[200vw]  ` + Jose.className
-      }
+      className={`relative m-auto h-[800px] w-full
+  xlm:flex xlm:items-center smm:h-[200vw]  `}
     >
       <div
         className="absolute left-[5%] top-[0%] z-50

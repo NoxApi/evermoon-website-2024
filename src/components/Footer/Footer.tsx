@@ -2,13 +2,17 @@ import Image from "next/image";
 
 import LinkNewTab from "../../general/LinkNewTab";
 
+import { Josefin_Sans } from "next/font/google";
+
+const Jose = Josefin_Sans({ subsets: ["latin"] });
+
 import "animate.css";
 
 const Footer = () => {
   return (
     <div
-      className="relative z-50 flex h-[258px]  w-[100%] min-w-[1914px] 
-  flex-col bg-[#01071a] pt-[20px] smm:h-[105vw]"
+      className={`relative z-50 flex h-[258px]  w-[100%] min-w-[1914px] 
+  flex-col bg-[#01071a] pt-[20px] smm:h-[105vw] ${Jose.className}`}
     >
       <div className="absolute bottom-0 left-0 h-[32px] w-full translate-y-[8px] bg-[#01071a]  "></div>
       <div

@@ -18,8 +18,7 @@ const Index = () => {
     <section
       id="video"
       className={
-        " w-full  overflow-hidden smm:h-[180vw] smm:w-[500vw] smm:max-w-[500vw] " +
-        Jose.className
+        " w-full  overflow-hidden smm:h-[180vw] smm:w-[500vw] smm:max-w-[500vw] "
       }
     >
       <div className=" relative flex h-[970px] w-full 2xlm:h-screen  smm:h-full ">

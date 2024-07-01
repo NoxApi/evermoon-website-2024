@@ -1,7 +1,3 @@
-import { Josefin_Sans } from "next/font/google";
-
-const Jose = Josefin_Sans({ subsets: ["latin"] });
-
 import Image from "next/image";
 import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
@@ -65,9 +61,7 @@ const Index = () => {
     <section
       ref={triggerRef2 as React.RefObject<HTMLDivElement>}
       id="Roadmap"
-      className={
-        "relative flex h-[700px]  w-full flex-col  xlm:h-auto " + Jose.className
-      }
+      className={"relative flex h-[700px]  w-full flex-col  xlm:h-auto "}
     >
       {/* <p>{(320*roadmap).toString()}</p> bgroadmap xlm:py-32 smm:py-[20vw] */}
       {/* <Transition

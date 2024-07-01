@@ -103,8 +103,8 @@ export default function Home() {
   ]);
   return (
     <div
-      className=" flex  h-auto w-full 
-min-w-[1920px] justify-center bg-[#01071A] font-serif"
+      className={` flex  h-auto w-full 
+min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
     >
       <div className=" flex flex-col items-center">
         <div

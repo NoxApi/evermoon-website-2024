@@ -42,8 +42,7 @@ const Index = () => {
     <section
       ref={triggerRef}
       className={
-        " h-[800px] w-full px-[32px] py-[52px] xlm:h-auto smm:py-[8.55vw] " +
-        Jose.className
+        " h-[800px] w-full px-[32px] py-[52px] xlm:h-auto smm:py-[8.55vw] "
       }
     >
       <div className="relative flex w-full min-w-[1920px] flex-col items-center justify-center xlm:h-auto  ">
