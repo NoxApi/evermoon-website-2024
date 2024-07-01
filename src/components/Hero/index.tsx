@@ -117,7 +117,7 @@ const Index = () => {
           id="animate_3D"
         />
         <div
-          className="boxleft absolute right-[0%] top-[0%] z-30 h-[730px] w-[426px] 
+          className="boxright absolute right-[0%] top-[0%] z-30 h-[730px] w-[426px] 
         2xl:right-[0%] xlm:opacity-0 lgm:right-[0%] lgm:w-[30vw] smm:right-[0%] smm:top-[0%] smm:h-[730px] smm:w-[25vw] "
           id="animate_3D2"
         />
