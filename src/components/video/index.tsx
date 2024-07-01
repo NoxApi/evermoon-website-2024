@@ -433,9 +433,9 @@ const Index = () => {
         </div>
 
         <div
-          className=" absolute left-[32.5%] top-[-33%] z-20 flex
+          className=" absolute bottom-[23%] left-[32.5%] z-20 flex
           w-[88vw] translate-x-[50%] translate-y-[50%] flex-col 
-          gap-y-[82vw] md:hidden lg:hidden xl:hidden "
+           md:hidden lg:hidden xl:hidden "
         >
           <div>
             <Transition

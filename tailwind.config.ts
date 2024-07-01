@@ -21,6 +21,8 @@ export default {
           "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_3dHover/Website%20BG.png')",
         bgWave:
           "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/road-repeat.webp')",
+        bgTribe:
+          "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Hero/Tribe%20-%20Ethern.png')",
       },
       screens: {
         xsm: "400px",

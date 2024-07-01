@@ -19,18 +19,6 @@ const Index = () => {
   //   console.log(inViewport);
   // }, [inViewport]);
 
-  // useEffect(() => {});
-  // function cancelAnimate() {
-  //   var element: any = document.getElementById("animate_3D");
-  //   element.classList.add("iframe-parent");
-  //   setToggle(false);
-  // }
-  // function activeAnimate() {
-  //   var element: any = document.getElementById("animate_3D");
-  //   element.classList.remove("iframe-parent");
-  //   setToggle(true);
-  // }
-
   useEffect(() => {
     if (window.innerWidth < 1024 && window.innerWidth >= 340) {
       const move1: any = document.getElementById("animate_3D");
@@ -49,15 +37,15 @@ const Index = () => {
       }
     >
       <div
-        className="absolute left-[5%] top-[5%] z-50
-      px-[32px] 2xl:left-[20%] lgm:px-[24px]
-    smm:left-0 smm:px-[3vw]"
+        className="absolute left-[5%] top-[0%] z-50
+       w-fit py-[52px] pl-[32px] 2xl:left-[20%] lgm:pl-[24px]
+    smm:left-0 smm:pl-[3vw]"
       >
-        <div className="flex flex-col">
-          <h3 className="text-[60px] uppercase text-white smm:text-[12vw]">
+        <div className="bg-bgTribe flex flex-col bg-contain bg-center bg-no-repeat">
+          <h3 className="drop-shadow-[0px_4px_4px_0px_rgba(1, 7, 26, 0.80)] text-[60px] uppercase text-white smm:text-[12vw]">
             dotler
           </h3>
-          <div className="flex items-center gap-x-[4px]">
+          <div className="shadow-[0px_4px_4px_0px_rgba(1, 7, 26, 0.80)] flex items-center gap-x-[4px] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -71,7 +59,10 @@ const Index = () => {
               />
             </svg>
             <p className="text-[20px] uppercase">FIGHTER</p>
-            <Link href="https://www.evermoon.games/" target="_blank">
+            <Link
+              href="https://docs.evermoon.games/evermoon/evermoon-game/evermoon-lore/ethern-heroes/dotler"
+              target="_blank"
+            >
               <div className="flex items-center gap-x-[6px] px-2 py-1">
                 <h3 className="text-[12px] text-white">View More</h3>
                 <svg
@@ -103,24 +94,23 @@ const Index = () => {
           </div>
         </div>
       </div>
-      <div
-        className="boxright absolute right-[0%] top-[0%] z-30 h-[720px] w-[426px] bg-red-300
-   2xl:right-[13%] lgm:right-[0%] lgm:w-[50px] smm:right-[0%] smm:top-[0%] smm:h-[730px] smm:w-[25vw] "
-        id="animate_3D2"
-      />
-      <div
-        className="boxleft absolute left-[0%] top-[0%] z-30 h-[720px] w-[426px] bg-red-300
-  2xl:left-[13%] lgm:right-[0%] lgm:w-[50px] smm:left-[0%] smm:top-[0%] smm:h-[730px] smm:w-[25vw] "
-        id="animate_3D"
-      />
-
-      <div className=" relative flex  h-[730px] w-[1320px] items-center  justify-center lgm:w-full smm:w-full ">
+      <div className=" relative flex  h-[730px] w-[1320px] items-center  justify-center lgm:w-full smm:w-full  ">
         <iframe
           src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_V4.4.34/index.html"
           className=" h-full w-full "
         ></iframe>
         {/* {inViewport && ( bg-inherit
         )} */}
+        <div
+          className="boxright absolute right-[0%] top-[0%] z-30 h-[730px] w-[426px] 
+   2xl:right-[0%] xlm:opacity-0 lgm:right-[0%] lgm:w-[50px] smm:right-[0%] smm:top-[0%] smm:h-[730px] smm:w-[25vw] "
+          id="animate_3D2"
+        />
+        <div
+          className="boxleft absolute left-[0%] top-[0%] z-30 h-[730px] w-[426px] 
+  2xl:left-[0%] xlm:opacity-0 lgm:right-[0%] lgm:w-[50px] smm:left-[0%] smm:top-[0%] smm:h-[730px] smm:w-[25vw] "
+          id="animate_3D"
+        />
       </div>
 
       {/* {!toggle ? (
