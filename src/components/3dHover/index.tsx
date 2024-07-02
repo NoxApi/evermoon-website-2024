@@ -414,10 +414,10 @@ const Index = () => {
                       src="/FNewVideo/Top Tier_webM.webm"
                       type="video/webm"
                     />
-                    {/* <source
+                    <source
                       src="/FNewVideo/MP4/Top-Tier MOBA.mp4"
                       type="video/mp4"
-                    /> */}
+                    />
                   </video>
                 )}
                 {pick == 2 && (
@@ -432,10 +432,10 @@ const Index = () => {
                       src="/FNewVideo/Accessible (1).webm"
                       type="video/webm"
                     />
-                    {/* <source
+                    <source
                       src="/FNewVideo/MP4/Accessible.mp4"
                       type="video/mp4"
-                    /> */}
+                    />
                   </video>
                 )}
                 {pick == 3 && (
@@ -450,10 +450,10 @@ const Index = () => {
                       src="/FNewVideo/Valuable NFTs.webm"
                       type="video/webm"
                     />
-                    {/* <source
+                    <source
                       src="/FNewVideo/MP4/Valuable NFTs.mp4"
                       type="video/mp4"
-                    /> */}
+                    />
                   </video>
                 )}
                 {pick == 4 && (
@@ -468,10 +468,10 @@ const Index = () => {
                       src="/FNewVideo/Dynamics game Economy.webm"
                       type="video/webm"
                     />
-                    {/* <source
+                    <source
                       src="/FNewVideo/MP4/Dynamics game Economy.mp4"
                       type="video/mp4"
-                    /> */}
+                    />
                   </video>
                 )}
               </div>

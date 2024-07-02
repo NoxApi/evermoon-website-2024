@@ -32,10 +32,16 @@ const Index = () => {
   useEffect(() => {
     const e1 = document.getElementById("evm1");
     const e2 = document.getElementById("evm2");
+    const e3 = document.getElementById("evm3");
+    const e4 = document.getElementById("evm4");
+    const e5 = document.getElementById("evm5");
     if (inViewport) {
       setShowFadeUp(true);
       e1!.classList.add("ani-text");
       e2!.classList.add("slide-text");
+      e3!.classList.add("slide-text");
+      e4!.classList.add("slide-text");
+      e5!.style.opacity = "1";
     }
     // if (inViewport2.inViewport) {
     //   setShowFadeUp2(true);
@@ -52,38 +58,6 @@ const Index = () => {
       }
     >
       <div className="relative flex w-full min-w-[1920px] flex-col items-center justify-center xlm:h-auto  ">
-        {/* bgpartner h-[1200px] */}
-        {/* <div
-      ref={triggerRef2 as React.RefObject<HTMLDivElement>}
-      className="h-[200px] w-full relative  mdm:h-[25vw] flex flex-col justify-center items-center mt-[-10px] mdm:mt-0 z-20"
-      >
-      <Image
-        src={div2}
-        alt=""
-        className="w-full smm:w-[280vw]  -z-10 "
-      />
-      <Transition
-        show={showFadeUp}
-        enter="transition ease-in-out duration-[3000ms]   "
-        enterFrom="opacity-0 "
-        enterTo="opacity-100 feedtext "
-      >
-        <p className=" text-3xl lgm:text-2xl mdm:text-[3vw] mdm:leading-[5vw] uppercase   textshadow2 font-medium w-[100vw] text-center ">
-          {"MORE THAN JUST A GAME - IT'S YOUR GOLDMINE!"}
-        </p>
-        <p className=" text-4xl lgm:text-3xl mdm:text-[4vw] mdm:leading-[5vw] uppercase   textshadow2 font-bold w-[100vw] text-center mt-3">
-          {"join now!"}
-        </p>
-        <div className="flex justify-center w-full mt-4  ">
-          <Image src={gp} alt="" className="w-[190px]  mdm:w-[28vw]  " />
-          <Image
-            src={as}
-            alt=""
-            className="w-[190px]  mdm:w-[28vw]  ml-8 lgm:ml-4  mdm:ml-[3vw]"
-          />
-        </div>
-      </Transition>
-    </div> */}
         <div
           id="evm1"
           ref={triggerRef as React.RefObject<HTMLDivElement>}
@@ -104,12 +78,14 @@ const Index = () => {
         </div>
 
         <div
-          id="evm2"
+          id="5"
           className=" absolute top-[-5%] flex h-[400px] 
-    w-[800px] translate-y-[50%] justify-between xlm:hidden"
+          w-[800px] translate-y-[50%] justify-between
+    transition-all delay-1000 duration-1000 xlm:hidden"
         >
           <div
-            className="flipp mt-[45px] h-[340px]  w-[241px]  xlm:hidden "
+            id="evm2"
+            className="flipp mt-[45px] h-[340px]  w-[241px]    xlm:hidden "
             onMouseEnter={() => setFadeShowUp2(true)}
             onMouseLeave={() => setFadeShowUp2(false)}
           >
@@ -128,7 +104,8 @@ const Index = () => {
             </div>
           </div>
           <div
-            className="flipp h-[340px] w-[241px]  "
+            id="evm3"
+            className="flipp h-[340px] w-[241px] transition-all delay-1000 duration-1000 "
             onMouseEnter={() => setFadeShowUp2(true)}
             onMouseLeave={() => setFadeShowUp2(false)}
           >
@@ -153,13 +130,14 @@ const Index = () => {
             </div>
           </div>
           <div
-            className="flipp mt-[45px] h-[340px] w-[241px] xlm:hidden smm:flex"
+            id="evm4"
+            className="flipp mt-[45px] h-[340px] w-[241px] transition-all delay-1000 duration-1000 xlm:hidden smm:flex"
             onMouseEnter={() => setFadeShowUp2(true)}
             onMouseLeave={() => setFadeShowUp2(false)}
           >
             <div
               className="flip flex h-full w-full items-center
-        justify-center bg-bgteam3 bg-cover pt-[190px] transition-all duration-500 "
+        justify-center bg-bgteam3 bg-cover pt-[190px] transition-all delay-1000 duration-500 "
             >
               <Transition
                 show={fadeShowUp2}

@@ -52,8 +52,6 @@ const Index = () => {
     }
   }, []);
 
-  console.log(inViewport2);
-
   return (
     <section
       className={
@@ -671,8 +669,8 @@ const Index = () => {
         <button
           onClick={() => nav(1)}
           className={`flex w-full max-w-[122px] items-center justify-center 
-        gap-x-[8px] px-[14px] py-[10px]
-        ${roadmap === 0 ? "btn-primary_disable" : "btn-primary"}`}
+        gap-x-[8px] px-[14px] py-[10px] 
+        ${roadmap === 0 ? "btn-primary_disable" : "btn-primary hover:bg-blue-500 active:ring-blue-900"}`}
         >
           <Image
             src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/Arrow_left.png"
@@ -686,7 +684,7 @@ const Index = () => {
         <button
           onClick={() => nav(2)}
           className={`btn-primary flex w-full max-w-[122px] items-center 
-        justify-center gap-x-[8px] px-[14px] py-[10px]
+        justify-center gap-x-[8px] px-[14px] py-[10px] hover:bg-blue-500 active:ring-blue-900
         ${roadmap === 1440 && "btn-primary_disable"}
         `}
 
@@ -710,8 +708,8 @@ const Index = () => {
         <button
           onClick={() => nav(1)}
           className={`flex w-full max-w-[122px] items-center justify-center 
-    gap-x-[8px] px-[14px] py-[10px]
-    ${roadmap === 0 ? "btn-primary_disable" : "btn-primary"}`}
+    gap-x-[8px] px-[14px] py-[10px] 
+    ${roadmap === 0 ? "btn-primary_disable" : "btn-primary hover:bg-blue-500 active:ring-blue-900"}`}
         >
           <Image
             src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/Arrow_left.png"
@@ -725,7 +723,7 @@ const Index = () => {
         <button
           onClick={() => nav(2)}
           className={`btn-primary flex w-full max-w-[122px] items-center 
-    justify-center gap-x-[8px] px-[14px] py-[10px]
+    justify-center gap-x-[8px] px-[14px] py-[10px] hover:bg-blue-500 active:ring-blue-900
     ${roadmap === 2016 && "btn-primary_disable"}
     
     `}

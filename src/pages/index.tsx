@@ -28,14 +28,15 @@ export default function Home() {
     { threshold: 1 },
   );
   const triggerRef7 = useRef<HTMLElement>(null);
+  const triggerRef6 = useRef<HTMLElement>(null);
   const inViewport2 = useInViewport(
     triggerRef2 as MutableRefObject<HTMLElement>,
     { threshold: 0.3 },
   );
-  // const inViewport6 = useInViewport(
-  //   triggerRef6 as MutableRefObject<HTMLElement>,
-  //   { threshold: 0.3 },
-  // );
+  const inViewport6 = useInViewport(
+    triggerRef6 as MutableRefObject<HTMLElement>,
+    { threshold: 0.3 },
+  );
   const inViewport7 = useInViewport(
     triggerRef7 as MutableRefObject<HTMLElement>,
     { threshold: 0.1 },
@@ -80,9 +81,13 @@ export default function Home() {
     const e4 = document.getElementById("4");
     const e5 = document.getElementById("5");
     const e6 = document.getElementById("6");
-    // let e7 = document.getElementById("7");
+    const e7 = document.getElementById("7");
     const e8 = document.getElementById("8");
-    // let e9 = document.getElementById("9");
+    const e9 = document.getElementById("9");
+    const e10 = document.getElementById("10");
+    const e11 = document.getElementById("11");
+    const e12 = document.getElementById("12");
+    // const e13 = document.getElementById("13");
     if (inViewport) {
       e1!.style.opacity = "1";
       e3!.classList.add("slide-in-left");
@@ -91,14 +96,19 @@ export default function Home() {
     }
     if (inViewport2.inViewport) {
       e2!.style.opacity = "1";
-      // e5!.classList.add("scbtext");
+      e9!.style.opacity = "1";
+      e10!.style.opacity = "1";
+      e11!.style.opacity = "1";
+      e12!.classList.add("ani-text");
+      // e13!.classList.add("ani-text");
     }
     if (inViewport4.inViewport) {
+      e7!.style.opacity = "1";
       e6!.classList.add("ani-text");
     }
     // if (inViewport6.inViewport) {
-    //   e6!.classList.add("feedtext");
-    //   e7!.classList.add("feedtext");
+    //   e12!.classList.add("ani-text");
+    //   e13!.classList.add("ani-text");
     // }
     if (inViewport7.inViewport) {
       e8!.classList.add("ani-text");
@@ -111,8 +121,7 @@ export default function Home() {
     inViewport7.inViewport,
   ]);
 
-  console.log(inViewport);
-  console.log(inViewport4);
+  console.log(inViewport2);
 
   return (
     <div
@@ -432,7 +441,8 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               <button
                 className="
                 min-w-[122px]  rounded-[8px] bg-[#1D4ED8]
-                 px-[14px] py-[10px] smm:px-[3.6vw] smm:py-[2.75vw] 
+                px-[14px] py-[10px]
+                 hover:bg-blue-500 active:ring-blue-900 smm:px-[3.6vw] smm:py-[2.75vw] 
                  "
               >
                 <p className="flex justify-center text-sm text-white smm:text-[4vw]">
@@ -446,17 +456,22 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           <>
             <div
               className="bgFull relative flex h-[724px] w-screen 
-             min-w-[1900px] flex-col items-center justify-center p-[95px] 
-            smm:h-auto smm:p-0 smm:pt-[10vw] "
+             min-w-[1900px] flex-col items-center justify-center p-[95px]  smm:h-auto smm:p-0 smm:pt-[10vw] "
             >
-              <p
-                id="6"
-                ref={triggerRef4 as React.RefObject<HTMLDivElement>}
-                className="translate-[50%] absolute
-             top-[10%] text-[40px] text-[#F1E3B5] mdm:text-[24px] "
+              <div
+                className="flex justify-center opacity-0
+                transition-opacity delay-300 duration-300"
+                id="7"
               >
-                {"SACRED BEAST"}
-              </p>
+                <p
+                  id="6"
+                  ref={triggerRef4 as React.RefObject<HTMLDivElement>}
+                  className="translate-[50%] absolute
+                top-[10%] text-[40px] text-[#F1E3B5] mdm:text-[24px] "
+                >
+                  {"SACRED BEAST"}
+                </p>
+              </div>
               <div
                 ref={triggerRef2 as React.RefObject<HTMLDivElement>}
                 className="relative z-10 flex h-[600px] 
@@ -467,7 +482,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   id="egg"
                   className="absolute z-30 translate-x-[13px]
                 translate-y-[10px] opacity-0 transition-opacity 
-                duration-1000 smm:w-[90vw] smm:translate-x-[2vw] smm:translate-y-[0vw]"
+                delay-[1000ms] duration-1000 smm:w-[90vw] smm:translate-x-[2vw] smm:translate-y-[0vw]"
                 >
                   <div className=" h-[400px] w-[400px] smm:h-[50vw] smm:w-[50vw] ">
                     <Image
@@ -481,65 +496,86 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="absolute left-[10%] top-[9.75%] z-20
                     smm:left-[17%] smm:top-[-24%] smm:w-[55vw]"
                     />
-                    <Image
-                      src={
-                        "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Aura_Egg.png"
-                      }
-                      width={300}
-                      height={300}
-                      alt=""
-                      className="egg_glow absolute right-[3%] top-[15%] 
-                    w-[800px] smm:right-[14%] smm:top-[-15%]
-                    smm:w-[70vw]"
-                    />
                   </div>
                 </div>
-
-                <Image
-                  src={
-                    "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
-                  }
-                  width={300}
-                  height={300}
-                  alt=""
-                  className=" layer1a absolute z-20  w-[320px] md:w-[275px]
+                <div
+                  id="11"
+                  className="absolute left-[18%] top-[30%] 
+                    w-[350px] opacity-0 transition-opacity
+                    delay-[2000ms] duration-1000 smm:right-[14%] 
+                smm:top-[-15%] smm:w-[70vw]"
+                >
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Aura_Egg.png"
+                    }
+                    width={300}
+                    height={300}
+                    alt=""
+                    className="egg_glow w-full "
+                    id=""
+                  />
+                </div>
+                <div
+                  id="9"
+                  className=" layer1a absolute z-20  w-[320px] opacity-0
+                transition-opacity delay-[500ms] duration-300
+                md:w-[275px] lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
+                >
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
+                    }
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
+                </div>
+                <div
+                  id="10"
+                  className=" layer3a absolute z-20  w-[320px] opacity-0
+                  transition-opacity delay-[500ms] duration-300 md:w-[275px] 
                 lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
-                />
+                >
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
+                    }
+                    width={300}
+                    height={300}
+                    alt=""
+                  />
+                </div>
+                <div
+                  id="12"
+                  className="translate-[50%] duration-2000 absolute 
+                bottom-[3%] mt-[22px] flex flex-col justify-center
+                gap-y-5 transition-all delay-[3000ms]
 
-                <Image
-                  src={
-                    "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
-                  }
-                  width={300}
-                  height={300}
-                  alt=""
-                  className=" layer3a absolute z-20  w-[320px] md:w-[275px]
-                lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
-                />
-              </div>
-              <div
-                className="translate-[50%] absolute bottom-[10%] 
-                mt-[22px] flex flex-col justify-center gap-y-5"
-              >
-                <h2 className=" text-center text-[20px] smm:text-[12px]">
-                  FEED YOUR BEAST TO EARN MORE <br /> EXCLUSIVE NFTs ASSET
-                </h2>
-                <div className="flex justify-center">
-                  <Link
-                    href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast"
-                    target="_blank"
-                  >
-                    <button
-                      className=" m-auto
-                rounded-[8px]  bg-[#1D4ED8] 
-                 px-[14px] py-[10px] smm:px-[2vw] smm:py-[1vw] 
-                 "
+                "
+                >
+                  <div className="">
+                    <h2 className=" text-center text-[20px]  smm:text-[12px]">
+                      FEED YOUR BEAST TO EARN MORE <br /> EXCLUSIVE NFTs ASSET
+                    </h2>
+                  </div>
+                  <div className="flex justify-center  ">
+                    <Link
+                      href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast"
+                      target="_blank"
                     >
-                      <p className="flex justify-center text-sm text-white smm:text-[4vw]">
-                        {"Explore"}
-                      </p>
-                    </button>
-                  </Link>
+                      <button
+                        className=" m-auto rounded-[8px] bg-[#1D4ED8] px-[14px]
+                  py-[10px]  
+                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2vw] smm:py-[1vw] 
+                 "
+                      >
+                        <p className="flex justify-center text-sm text-white smm:text-[4vw]">
+                          {"Explore"}
+                        </p>
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

@@ -22,10 +22,12 @@ const Footer = () => {
 
   useEffect(() => {
     const e1 = document.getElementById("icons");
-    const e2 = document.getElementById("evm2");
+    const e2 = document.getElementById("te-xtnav");
+    const e3 = document.getElementById("spray");
     if (inViewport) {
       e1!.classList.add("ani-text");
       e2!.classList.add("ani-text");
+      e3!.style.opacity = "1";
     }
   }, [inViewport]);
   return (
@@ -51,14 +53,14 @@ const Footer = () => {
       >
         <div className="flex gap-x-[8px] smm:flex-col smm:gap-y-[1vw]">
           <div className="flex gap-x-[8px]">
-            <div className="p-1">
+            <div className="p-1 ">
               <LinkNewTab href="https://twitter.com/EverMoon_nft">
                 <Image
                   src="https://storage.googleapis.com/evermoon_website_bucket/Footer_img/X.png"
                   width={52}
                   height={52}
                   alt="q122"
-                  className="w-[24px] smm:w-[6.4vw] "
+                  className="hover:-[#F1E3B5] w-[24px] smm:w-[6.4vw] "
                   priority
                 />
               </LinkNewTab>
@@ -194,66 +196,68 @@ const Footer = () => {
         </Link>
       </div>
       <div
-        id="evm2"
-        className="my-[18px] flex w-full justify-center transition-all delay-[4000s] duration-1000 smm:flex-col "
+        id="spray"
+        className=" opacity-0 mix-blend-screen
+            transition-all delay-500 duration-1000"
       >
-        {/* h-[30px] my-[18px] lgm:mt-12 lgm:flex-col mdm:h-[90px] */}
-        <div className="flex justify-center lgm:mt-2">
-          {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm footertext 
-      smm:h-[30px] smm:justify-center smm:mt-2 gap-x-4 smm:gap-x-[0vw]
-    mr-4" /> */}
-          <LinkNewTab href="/home">
-            <button
-              className="mr-4 p-[8px] text-[14px] text-white
-        mdm:text-[15px] smm:ml-[0vw]"
-            >
-              {"HOME"}
-            </button>
-          </LinkNewTab>
-          {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
-          <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast">
-            <button
-              className="mr-4 p-[8px] text-[14px] text-white
-        mdm:text-[15px] smm:ml-[0vw]"
-            >
-              {"SACRED BEAST"}
-            </button>
-          </LinkNewTab>
-          {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
-        </div>
-        <div className="flex justify-center mdm:flex-col">
-          <div className="flex justify-center lgm:mt-2 mdm:h-[30px]">
-            {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm lg:hidden" /> */}
-            <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission">
+        <div
+          id="te-xtnav"
+          className="my-[18px] flex w-full justify-center transition-all duration-1000 smm:flex-col "
+        >
+          <div className="flex justify-center lgm:mt-2">
+            <LinkNewTab href="/home">
               <button
-                className="mr-4 p-[8px] text-[14px] uppercase
-          text-white mdm:text-[15px] smm:ml-[0vw]"
+                className="mr-4 p-[8px] text-[14px] text-white
+        mdm:text-[15px] smm:ml-[0vw]"
               >
-                {"Moon Mission"}
+                {"HOME"}
               </button>
             </LinkNewTab>
             {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
-            <LinkNewTab href="https://docs.evermoon.games/evermoon">
+            <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast">
               <button
-                className="mr-4 p-[8px] text-[14px] uppercase text-white
-          mdm:text-[15px] smm:ml-[0vw]"
+                className="mr-4 p-[8px] text-[14px] text-white
+        mdm:text-[15px] smm:ml-[0vw]"
               >
-                {"Whitepaper"}
+                {"SACRED BEAST"}
               </button>
             </LinkNewTab>
             {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
           </div>
-          <div className="mdm:h-[30px flex justify-center lgm:mt-2">
-            {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw] md:hidden" /> */}
-            <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/marketplace">
-              <button
-                className="p-[8px] text-[14px] text-white mdm:text-[15px]
+          <div className="flex justify-center mdm:flex-col">
+            <div className="flex justify-center lgm:mt-2 mdm:h-[30px]">
+              {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm lg:hidden" /> */}
+              <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission">
+                <button
+                  className="mr-4 p-[8px] text-[14px] uppercase
+          text-white mdm:text-[15px] smm:ml-[0vw]"
+                >
+                  {"Moon Mission"}
+                </button>
+              </LinkNewTab>
+              {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
+              <LinkNewTab href="https://docs.evermoon.games/evermoon">
+                <button
+                  className="mr-4 p-[8px] text-[14px] uppercase text-white
+          mdm:text-[15px] smm:ml-[0vw]"
+                >
+                  {"Whitepaper"}
+                </button>
+              </LinkNewTab>
+              {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
+            </div>
+            <div className="mdm:h-[30px flex justify-center lgm:mt-2">
+              {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw] md:hidden" /> */}
+              <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/marketplace">
+                <button
+                  className="p-[8px] text-[14px] text-white mdm:text-[15px]
           smm:ml-[0vw]"
-              >
-                {"MARKETPLACE"}
-              </button>
-            </LinkNewTab>
-            {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
+                >
+                  {"MARKETPLACE"}
+                </button>
+              </LinkNewTab>
+              {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
+            </div>
           </div>
         </div>
       </div>
