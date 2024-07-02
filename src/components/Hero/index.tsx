@@ -44,16 +44,16 @@ const Index = () => {
       ref={triggerRef as React.RefObject<HTMLDivElement>}
       id="Card"
       className={
-        `relative m-auto h-[800px] w-full
-  xlm:flex xlm:items-center smm:h-[200vw]  ` + Jose.className
+        `relative m-auto h-fit w-full
+  xlm:flex xlm:items-center   ` + Jose.className
       }
     >
       <div
-        className="bg-bgTribe absolute left-[5%] top-[5%]
-      z-50 bg-contain bg-center bg-no-repeat
+        className="absolute left-[5%] top-[5%] z-50
+      bg-bgTribe bg-contain bg-center bg-no-repeat
     py-[52px] pl-[32px] 2xl:left-[20%] lgm:pl-[24px]  smm:left-0 smm:py-[32px] smm:pl-[4vw]"
       >
-        <div className="bg-bgTribe flex flex-col">
+        <div className="flex flex-col bg-bgTribe">
           <h3 className="text-[60px] uppercase text-white drop-shadow-[0px_4px_4px_0px_#000024] smm:text-[12vw]">
             dotler
           </h3>
@@ -71,7 +71,7 @@ const Index = () => {
               />
             </svg>
             <p className="text-[20px] uppercase">FIGHTER</p>
-            <Link href="https://www.evermoon.games/" target="_blank">
+            <Link href="https://docs.evermoon.games/evermoon" target="_blank">
               <div className="flex items-center gap-x-[6px] px-2 py-1">
                 <h3 className="text-[12px] text-white">View More</h3>
                 <svg
@@ -106,7 +106,7 @@ const Index = () => {
 
       <div className=" relative flex  h-[730px] w-[1320px] items-center  justify-center lgm:w-full smm:w-full  ">
         <iframe
-          src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_V4.4.34/index.html"
+          src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_Model_V1.4/index.html"
           className=" h-[730px] w-[1320px] "
         ></iframe>
         {/* {inViewport && ( bg-inherit

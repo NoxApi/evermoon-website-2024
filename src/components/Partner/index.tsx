@@ -17,10 +17,10 @@ const Jose = Josefin_Sans({ subsets: ["latin"] });
 const Index = () => {
   const triggerRef = useRef<HTMLElement>(null);
   const triggerRef2 = useRef<HTMLElement>(null);
-  // const { inViewport } = useInViewport(
-  //   triggerRef as MutableRefObject<HTMLElement>,
-  //   { threshold: 0.1 },
-  // );
+  const { inViewport } = useInViewport(
+    triggerRef as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
   // const inViewport2 = useInViewport(
   //   triggerRef2 as MutableRefObject<HTMLElement>,
   //   { threshold: 0.2 },
@@ -29,18 +29,24 @@ const Index = () => {
   const [showFadeUp2, setShowFadeUp2] = useState(false);
   const [fadeShowUp2, setFadeShowUp2] = useState(false);
 
-  // useEffect(() => {
-  //   if (inViewport) {
-  //     setShowFadeUp(true);
-  //   }
-  //   if (inViewport2.inViewport) {
-  //     setShowFadeUp2(true);
-  //   }
-  //   return () => {};
-  // }, [inViewport, inViewport2]);
+  useEffect(() => {
+    const e1 = document.getElementById("evm1");
+    const e2 = document.getElementById("evm2");
+    if (inViewport) {
+      setShowFadeUp(true);
+      e1!.classList.add("ani-text");
+      e2!.classList.add("slide-text");
+    }
+    // if (inViewport2.inViewport) {
+    //   setShowFadeUp2(true);
+    // }
+    // return () => {};
+  }, [
+    inViewport,
+    //  inViewport2
+  ]);
   return (
     <section
-      ref={triggerRef}
       className={
         " h-[800px] w-full px-[32px] py-[52px] xlm:h-auto smm:py-[8.55vw] "
       }
@@ -78,7 +84,11 @@ const Index = () => {
         </div>
       </Transition>
     </div> */}
-        <div className="">
+        <div
+          id="evm1"
+          ref={triggerRef as React.RefObject<HTMLDivElement>}
+          className=""
+        >
           <p className="text-center text-4xl text-zinc-200 smm:text-2xl ">
             {"CORE TEAM"}
           </p>
@@ -94,6 +104,7 @@ const Index = () => {
         </div>
 
         <div
+          id="evm2"
           className=" absolute top-[-5%] flex h-[400px] 
     w-[800px] translate-y-[50%] justify-between xlm:hidden"
         >

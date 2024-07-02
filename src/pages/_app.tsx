@@ -2,6 +2,7 @@ import { Josefin_Sans } from "next/font/google";
 import { type AppType } from "next/app";
 import Head from "next/head";
 import Footer from "../components/Footer/Footer";
+import NavBar from "../components/Navbar/Index";
 
 const Jose = Josefin_Sans({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           Jose.className
         }
       >
+        <NavBar />
         <Component {...pageProps} />
         <Footer />
       </main>

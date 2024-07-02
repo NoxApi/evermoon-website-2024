@@ -19,10 +19,14 @@ export default function Home() {
   const triggerRef = useRef<HTMLElement>(null);
   const { inViewport } = useInViewport(
     triggerRef as MutableRefObject<HTMLElement>,
-    { threshold: 0.3 },
+    { threshold: 0.1 },
   );
   const triggerRef2 = useRef<HTMLElement>(null);
-  const triggerRef6 = useRef<HTMLElement>(null);
+  const triggerRef4 = useRef<HTMLElement>(null);
+  const inViewport4 = useInViewport(
+    triggerRef4 as MutableRefObject<HTMLElement>,
+    { threshold: 1 },
+  );
   const triggerRef7 = useRef<HTMLElement>(null);
   const inViewport2 = useInViewport(
     triggerRef2 as MutableRefObject<HTMLElement>,
@@ -32,10 +36,10 @@ export default function Home() {
   //   triggerRef6 as MutableRefObject<HTMLElement>,
   //   { threshold: 0.3 },
   // );
-  // const inViewport7 = useInViewport(
-  //   triggerRef7 as MutableRefObject<HTMLElement>,
-  //   { threshold: 0.1 },
-  // );
+  const inViewport7 = useInViewport(
+    triggerRef7 as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
   const [isfetching, setisfetching] = useState(false);
   const [mediumdata, setmediumdata] = useState(Array);
   let mediums1: any[] = [];
@@ -74,33 +78,42 @@ export default function Home() {
     const e2 = document.getElementById("egg");
     const e3 = document.getElementById("3");
     const e4 = document.getElementById("4");
-    // let e5 = document.getElementById("5");
-    // let e6 = document.getElementById("6");
+    const e5 = document.getElementById("5");
+    const e6 = document.getElementById("6");
     // let e7 = document.getElementById("7");
-    // let e8 = document.getElementById("8");
+    const e8 = document.getElementById("8");
     // let e9 = document.getElementById("9");
     if (inViewport) {
       e1!.style.opacity = "1";
       e3!.classList.add("slide-in-left");
       e4!.classList.add("slide-in-right");
+      e5!.style.opacity = "1";
     }
     if (inViewport2.inViewport) {
       e2!.style.opacity = "1";
       // e5!.classList.add("scbtext");
     }
+    if (inViewport4.inViewport) {
+      e6!.classList.add("ani-text");
+    }
     // if (inViewport6.inViewport) {
     //   e6!.classList.add("feedtext");
     //   e7!.classList.add("feedtext");
     // }
-    // if (inViewport7.inViewport) {
-    //   e8!.classList.add("newstext");
-    // }
+    if (inViewport7.inViewport) {
+      e8!.classList.add("ani-text");
+    }
   }, [
     inViewport,
     inViewport2.inViewport,
+    inViewport4.inViewport,
     // inViewport6.inViewport,
-    // inViewport7.inViewport,
+    inViewport7.inViewport,
   ]);
+
+  console.log(inViewport);
+  console.log(inViewport4);
+
   return (
     <div
       className={` flex  h-auto w-full 
@@ -333,23 +346,23 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           </div>
         </div>
         <div
-          className=" relative z-20 flex h-[820px] w-[100%] min-w-[1920px]
-        flex-col justify-center p-[10px] mix-blend-screen smm:h-auto smm:pb-[15vw] 
+          id="evm1"
+          ref={triggerRef as React.RefObject<HTMLDivElement>}
+          className=" relative z-20 flex h-[820px]  w-[100%] min-w-[1920px] flex-col 
+          justify-center bg-[#01071A] p-[10px] opacity-0 transition-opacity duration-300
+           smm:h-auto
         "
         >
           <div
-            className="flex items-center justify-center pl-[50px] lgm:mr-2 
-          smm:flex-col smm:pr-[30px]"
+            className="#01071A flex items-center justify-center pl-[50px] 
+          lgm:mr-2 smm:flex-col smm:pr-[30px]"
           >
-            <div className="flex justify-center pr-4 pt-3 ">
-              <p
-                id="3"
-                className="text-[36px] text-white mdm:text-[28px] smm:text-[5.75vw] "
-              >
+            <div id="3" className="flex justify-center pr-4 pt-3 opacity-0 ">
+              <p className="text-[36px] text-white  mdm:text-[28px] smm:text-[5.75vw] ">
                 {"Powered by"}
               </p>
             </div>
-            <div id="4" className="pr-[16px] smm:m-auto">
+            <div id="4" className="pr-[16px] opacity-0 smm:m-auto">
               <Image
                 src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/immutable.png"
                 width={1005}
@@ -360,67 +373,74 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
           </div>
-          <div
-            className=" bgMoon mx-auto h-[540px] w-[540px] rounded-full  
-            smm:h-[85vw] smm:w-[90vw] "
-          />
 
           <div
-            id="evm1"
-            ref={triggerRef as React.RefObject<HTMLDivElement>}
-            className="translate-[50%] coin absolute left-[44.3%] top-[40%] z-20 
-          w-[218px] opacity-0 mix-blend-screen transition-opacity duration-1000
-          md:left-[44%] lg:left-[44%] smm:left-[46.75%] smm:w-[35vw] "
+            id="5"
+            className=" bgMoon relative mx-auto h-[540px]  
+            w-[540px] rounded-full opacity-0 mix-blend-screen
+            transition-all delay-1000 duration-1000 smm:h-[85vw] smm:w-[90vw]"
           >
-            <Image
-              src={
-                "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/EVM.png"
-              }
-              width={300}
-              height={300}
-              alt=""
-              priority={true}
-              className={` smm:w-full  `}
-            />
+            <div
+              className=" absolute left-[-28%] top-[-32%] w-[430px] 
+            translate-x-[50%] translate-y-[50%] smm:left-[-20%] smm:top-[-37%] smm:w-[65vw] "
+            >
+              <Image
+                src={
+                  "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Particle%201.png"
+                }
+                width={300}
+                height={300}
+                alt=""
+                // priority={true}
+                className={` Particle_glow w-full  `}
+              />
+            </div>
+            <div
+              className="absolute left-[-28%] top-[0%] z-30 w-[430px] 
+            translate-x-[50%] translate-y-[50%] mix-blend-screen
+            smm:left-[-5%] smm:top-[3%] smm:w-[50vw]"
+            >
+              <Image
+                src={
+                  " https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Comp%201.gif"
+                }
+                width={640}
+                height={412}
+                alt=""
+                className={` w-full `}
+              />
+            </div>
+            <div
+              className="absolute left-[10%] top-[10%] z-20 w-[218px] translate-x-[50%]
+            translate-y-[50%] smm:left-[17%] smm:top-[5%] smm:w-[30vw]"
+            >
+              <Image
+                src={
+                  "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/EVM.png"
+                }
+                width={300}
+                height={300}
+                alt=""
+                priority={true}
+                className={` smm:w-full `}
+              />
+            </div>
+            <div
+              className="absolute bottom-[20%] left-[21%] translate-x-[50%] translate-y-[50%]
+            smm:bottom-[24%] smm:left-[2.5%] "
+            >
+              <button
+                className="
+                min-w-[122px]  rounded-[8px] bg-[#1D4ED8]
+                 px-[14px] py-[10px] smm:px-[3.6vw] smm:py-[2.75vw] 
+                 "
+              >
+                <p className="flex justify-center text-sm text-white smm:text-[4vw]">
+                  {"$EVM Coming Soon"}
+                </p>
+              </button>
+            </div>
           </div>
-          <Image
-            src={
-              "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Particle%201.png"
-            }
-            width={300}
-            height={300}
-            alt=""
-            priority={true}
-            className={` Particle_glow absolute left-[41%] top-[27%]
-              w-[370px] smm:left-[38%] smm:top-[28%] smm:w-[60vw]
-              smm:translate-x-[50%] `}
-          />
-          <Image
-            src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Comp%201.gif"
-            width={640}
-            height={412}
-            alt=""
-            className="translate-[50%] absolute left-[40%] top-[35%] 
-               z-0 w-[400px]
-                smm:left-[43.5%] smm:top-[35%] smm:w-[69vw]"
-          />
-
-          {/* <div
-            className={` translate-[50%] orbit absolute left-[34%]
-          top-[25%] z-20 border
-          border-transparent smm:left-[34.25%] smm:top-[10%] smm:w-[160vw] `}
-          /> */}
-
-          <button
-            className="translate-[50%]   
-          absolute bottom-[25%] left-[46%]
-          rounded-[8px] bg-[#1D4ED8] px-[14px] 
-          py-[10px] md:left-[45.75%]
-          lg:left-[45.75%] smm:bottom-[22%] 
-          smm:left-[46.5%] smm:px-[2.7vw] smm:py-[1.6vw]"
-          >
-            <p className="text-sm  text-white  ">{"$EVM Coming soon"}</p>
-          </button>
         </div>
         {isshow && (
           <>
@@ -430,7 +450,8 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
             smm:h-auto smm:p-0 smm:pt-[10vw] "
             >
               <p
-                id="5"
+                id="6"
+                ref={triggerRef4 as React.RefObject<HTMLDivElement>}
                 className="translate-[50%] absolute
              top-[10%] text-[40px] text-[#F1E3B5] mdm:text-[24px] "
               >
@@ -497,22 +518,29 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 />
               </div>
               <div
-                className="translate-[50%] absolute bottom-[10%] mt-[22px] 
-            flex flex-col gap-y-5"
+                className="translate-[50%] absolute bottom-[10%] 
+                mt-[22px] flex flex-col justify-center gap-y-5"
               >
                 <h2 className=" text-center text-[20px] smm:text-[12px]">
                   FEED YOUR BEAST TO EARN MORE <br /> EXCLUSIVE NFTs ASSET
                 </h2>
-                <button
-                  className="mx-auto    
+                <div className="flex justify-center">
+                  <Link
+                    href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast"
+                    target="_blank"
+                  >
+                    <button
+                      className=" m-auto
                 rounded-[8px]  bg-[#1D4ED8] 
                  px-[14px] py-[10px] smm:px-[2vw] smm:py-[1vw] 
                  "
-                >
-                  <p className="flex justify-center text-sm text-white smm:text-[4vw]">
-                    {"Explore"}
-                  </p>
-                </button>
+                    >
+                      <p className="flex justify-center text-sm text-white smm:text-[4vw]">
+                        {"Explore"}
+                      </p>
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
             <div
@@ -554,28 +582,33 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                     className="bgnews flex h-full w-full items-center justify-center 
                               overflow-hidden border-l-[1px] border-[#F1E3B5]"
                                   >
-                                    <div className="h-auto w-auto ">
-                                      <img
-                                        src={
-                                          x.content
-                                            .split('src="')[1]
-                                            .split('">')[0]
-                                        }
-                                        alt=""
-                                        className=""
-                                      />
-                                    </div>
+                                    <Link href={x.guid} target="_blank">
+                                      <div className="h-auto w-auto ">
+                                        <img
+                                          src={
+                                            x.content
+                                              .split('src="')[1]
+                                              .split('">')[0]
+                                          }
+                                          alt=""
+                                          className=""
+                                        />
+                                      </div>
+                                    </Link>
                                   </div>
                                 </div>
                                 <div
                                   className="flex w-[784px] flex-col px-[24px] xlm:w-[470px]
                               "
                                 >
-                                  <p className="mb-[4px] text-[18px] text-[#F1E3B5] smm:text-[5vw]">
+                                  <p
+                                    id="test"
+                                    className=" mb-[4px] text-[18px] text-[#F1E3B5] smm:text-[5vw]"
+                                  >
                                     {x.title.replace("&amp;", "&")}
                                   </p>
 
-                                  <div className="overflow-hidden lgm:overflow-x-hidden">
+                                  <div className="hover: overflow-hidden lgm:overflow-x-hidden ">
                                     <p
                                       className="text-[12px] leading-tight
                                   text-white smm:text-[3vw] "

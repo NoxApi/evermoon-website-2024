@@ -2,26 +2,23 @@ import Image from "next/image";
 import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import "swiper/css";
-
 const Index = () => {
   const [roadmap, setroadmap] = useState(0);
   const triggerRef2 = useRef<HTMLElement>(null);
   const [showFadeUp, setShowFadeUp] = useState(false);
   const [showFadeUp2, setShowFadeUp2] = useState(false);
-  // const inViewport2 = useInViewport(
-  //   triggerRef2 as MutableRefObject<HTMLElement>,
-  //   { threshold: 0.1 },
-  // );
-  // useEffect(() => {
-  //   setShowFadeUp(true);
-  //   if (inViewport2.inViewport) {
-  //     setShowFadeUp2(true);
-  //   }
-  //   return () => {};
-  // }, [inViewport2]);
+  const inViewport2 = useInViewport(
+    triggerRef2 as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
+  useEffect(() => {
+    // setShowFadeUp(true);
+    const e1 = document.getElementById("text");
+    if (inViewport2.inViewport) {
+      e1!.classList.add("ani-text");
+      // setShowFadeUp2(true);
+    }
+  }, [inViewport2.inViewport]);
 
   const nav = (op: number) => {
     if (op == 1) {
@@ -55,24 +52,21 @@ const Index = () => {
     }
   }, []);
 
-  console.log(roadmap);
+  console.log(inViewport2);
 
   return (
     <section
-      ref={triggerRef2 as React.RefObject<HTMLDivElement>}
-      id="Roadmap"
-      className={"relative flex h-[700px]  w-full flex-col  xlm:h-auto "}
+      className={
+        "relative flex h-auto  w-full flex-col  py-[9.2vw] xlm:h-auto "
+      }
     >
-      {/* <p>{(320*roadmap).toString()}</p> bgroadmap xlm:py-32 smm:py-[20vw] */}
-      {/* <Transition
-    // className={"mb-12 smm:mb-[10vw]"}
-    show={showFadeUp2}
-    enter="transition ease-in-out duration-[800ms]   "
-    enterFrom="opacity-0 -translate-y-[-200px]  "
-    enterTo="opacity-100 translate-y-0  "
-  >
-  </Transition> */}
-      <p className="text-center text-4xl smm:text-2xl  ">{"ROADMAP"}</p>
+      <p
+        id="text"
+        ref={triggerRef2 as React.RefObject<HTMLDivElement>}
+        className=" text-center text-4xl smm:text-2xl "
+      >
+        {"ROADMAP"}
+      </p>
 
       <div className=" mt-12 w-[1200px] overflow-hidden lg:w-[1020px]  2xlm:w-full lgm:w-full mdm:w-[100vw]">
         <style>
@@ -671,7 +665,7 @@ const Index = () => {
         </div>
       </div>
       <div
-        className=" absolute bottom-[10%] z-40  flex w-[185px] gap-x-[20px] 
+        className=" absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
     lgm:bottom-[10%] lgm:hidden "
       >
         <button
@@ -710,7 +704,7 @@ const Index = () => {
       </div>
 
       <div
-        className="absolute bottom-[10%] z-40 flex w-[185px] gap-x-[20px] 
+        className="absolute bottom-[20%] z-40 flex w-[185px] gap-x-[20px] 
   xl:hidden 2xl:hidden smm:bottom-[2%] smm:w-full smm:justify-center "
       >
         <button

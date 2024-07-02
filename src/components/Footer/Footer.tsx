@@ -1,18 +1,38 @@
+import { useRef, MutableRefObject, useEffect } from "react";
+
 import Image from "next/image";
 
 import LinkNewTab from "../../general/LinkNewTab";
 
 import { Josefin_Sans } from "next/font/google";
 
+import { useInViewport } from "react-in-viewport";
+
 const Jose = Josefin_Sans({ subsets: ["latin"] });
 
 import "animate.css";
+import Link from "next/link";
 
 const Footer = () => {
+  const triggerRef = useRef<HTMLElement>(null);
+  const { inViewport } = useInViewport(
+    triggerRef as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
+
+  useEffect(() => {
+    const e1 = document.getElementById("icons");
+    const e2 = document.getElementById("evm2");
+    if (inViewport) {
+      e1!.classList.add("ani-text");
+      e2!.classList.add("ani-text");
+    }
+  }, [inViewport]);
   return (
     <div
       className={`relative z-50 flex h-[258px]  w-[100%] min-w-[1914px] 
   flex-col bg-[#01071a] pt-[20px] smm:h-[105vw] ${Jose.className}`}
+      ref={triggerRef as React.RefObject<HTMLDivElement>}
     >
       <div className="absolute bottom-0 left-0 h-[32px] w-full translate-y-[8px] bg-[#01071a]  "></div>
       <div
@@ -25,7 +45,10 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="flex h-auto w-auto justify-center gap-x-[8px] ">
+      <div
+        id="icons"
+        className="flex h-auto w-auto justify-center gap-x-[8px] transition-all  duration-1000 "
+      >
         <div className="flex gap-x-[8px] smm:flex-col smm:gap-y-[1vw]">
           <div className="flex gap-x-[8px]">
             <div className="p-1">
@@ -157,16 +180,23 @@ const Footer = () => {
         <p className="text-[12px] capitalize text-white smm:text-[3.2vw]">
           audited by
         </p>
-
-        <Image
-          src="https://storage.googleapis.com/evermoon_website_bucket/Footer_img/certik.png"
-          width={137}
-          height={32}
-          alt="Ct"
-          className="w-[68px] smm:w-[18.25vw]"
-        />
+        <Link
+          href="https://docs.evermoon.games/evermoon/faq/evermoon-security-audit-completed-by-certik"
+          target="_blank"
+        >
+          <Image
+            src="https://storage.googleapis.com/evermoon_website_bucket/Footer_img/certik.png"
+            width={137}
+            height={32}
+            alt="Ct"
+            className="w-[68px] smm:w-[18.25vw]"
+          />
+        </Link>
       </div>
-      <div className="my-[18px] flex w-full justify-center smm:flex-col ">
+      <div
+        id="evm2"
+        className="my-[18px] flex w-full justify-center transition-all delay-[4000s] duration-1000 smm:flex-col "
+      >
         {/* h-[30px] my-[18px] lgm:mt-12 lgm:flex-col mdm:h-[90px] */}
         <div className="flex justify-center lgm:mt-2">
           {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm footertext 
@@ -181,7 +211,7 @@ const Footer = () => {
             </button>
           </LinkNewTab>
           {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
-          <LinkNewTab href="/sacredbeast">
+          <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast">
             <button
               className="mr-4 p-[8px] text-[14px] text-white
         mdm:text-[15px] smm:ml-[0vw]"
@@ -194,12 +224,12 @@ const Footer = () => {
         <div className="flex justify-center mdm:flex-col">
           <div className="flex justify-center lgm:mt-2 mdm:h-[30px]">
             {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm lg:hidden" /> */}
-            <LinkNewTab href="/pool">
+            <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission">
               <button
-                className="mr-4 p-[8px] text-[14px] text-white
-          mdm:text-[15px] smm:ml-[0vw]"
+                className="mr-4 p-[8px] text-[14px] uppercase
+          text-white mdm:text-[15px] smm:ml-[0vw]"
               >
-                {"DE-ZENTRUM POOL"}
+                {"Moon Mission"}
               </button>
             </LinkNewTab>
             {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw]" /> */}
@@ -215,7 +245,7 @@ const Footer = () => {
           </div>
           <div className="mdm:h-[30px flex justify-center lgm:mt-2">
             {/* <div className="w-[1px] h-full bg-[#F1E3B5] rounded-sm ml-4 smm:ml-[0vw] md:hidden" /> */}
-            <LinkNewTab href="/marketplace">
+            <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/marketplace">
               <button
                 className="p-[8px] text-[14px] text-white mdm:text-[15px]
           smm:ml-[0vw]"
