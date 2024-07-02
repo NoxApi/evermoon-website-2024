@@ -122,36 +122,6 @@ const Index = () => {
           id="animate_3D2"
         />
       </div>
-
-      {/* <div className=" relative flex  h-[720px] w-[1320px] items-center  justify-center   ">
-        <iframe
-          src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_V4.4.34/index.html"
-          className="  h-full w-full "
-          scrolling="yes"
-        ></iframe>
-       
-
-        <div
-          className="boxright absolute right-[0%] top-[0%] z-30 h-[720px] w-[426px] overflow-auto
-   2xl:right-[0%] xlm:opacity-0 lgm:right-[275px] lgm:w-[50px] smm:right-[472px] smm:top-[0%] smm:h-[720px] smm:w-[25vw] "
-          id="animate_3D2"
-        />
-        <div
-          className="boxleft  absolute left-[0%] top-[0%] z-30 h-[720px] w-[426px]
-  2xl:left-[0%] xlm:opacity-0 lgm:left-[275px] lgm:w-[50px] smm:left-[472px] smm:top-[0%] smm:h-[720px] smm:w-[25vw] "
-          id="animate_3D"
-        />
-      </div> */}
-
-      {/* {!toggle ? (
-            <button className="btn-primary " onClick={() => activeAnimate()}>
-              distoggle scroll
-            </button>
-          ) : (
-            <button className="btn-primary " onClick={() => cancelAnimate()}>
-              toggle scroll
-            </button>
-          )} */}
     </section>
   );
 };
