@@ -359,7 +359,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           ref={triggerRef as React.RefObject<HTMLDivElement>}
           className=" relative z-20 flex h-[820px]  w-[100%] min-w-[1920px] flex-col 
           justify-center bg-[#01071A] p-[10px] opacity-0 transition-opacity duration-300
-           smm:h-auto
+           smm:h-auto smm:pb-[17vw]
         "
         >
           <div
@@ -385,29 +385,14 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
 
           <div
             id="5"
-            className=" bgMoon relative mx-auto h-[540px]  
-            w-[540px] rounded-full opacity-0 mix-blend-screen
-            transition-all delay-1000 duration-1000 smm:h-[85vw] smm:w-[90vw]"
+            className=" bgMoon  relative mx-auto  
+            h-[540px] w-[540px] rounded-full
+             opacity-0 transition-all delay-1000 duration-1000 smm:h-[85vw] smm:w-[90vw] "
           >
             <div
-              className=" absolute left-[-28%] top-[-32%] w-[430px] 
-            translate-x-[50%] translate-y-[50%] smm:left-[-20%] smm:top-[-37%] smm:w-[65vw] "
-            >
-              <Image
-                src={
-                  "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Particle%201.png"
-                }
-                width={300}
-                height={300}
-                alt=""
-                // priority={true}
-                className={` Particle_glow w-full  `}
-              />
-            </div>
-            <div
-              className="absolute left-[-28%] top-[0%] z-30 w-[430px] 
-            translate-x-[50%] translate-y-[50%] mix-blend-screen
-            smm:left-[-5%] smm:top-[3%] smm:w-[50vw]"
+              className="absolute left-[50%] top-[50%] z-50 w-[500px] 
+            translate-x-[-50%] translate-y-[-68%] mix-blend-screen smm:w-[60vw]
+             smm:translate-y-[-100%]"
             >
               <Image
                 src={
@@ -419,9 +404,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 className={` w-full `}
               />
             </div>
+
             <div
-              className="absolute left-[10%] top-[10%] z-20 w-[218px] translate-x-[50%]
-            translate-y-[50%] smm:left-[17%] smm:top-[5%] smm:w-[30vw]"
+              className="coin absolute left-[50%] top-[50%] z-40
+            w-[218px] smm:w-[30vw] "
             >
               <Image
                 src={
@@ -435,14 +421,28 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
             <div
-              className="absolute bottom-[20%] left-[21%] translate-x-[50%] translate-y-[50%]
-            smm:bottom-[24%] smm:left-[2.5%] "
+              className="absolute left-[50%] top-[50%] z-10 w-[400px] 
+            translate-x-[-50%] translate-y-[-60%] mix-blend-screen smm:w-[50vw]
+             smm:translate-y-[-85%]"
+            >
+              <Image
+                src={
+                  " https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Orbit%20background_13.gif"
+                }
+                width={640}
+                height={412}
+                alt=""
+                className={` w-full `}
+              />
+            </div>
+            <div
+              className="absolute bottom-[20%] left-[21%] translate-x-[50%] translate-y-[50%] smm:bottom-[24%]
+            smm:left-0 smm:right-[50%] smm:translate-y-[-40%] "
             >
               <button
                 className="
                 min-w-[122px]  rounded-[8px] bg-[#1D4ED8]
-                px-[14px] py-[10px]
-                 hover:bg-blue-500 active:ring-blue-900 smm:px-[3.6vw] smm:py-[2.75vw] 
+                 px-[14px] py-[10px] smm:px-[3.6vw] smm:py-[2.75vw] 
                  "
               >
                 <p className="flex justify-center text-sm text-white smm:text-[4vw]">

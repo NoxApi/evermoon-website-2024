@@ -1362,25 +1362,54 @@ input[type="number"] {
 }
 @keyframes animatecoin {
   0% {
-    transform: translateY(4%);
+    transform: translate(-50%, -60%);
   }
   3% {
-    transform: translateY(4%);
+    transform: translate(-50%, -60%);
   }
   48% {
-    transform: translateY(-4%);
+    transform: translate(-50%, -68%);
   }
   50% {
-    transform: translateY(-4%);
+    transform: translate(-50%, -68%);
   }
   53% {
-    transform: translateY(-4%);
+    transform: translate(-50%, -68%);
   }
   98% {
-    transform: translateY(4%);
+    transform: translate(-50%, -60%);
   }
   100% {
-    transform: translateY(4%);
+    transform: translate(-50%, -60%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .coin {
+    animation: animatecoinmobile 10s linear infinite;
+  }
+
+  @keyframes animatecoinmobile {
+    0% {
+      transform: translate(-50%, -100%);
+    }
+    3% {
+      transform: translate(-50%, -100%);
+    }
+    48% {
+      transform: translate(-50%, -108%);
+    }
+    50% {
+      transform: translate(-50%, -108%);
+    }
+    53% {
+      transform: translate(-50%, -108%);
+    }
+    98% {
+      transform: translate(-50%, -100%);
+    }
+    100% {
+      transform: translate(-50%, -100%);
+    }
   }
 }
 
