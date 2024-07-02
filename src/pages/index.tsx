@@ -500,10 +500,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   id="11"
-                  className="absolute left-[18%] top-[30%] 
-                    w-[350px] opacity-0 transition-opacity
-                    delay-[2000ms] duration-1000 smm:right-[14%] 
-                smm:top-[-15%] smm:w-[70vw]"
+                  className="absolute left-[50%] top-[50%] 
+                    w-[350px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity
+                    delay-[2000ms] duration-1000 smm:w-[73vw]
+                    smm:translate-x-[-51%] smm:translate-y-[-64%]"
                 >
                   <Image
                     src={
