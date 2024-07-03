@@ -1386,7 +1386,6 @@ input[type="number"] {
   .coin {
     animation: animatecoinmobile 10s linear infinite;
   }
-
   @keyframes animatecoinmobile {
     0% {
       transform: translate(-50%, -100%);
