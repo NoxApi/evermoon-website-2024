@@ -133,7 +133,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           className="relative  h-[1080px] w-[1920px] justify-center overflow-hidden 
         mdm:flex mdm:h-[177vw] "
         >
-          <div
+          {/* <div
             className=" absolute bottom-[16%] left-[50%] z-20 flex w-[100vw] translate-x-[-50%]
         flex-col items-center justify-between px-[5vw] lg:hidden mdm:hidden "
           >
@@ -152,7 +152,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 <p className="text-sm  text-white ">{"Enter Official Site"}</p>
               </button>
             </Link>
-          </div>
+          </div> */}
           <div className="flex w-full justify-center mdm:absolute ">
             <div
               id="layer6"
@@ -500,10 +500,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   id="11"
-                  className="absolute left-[18%] top-[30%] 
-                    w-[350px] opacity-0 transition-opacity
-                    delay-[2000ms] duration-1000 smm:right-[14%] 
-                smm:top-[-15%] smm:w-[70vw]"
+                  className="absolute left-[50%] top-[50%] 
+                    w-[350px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity
+                    delay-[2000ms] duration-1000 smm:w-[73vw]
+                    smm:translate-x-[-51%] smm:translate-y-[-64%]"
                 >
                   <Image
                     src={
@@ -807,14 +807,14 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           </>
         )}
       </div>
-      <div className=" fixed left-[50%] top-0 z-20 flex w-full max-w-[1920px] translate-x-[-50%] items-center justify-end px-[100px] py-[20px] lgm:hidden">
-        {/* <Image src={logo3} alt="" className="w-[300px] z-20 "></Image> */}
+      {/* <div className=" fixed left-[50%] top-0 z-20 flex w-full max-w-[1920px] translate-x-[-50%] items-center justify-end px-[100px] py-[20px] lgm:hidden">
+        <Image src={logo3} alt="" className="w-[300px] z-20 "></Image>
         <Link href="/home">
           <button className="btn-primary_EnSite text-white   ">
             <p className="text-sm ">{"Enter Official Site"}</p>
           </button>
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }

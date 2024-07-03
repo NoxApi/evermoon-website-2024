@@ -41,7 +41,7 @@ const Index = () => {
       e2!.classList.add("slide-text");
       e3!.classList.add("slide-text");
       e4!.classList.add("slide-text");
-      e5!.style.opacity = "1";
+      // e5!.style.opacity = "1";
     }
     // if (inViewport2.inViewport) {
     //   setShowFadeUp2(true);
