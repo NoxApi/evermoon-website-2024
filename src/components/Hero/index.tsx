@@ -107,6 +107,7 @@ const Index = () => {
         <iframe
           src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_Model_V1.4/index.html"
           className=" h-[730px] w-[1320px] "
+          allow="camera; microphone"
         ></iframe>
         {/* {inViewport && ( bg-inherit
         )} */}

@@ -32,9 +32,9 @@ const Footer = () => {
   }, [inViewport]);
   return (
     <div
+      ref={triggerRef as React.RefObject<HTMLDivElement>}
       className={`relative z-50 flex h-[258px]  w-[100%] min-w-[1914px] 
   flex-col bg-[#01071a] pt-[20px] smm:h-[105vw] ${Jose.className}`}
-      ref={triggerRef as React.RefObject<HTMLDivElement>}
     >
       <div className="absolute bottom-0 left-0 h-[32px] w-full translate-y-[8px] bg-[#01071a]  "></div>
       <div

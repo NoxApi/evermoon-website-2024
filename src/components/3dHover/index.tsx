@@ -1,9 +1,17 @@
 import { useState, useRef, MutableRefObject, useEffect } from "react";
 
+import { Transition } from "@headlessui/react";
+import { useInViewport } from "react-in-viewport";
+
 import Image from "next/image";
 
 const Index = () => {
   const [pick, setpick] = useState(1);
+  const triggerRef1 = useRef<HTMLElement>(null);
+  const inViewport1 = useInViewport(
+    triggerRef1 as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
 
   useEffect(() => {
     let intervalId: number | undefined;
@@ -38,7 +46,22 @@ const Index = () => {
       const element: any = document.getElementById("div3");
       element.classList.remove("coin2");
     }
-  }, []);
+    const e1 = document.getElementById("box1");
+    const e2 = document.getElementById("box2");
+    const e3 = document.getElementById("box3");
+    const e4 = document.getElementById("box4");
+    const e5 = document.getElementById("box5");
+    if (inViewport1.inViewport) {
+      e1!.classList.add("ani-text");
+      e2!.classList.add("box-ani_delay");
+      e3!.classList.add("box-ani_delay1");
+      e4!.classList.add("box-ani_delay2");
+      e5!.style.opacity = "1";
+    }
+  }, [inViewport1.inViewport]);
+
+  console.log(inViewport1);
+
   return (
     <section
       className=" h-[800px] w-full bg-bgExplore  bg-cover px-[32px] py-[80px] xlm:h-auto 
@@ -94,8 +117,14 @@ const Index = () => {
                 innovation. Empowering <br /> players, Transforming gaming!
               </p>
             </div>
-            <div className=" flex flex-col gap-y-[20px] smm:mx-auto smm:w-[90vw] smm:gap-y-[3vw]">
+            <div
+              id="box5"
+              ref={triggerRef1 as React.RefObject<HTMLDivElement>}
+              className=" flex flex-col gap-y-[20px] opacity-0 transition-opacity delay-300
+              duration-1000 smm:mx-auto smm:w-[90vw] smm:gap-y-[3vw]"
+            >
               <div
+                id="box1"
                 className="flex cursor-pointer 2xl:max-w-[575px] "
                 onClick={() => setpick(1)}
               >
@@ -119,8 +148,7 @@ const Index = () => {
                   )}
                 </div>
                 <div
-                  className={`flex  w-[95%] items-center justify-start 
-          border-l-2 border-[#F1E3B5] px-[16px] py-[8px] smm:w-[600px]
+                  className={`flex  w-[95%] items-center justify-start border-l-2 border-[#F1E3B5] px-[16px] py-[8px] smm:w-[600px]
           ${
             pick == 1
               ? "bg-gradient-to-r from-[#1E408A] to-[#00123A]"
@@ -166,6 +194,7 @@ const Index = () => {
                 </div>
               </div>
               <div
+                id="box2"
                 className="flex cursor-pointer 2xl:max-w-[575px]"
                 onClick={() => setpick(2)}
               >
@@ -261,6 +290,7 @@ const Index = () => {
                 </div>
               </div>
               <div
+                id="box3"
                 className="flex cursor-pointer 2xl:max-w-[575px]"
                 onClick={() => setpick(3)}
               >
@@ -330,6 +360,7 @@ const Index = () => {
                 </div>
               </div>
               <div
+                id="box4"
                 className="flex cursor-pointer 2xl:max-w-[575px]"
                 onClick={() => setpick(4)}
               >
@@ -406,7 +437,7 @@ const Index = () => {
                   <video
                     muted={true}
                     autoPlay={true}
-                    // loop={true}
+                    loop={true}
                     playsInline={true}
                     className={` object-cover  `}
                   >
@@ -424,7 +455,7 @@ const Index = () => {
                   <video
                     muted={true}
                     autoPlay={true}
-                    // loop={true}
+                    loop={true}
                     playsInline={true}
                     className={` object-cover  `}
                   >
@@ -442,7 +473,7 @@ const Index = () => {
                   <video
                     muted={true}
                     autoPlay={true}
-                    // loop={true}
+                    loop={true}
                     playsInline={true}
                     className={` object-cover  `}
                   >
@@ -460,7 +491,7 @@ const Index = () => {
                   <video
                     muted={true}
                     autoPlay={true}
-                    // loop={true}
+                    loop={true}
                     playsInline={true}
                     className={` object-cover  `}
                   >

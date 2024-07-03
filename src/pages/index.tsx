@@ -87,7 +87,9 @@ export default function Home() {
     const e10 = document.getElementById("10");
     const e11 = document.getElementById("11");
     const e12 = document.getElementById("12");
-    // const e13 = document.getElementById("13");
+    const e13 = document.getElementById("13");
+    const e14 = document.getElementById("14");
+    const e15 = document.getElementById("15");
     if (inViewport) {
       e1!.style.opacity = "1";
       e3!.classList.add("slide-in-left");
@@ -99,8 +101,8 @@ export default function Home() {
       e9!.style.opacity = "1";
       e10!.style.opacity = "1";
       e11!.style.opacity = "1";
-      e12!.classList.add("ani-text");
-      // e13!.classList.add("ani-text");
+      e12!.classList.add("ani-text_delay");
+      e13!.style.opacity = "1";
     }
     if (inViewport4.inViewport) {
       e7!.style.opacity = "1";
@@ -112,6 +114,7 @@ export default function Home() {
     // }
     if (inViewport7.inViewport) {
       e8!.classList.add("ani-text");
+      e14!.style.opacity = "1";
     }
   }, [
     inViewport,
@@ -451,7 +454,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
         {isshow && (
           <>
             <div
-              className="bgFull relative flex h-[724px] w-screen 
+              className="bgFull relative flex h-[824px] w-screen 
              min-w-[1900px] flex-col items-center justify-center p-[95px]  smm:h-auto smm:p-0 smm:pt-[10vw] "
             >
               <div
@@ -543,14 +546,14 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   />
                 </div>
                 <div
-                  id="12"
+                  id="13"
                   className="translate-[50%] duration-2000 absolute 
                 bottom-[3%] mt-[22px] flex flex-col justify-center
-                gap-y-5 transition-all delay-[3000ms]
+                gap-y-5 opacity-0 transition-opacity delay-[2250ms] duration-1000
 
                 "
                 >
-                  <div className="">
+                  <div id="12" className="">
                     <h2 className=" text-center text-[20px]  smm:text-[12px]">
                       FEED YOUR BEAST TO EARN MORE <br /> EXCLUSIVE NFTs ASSET
                     </h2>
@@ -595,9 +598,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   {"NEWS"}
                 </p>
                 <div
+                  id="14"
                   className=" z-10 h-[520px] w-[1000px] 
-               overflow-x-hidden bg-transparent lgm:w-[680px] lgm:overflow-auto 
-               smm:hidden "
+               overflow-x-hidden bg-transparent opacity-0 transition-opacity 
+               delay-500 duration-500 lgm:w-[680px] lgm:overflow-auto smm:hidden "
                 >
                   {!isfetching ? (
                     <>
@@ -612,7 +616,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                 <div className="flex h-[140px] w-[254px] flex-col p-[5px] ">
                                   <div
                                     className="bgnews flex h-full w-full items-center justify-center 
-                              overflow-hidden border-l-[1px] border-[#F1E3B5]"
+                                overflow-hidden border-l-[1px] border-[#F1E3B5]"
                                   >
                                     <Link href={x.guid} target="_blank">
                                       <div className="h-auto w-auto ">
@@ -631,7 +635,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                 </div>
                                 <div
                                   className="flex w-[784px] flex-col px-[24px] xlm:w-[470px]
-                              "
+                                "
                                 >
                                   <p
                                     id="test"

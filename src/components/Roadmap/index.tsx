@@ -52,6 +52,7 @@ const Index = () => {
     }
   }, []);
 
+  console.log(roadmap);
   return (
     <section
       className={

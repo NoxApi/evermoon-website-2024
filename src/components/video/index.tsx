@@ -33,9 +33,10 @@ const Index = () => {
           <source src="/FNewVideo/Lysia_Animate_Loop.mp4" type="video/mp4" />
         </video>
         <div
-          className=" absolute left-[7%] flex h-full w-[50%] max-w-[1280px] flex-col items-start
-        justify-end pb-[32px] 2xl:left-[20.5%] lgm:left-0 lgm:pb-[24px] 
-        lgm:pl-[24px] smm:px-[4vw]
+          className=" absolute left-[31%] top-[50%] flex h-full w-[50%] max-w-[1280px] 
+          translate-x-[-50%] translate-y-[-50%] flex-col items-start justify-end 
+          pb-[32px] 2xl:left-[42%] 2xl:top-[37%] lgm:left-0 lgm:pb-[24px] 
+          lgm:pl-[24px] smm:px-[4vw]
         "
         >
           <div>
@@ -433,7 +434,7 @@ const Index = () => {
 
         <div
           className=" absolute bottom-[23%] left-[32.5%] z-20 flex
-          w-[88vw] translate-x-[50%] translate-y-[50%] flex-col 
+          w-[88vw] translate-x-[-50%] translate-y-[-50%] flex-col 
           gap-y-[20px] md:hidden lg:hidden xl:hidden "
         >
           <div>
