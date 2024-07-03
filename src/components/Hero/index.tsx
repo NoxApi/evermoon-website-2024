@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, MutableRefObject } from "react";
 
 import { useInViewport } from "react-in-viewport";
 
@@ -10,14 +10,17 @@ import Link from "next/link";
 
 const Index = () => {
   const triggerRef = useRef<HTMLElement>(null);
-  // const { inViewport } = useInViewport(
-  //   triggerRef as MutableRefObject<HTMLElement>,
-  //   { threshold: 0.1 },
-  // );
+  const { inViewport } = useInViewport(
+    triggerRef as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
   const [toggle, setToggle] = useState(false);
-  // useEffect(() => {
-  //   console.log(inViewport);
-  // }, [inViewport]);
+  useEffect(() => {
+    const e1 = document.getElementById("lolo");
+    if (inViewport) {
+      e1!.style.opacity = "1";
+    }
+  }, [inViewport]);
 
   // useEffect(() => {});
   // function cancelAnimate() {
@@ -49,9 +52,11 @@ const Index = () => {
       }
     >
       <div
+        id="lolo"
+        ref={triggerRef as React.RefObject<HTMLDivElement>}
         className="absolute left-[5%] top-[5%] z-50
-      bg-bgTribe bg-contain bg-center bg-no-repeat
-    py-[52px] pl-[32px] 2xl:left-[20%] lgm:pl-[24px]  smm:left-0 smm:py-[32px] smm:pl-[4vw]"
+      bg-bgTribe bg-contain bg-center bg-no-repeat py-[52px] pl-[32px] opacity-0
+      transition-opacity delay-[10500ms] duration-1000 2xl:left-[20%] lgm:pl-[24px]  smm:left-0 smm:py-[32px] smm:pl-[4vw]"
       >
         <div className="flex flex-col bg-bgTribe">
           <h3 className="text-[60px] uppercase text-white drop-shadow-[0px_4px_4px_0px_#000024] smm:text-[12vw]">
@@ -71,7 +76,10 @@ const Index = () => {
               />
             </svg>
             <p className="text-[20px] uppercase">FIGHTER</p>
-            <Link href="https://docs.evermoon.games/evermoon" target="_blank">
+            <Link
+              href="https://docs.evermoon.games/evermoon/evermoon-game/evermoon-lore"
+              target="_blank"
+            >
               <div className="flex items-center gap-x-[6px] px-2 py-1">
                 <h3 className="text-[12px] text-white">View More</h3>
                 <svg

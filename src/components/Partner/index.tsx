@@ -35,13 +35,15 @@ const Index = () => {
     const e3 = document.getElementById("evm3");
     const e4 = document.getElementById("evm4");
     const e5 = document.getElementById("evm5");
+    const e6 = document.getElementById("evm6");
     if (inViewport) {
       setShowFadeUp(true);
       e1!.classList.add("ani-text");
-      e2!.classList.add("slide-text");
+      e2!.classList.add("slide-text1");
       e3!.classList.add("slide-text");
-      e4!.classList.add("slide-text");
-      // e5!.style.opacity = "1";
+      e4!.classList.add("slide-text2");
+      e5!.style.opacity = "1";
+      e6!.classList.add("ani-text_delay");
     }
     // if (inViewport2.inViewport) {
     //   setShowFadeUp2(true);
@@ -78,10 +80,10 @@ const Index = () => {
         </div>
 
         <div
-          id="5"
+          id="evm5"
           className=" absolute top-[-5%] flex h-[400px] 
           w-[800px] translate-y-[50%] justify-between
-    transition-all delay-1000 duration-1000 xlm:hidden"
+      xlm:hidden"
         >
           <div
             id="evm2"
@@ -105,7 +107,7 @@ const Index = () => {
           </div>
           <div
             id="evm3"
-            className="flipp h-[340px] w-[241px] transition-all delay-1000 duration-1000 "
+            className="flipp h-[340px] w-[241px]  "
             onMouseEnter={() => setFadeShowUp2(true)}
             onMouseLeave={() => setFadeShowUp2(false)}
           >
@@ -131,13 +133,13 @@ const Index = () => {
           </div>
           <div
             id="evm4"
-            className="flipp mt-[45px] h-[340px] w-[241px] transition-all delay-1000 duration-1000 xlm:hidden smm:flex"
+            className="flipp mt-[45px] h-[340px] w-[241px] xlm:hidden smm:flex"
             onMouseEnter={() => setFadeShowUp2(true)}
             onMouseLeave={() => setFadeShowUp2(false)}
           >
             <div
               className="flip flex h-full w-full items-center
-        justify-center bg-bgteam3 bg-cover pt-[190px] transition-all delay-1000 duration-500 "
+        justify-center bg-bgteam3 bg-cover pt-[190px] transition-all duration-500 "
             >
               <Transition
                 show={fadeShowUp2}
@@ -226,6 +228,7 @@ const Index = () => {
         </div>
 
         <p
+          id="evm6"
           className="z-50 mt-[100px] px-[5vw] text-[14px] 
        uppercase text-zinc-200 xlm:w-[100vw] xlm:text-center
       smm:text-[4vw] smm:leading-[5vw]"

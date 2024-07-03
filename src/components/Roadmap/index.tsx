@@ -14,9 +14,10 @@ const Index = () => {
   useEffect(() => {
     // setShowFadeUp(true);
     const e1 = document.getElementById("text");
+    const e2 = document.getElementById("text2");
     if (inViewport2.inViewport) {
       e1!.classList.add("ani-text");
-      // setShowFadeUp2(true);
+      e2!.classList.add("ani-text_delay7");
     }
   }, [inViewport2.inViewport]);
 
@@ -52,7 +53,6 @@ const Index = () => {
     }
   }, []);
 
-  console.log(roadmap);
   return (
     <section
       className={
@@ -67,7 +67,10 @@ const Index = () => {
         {"ROADMAP"}
       </p>
 
-      <div className=" mt-12 w-[1200px] overflow-hidden lg:w-[1020px]  2xlm:w-full lgm:w-full mdm:w-[100vw]">
+      <div
+        id="text2"
+        className=" mt-12 w-[1200px] overflow-hidden lg:w-[1020px]  2xlm:w-full lgm:w-full mdm:w-[100vw]"
+      >
         <style>
           {`
                 .roadmapdynamic {
@@ -479,7 +482,6 @@ const Index = () => {
                   <li className="text-sm text-white ">
                     {" Building Challenge & Synthesis "}
                   </li>
-                  <li className="text-sm text-white ">{" Synthesis "}</li>
                 </ul>
                 <div className="mt-[30px] flex justify-start">
                   <p

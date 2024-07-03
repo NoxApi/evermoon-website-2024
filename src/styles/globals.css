@@ -1508,8 +1508,18 @@ iframe {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s; /* don't forget to set a duration! */
 }
+.ani-text_delay7 {
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  animation-delay: 500ms; /* don't forget to set a duration! */
+}
 
 .ani-text_delay {
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  animation-delay: 1200ms; /* don't forget to set a duration! */
+}
+.ani-text_delay_Long {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s;
   animation-delay: 2250ms; /* don't forget to set a duration! */
@@ -1524,12 +1534,12 @@ iframe {
 .box-ani_delay {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s;
-  animation-delay: 400ms;
+  animation-delay: 200ms;
 }
 .box-ani_delay1 {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s;
-  animation-delay: 800ms; /* don't forget to set a duration! */
+  animation-delay: 400ms; /* don't forget to set a duration! */
 }
 .box-ani_delay2 {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
@@ -1545,7 +1555,17 @@ iframe {
 .slide-text {
   animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
-  animation-delay: 2000ms;
+  animation-delay: 200ms;
+}
+.slide-text1 {
+  animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animation-delay: 500ms;
+}
+.slide-text2 {
+  animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  animation-delay: 500ms;
 }
 
 @layer base {

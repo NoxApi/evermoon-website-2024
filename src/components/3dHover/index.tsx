@@ -55,12 +55,10 @@ const Index = () => {
       e1!.classList.add("ani-text");
       e2!.classList.add("box-ani_delay");
       e3!.classList.add("box-ani_delay1");
-      e4!.classList.add("box-ani_delay2");
+      // e4!.classList.add("box-ani_delay2");
       e5!.style.opacity = "1";
     }
   }, [inViewport1.inViewport]);
-
-  console.log(inViewport1);
 
   return (
     <section
@@ -95,8 +93,14 @@ const Index = () => {
           className="flex h-full w-full items-start justify-center gap-x-[50px]  
   xlm:flex-col-reverse xlm:gap-y-[58px] smm:gap-y-0 "
         >
-          <div className=" mt-5 h-auto w-full xlm:w-full smm:mt-0 ">
+          <div
+            id="box5"
+            ref={triggerRef1 as React.RefObject<HTMLDivElement>}
+            className=" mt-5 h-auto w-full opacity-0 transition-opacity delay-300 duration-1000 xlm:w-full
+              smm:mt-0 "
+          >
             <div
+              id="box1"
               className="flex flex-col items-start justify-center 
       xlm:hidden xlm:w-[80vw] xlm:items-center"
             >
@@ -110,7 +114,7 @@ const Index = () => {
                 {"EVERMOON?"}
               </p>
             </div>
-            <div className="mb-[40px] xlm:hidden">
+            <div id="box2" className="mb-[40px] xlm:hidden">
               <p className="text-[18px] capitalize text-white xlm:text-xl smm:text-[4vw] smm:leading-[5vw]">
                 Evermoon is a Next-Gen MOBA revolution, blending the
                 electrifying <br /> 5v5, 3-lane battle strategy with Web3
@@ -118,13 +122,10 @@ const Index = () => {
               </p>
             </div>
             <div
-              id="box5"
-              ref={triggerRef1 as React.RefObject<HTMLDivElement>}
-              className=" flex flex-col gap-y-[20px] opacity-0 transition-opacity delay-300
-              duration-1000 smm:mx-auto smm:w-[90vw] smm:gap-y-[3vw]"
+              id="box3"
+              className=" flex flex-col gap-y-[20px]  smm:mx-auto smm:w-[90vw] smm:gap-y-[3vw]"
             >
               <div
-                id="box1"
                 className="flex cursor-pointer 2xl:max-w-[575px] "
                 onClick={() => setpick(1)}
               >
@@ -194,7 +195,6 @@ const Index = () => {
                 </div>
               </div>
               <div
-                id="box2"
                 className="flex cursor-pointer 2xl:max-w-[575px]"
                 onClick={() => setpick(2)}
               >
@@ -290,7 +290,6 @@ const Index = () => {
                 </div>
               </div>
               <div
-                id="box3"
                 className="flex cursor-pointer 2xl:max-w-[575px]"
                 onClick={() => setpick(3)}
               >
@@ -360,7 +359,6 @@ const Index = () => {
                 </div>
               </div>
               <div
-                id="box4"
                 className="flex cursor-pointer 2xl:max-w-[575px]"
                 onClick={() => setpick(4)}
               >
