@@ -434,14 +434,14 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
             <div
-              className="absolute bottom-[20%] left-[21%] translate-x-[50%] translate-y-[50%]
-            smm:bottom-[24%] smm:left-0 smm:right-[40%] smm:translate-y-[-40%] "
+              className="absolute bottom-[20%] left-[50%] w-fit translate-x-[-50%]
+            translate-y-[-50%] smm:bottom-[24%] smm:left-[50%]  smm:translate-y-[-40%] "
             >
               <button
                 className="
                 min-w-[122px] rounded-[8px] bg-[#1D4ED8]
                   px-[14px] py-[10px]
-                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2vw] smm:py-[1vw]
+                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2.7vw] smm:py-[1.6vw]
                  "
               >
                 <p className="flex justify-center text-sm text-white">
@@ -566,7 +566,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       <button
                         className=" m-auto min-w-[122px] rounded-[8px] bg-[#1D4ED8]
                   px-[14px] py-[10px]
-                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2vw] smm:py-[1vw] 
+                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2.7vw] smm:py-[1.6vw] 
                  "
                       >
                         <p className="flex justify-center text-sm text-white">
@@ -634,8 +634,8 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                   </div>
                                 </div>
                                 <div
-                                  className="flex w-[784px] flex-col px-[24px] xlm:w-[470px]
-                                "
+                                  className="klow flex w-[784px] cursor-pointer flex-col
+                                px-[24px] xlm:w-[470px]"
                                 >
                                   <p
                                     id="test"

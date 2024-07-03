@@ -3,7 +3,7 @@ import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
 const Index = () => {
-  const [roadmap, setroadmap] = useState(750);
+  const [roadmap, setroadmap] = useState(1152);
   // const [current, setcurrent] = useState(5);
   const triggerRef2 = useRef<HTMLElement>(null);
   const [showFadeUp, setShowFadeUp] = useState(false);
@@ -16,9 +16,11 @@ const Index = () => {
     // setShowFadeUp(true);
     const e1 = document.getElementById("text");
     const e2 = document.getElementById("text2");
+    const e3 = document.getElementById("text3");
     if (inViewport2.inViewport) {
       e1!.classList.add("ani-text");
       e2!.classList.add("ani-text_delay7");
+      e3!.style.opacity = "1";
     }
   }, [inViewport2.inViewport]);
 
@@ -71,8 +73,8 @@ const Index = () => {
       </p>
 
       <div
-        id="text2"
-        className=" mt-12 w-[1200px] overflow-hidden lg:w-[1020px]  2xlm:w-full lgm:w-full mdm:w-[100vw]"
+        id="text3"
+        className=" mt-12 w-[1200px] overflow-hidden opacity-0 transition-opacity delay-500 duration-1000 lg:w-[1020px]  2xlm:w-full lgm:w-full mdm:w-[100vw]"
       >
         <style>
           {`
@@ -82,6 +84,7 @@ const Index = () => {
         </style>
 
         <div
+          id="text2"
           className={`roadmapdynamic flex h-[650px] w-[1280px] transition-transform smm:h-[145vw]`}
         >
           <div className=" ">
@@ -678,7 +681,7 @@ const Index = () => {
           onClick={() => nav(1)}
           className={`flex w-full max-w-[122px] items-center justify-center 
         gap-x-[8px] px-[14px] py-[10px] 
-        ${roadmap === 0 ? "btn-primary_disable" : "btn-primary hover:bg-blue-500 active:ring-blue-900"}`}
+        ${roadmap === 0 ? "btn-primary_disable" : "btn-primary "}`}
         >
           <Image
             src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/Arrow_left.png"
@@ -692,7 +695,7 @@ const Index = () => {
         <button
           onClick={() => nav(2)}
           className={`btn-primary flex w-full max-w-[122px] items-center 
-        justify-center gap-x-[8px] px-[14px] py-[10px] hover:bg-blue-500 active:ring-blue-900
+        justify-center gap-x-[8px] px-[14px] py-[10px] 
         ${roadmap === 1440 && "btn-primary_disable"}
         `}
 
@@ -717,7 +720,7 @@ const Index = () => {
           onClick={() => nav(1)}
           className={`flex w-full max-w-[122px] items-center justify-center 
     gap-x-[8px] px-[14px] py-[10px] 
-    ${roadmap === 0 ? "btn-primary_disable" : "btn-primary hover:bg-blue-500 active:ring-blue-900"}`}
+    ${roadmap === 0 ? "btn-primary_disable" : "btn-primary "}`}
         >
           <Image
             src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/Arrow_left.png"
@@ -730,9 +733,9 @@ const Index = () => {
         </button>
         <button
           onClick={() => nav(2)}
-          className={`btn-primary flex w-full max-w-[122px] items-center 
-    justify-center gap-x-[8px] px-[14px] py-[10px] hover:bg-blue-500 active:ring-blue-900
-    ${roadmap === 2016 && "btn-primary_disable"}
+          className={` flex w-full max-w-[122px] items-center 
+    justify-center gap-x-[8px] px-[14px] py-[10px]
+    ${roadmap === 2016 ? "btn-primary_disable" : "btn-primary "}
     
     `}
 

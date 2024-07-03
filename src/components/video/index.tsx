@@ -35,7 +35,7 @@ const Index = () => {
         <div
           className=" absolute left-[31%] top-[50%] flex h-full w-[50%] max-w-[1280px] 
           translate-x-[-50%] translate-y-[-50%] flex-col items-start justify-end 
-          pb-[32px] 2xl:left-[42%] 2xl:top-[37%] lgm:left-0 lgm:pb-[24px] 
+          pb-[32px] 2xl:left-[42%] 2xl:top-[37%] lgm:left-[25%] lgm:pb-[24px] 
           lgm:pl-[24px] smm:px-[4vw]
         "
         >
@@ -433,7 +433,7 @@ const Index = () => {
         </div>
 
         <div
-          className=" absolute bottom-[23%] left-[32.5%] z-20 flex
+          className=" absolute bottom-[-12%] left-[50%] z-20 flex
           w-[88vw] translate-x-[-50%] translate-y-[-50%] flex-col 
           gap-y-[20px] md:hidden lg:hidden xl:hidden "
         >

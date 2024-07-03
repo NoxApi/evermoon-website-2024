@@ -1568,6 +1568,16 @@ iframe {
   animation-delay: 500ms;
 }
 
+.klow {
+}
+.klow:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(209, 195, 252, 0.15) 0%,
+    rgba(155, 196, 252, 0) 100%
+  );
+}
+
 @layer base {
   .btn-primary {
     @apply rounded-[8px]    
