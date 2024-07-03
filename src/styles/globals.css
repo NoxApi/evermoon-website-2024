@@ -1517,7 +1517,7 @@ iframe {
 .ani-text_delay {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s;
-  animation-delay: 1200ms; /* don't forget to set a duration! */
+  animation-delay: 1000ms; /* don't forget to set a duration! */
 }
 .ani-text_delay_Long {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */

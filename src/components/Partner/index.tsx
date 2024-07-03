@@ -36,6 +36,7 @@ const Index = () => {
     const e4 = document.getElementById("evm4");
     const e5 = document.getElementById("evm5");
     const e6 = document.getElementById("evm6");
+    const e7 = document.getElementById("evm7");
     if (inViewport) {
       setShowFadeUp(true);
       e1!.classList.add("ani-text");
@@ -44,6 +45,7 @@ const Index = () => {
       e4!.classList.add("slide-text2");
       e5!.style.opacity = "1";
       e6!.classList.add("ani-text_delay");
+      e7!.style.opacity = "1";
     }
     // if (inViewport2.inViewport) {
     //   setShowFadeUp2(true);
@@ -227,16 +229,21 @@ const Index = () => {
           </div>
         </div>
 
-        <p
-          id="evm6"
-          className="z-50 mt-[100px] px-[5vw] text-[14px] 
-       uppercase text-zinc-200 xlm:w-[100vw] xlm:text-center
-      smm:text-[4vw] smm:leading-[5vw]"
+        <div
+          id="evm7"
+          className="z-50 mt-[100px] px-[5vw]  opacity-0 transition-opacity 
+          delay-[2200ms] duration-1000 xlm:w-[100vw] xlm:text-center"
         >
-          {
-            "The developer house of shining talented team with vivid passions that making many great breakthroughs"
-          }
-        </p>
+          <p
+            id="evm6"
+            className="text-[14px] uppercase
+       text-zinc-200 smm:text-[4vw] "
+          >
+            {
+              "The developer house of shining talented team with vivid passions that making many great breakthroughs"
+            }
+          </p>
+        </div>
       </div>
     </section>
   );

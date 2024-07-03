@@ -434,16 +434,17 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
             <div
-              className="absolute bottom-[20%] left-[21%] translate-x-[50%] translate-y-[50%] smm:bottom-[24%]
-            smm:left-0 smm:right-[50%] smm:translate-y-[-40%] "
+              className="absolute bottom-[20%] left-[21%] translate-x-[50%] translate-y-[50%]
+            smm:bottom-[24%] smm:left-0 smm:right-[40%] smm:translate-y-[-40%] "
             >
               <button
                 className="
-                min-w-[122px]  rounded-[8px] bg-[#1D4ED8]
-                 px-[14px] py-[10px] smm:px-[3.2vw] smm:py-[1.9vw] 
+                min-w-[122px] rounded-[8px] bg-[#1D4ED8]
+                  px-[14px] py-[10px]
+                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2vw] smm:py-[1vw]
                  "
               >
-                <p className="flex justify-center text-sm text-white smm:text-[4vw]">
+                <p className="flex justify-center text-sm text-white">
                   {"$EVM Coming Soon"}
                 </p>
               </button>
@@ -498,10 +499,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   id="11"
-                  className="absolute left-[50%] top-[50%] 
-                    w-[350px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity
+                  className="absolute left-[50%] top-[51.5%] 
+                    w-[400px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity
                     delay-[2000ms] duration-1000 smm:w-[73vw]
-                    smm:translate-x-[-51%] smm:translate-y-[-64%]"
+                    smm:translate-x-[-51%] smm:translate-y-[-68%]"
                 >
                   <Image
                     src={
@@ -600,7 +601,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   id="14"
                   className=" z-10 h-[520px] w-[1000px] 
                overflow-x-hidden bg-transparent opacity-0 transition-opacity 
-               delay-500 duration-500 lgm:w-[680px] lgm:overflow-auto smm:hidden "
+               delay-1000 duration-1000 lgm:w-[680px] lgm:overflow-auto smm:hidden "
                 >
                   {!isfetching ? (
                     <>

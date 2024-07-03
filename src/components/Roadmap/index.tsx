@@ -3,7 +3,8 @@ import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
 const Index = () => {
-  const [roadmap, setroadmap] = useState(0);
+  const [roadmap, setroadmap] = useState(750);
+  // const [current, setcurrent] = useState(5);
   const triggerRef2 = useRef<HTMLElement>(null);
   const [showFadeUp, setShowFadeUp] = useState(false);
   const [showFadeUp2, setShowFadeUp2] = useState(false);
@@ -23,13 +24,15 @@ const Index = () => {
 
   const nav = (op: number) => {
     if (op == 1) {
-      if (roadmap > 288) {
+      if (roadmap >= 288) {
         setroadmap(roadmap - 288);
+        // setcurrent(current - 1);
       } else setroadmap(0);
     }
     if (op == 2)
       if (roadmap <= 288 * vw) {
         setroadmap(roadmap + 288);
+        // setcurrent(current + 1);
       } else if (roadmap > 288 * vw) {
         setroadmap(288 + 288 * vw);
       }
@@ -664,6 +667,8 @@ const Index = () => {
             <div className=" h-[280px] w-full bg-bgWave bg-contain bg-repeat-x" />
           </div>
         </div>
+        {/* absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
+    lgm:bottom-[10%] lgm:hidden */}
       </div>
       <div
         className=" absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
