@@ -634,7 +634,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                   </div>
                                 </div>
                                 <div
-                                  className="klow flex w-[784px] cursor-pointer flex-col
+                                  className=" flex w-[784px] flex-col
                                 px-[24px] xlm:w-[470px]"
                                 >
                                   <p
