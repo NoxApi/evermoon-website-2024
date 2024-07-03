@@ -133,7 +133,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           className="relative  h-[1080px] w-[1920px] justify-center overflow-hidden 
         mdm:flex mdm:h-[177vw] "
         >
-          {/* <div
+          <div
             className=" absolute bottom-[16%] left-[50%] z-20 flex w-[100vw] translate-x-[-50%]
         flex-col items-center justify-between px-[5vw] lg:hidden mdm:hidden "
           >
@@ -152,7 +152,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 <p className="text-sm  text-white ">{"Enter Official Site"}</p>
               </button>
             </Link>
-          </div> */}
+          </div>
           <div className="flex w-full justify-center mdm:absolute ">
             <div
               id="layer6"
@@ -395,9 +395,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
              smm:translate-y-[-100%]"
             >
               <Image
-                src={
-                  " https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Comp%201.gif"
-                }
+                src={"/FImgGif/Lite_Page_Comp 1.gif"}
                 width={640}
                 height={412}
                 alt=""
@@ -426,9 +424,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
              smm:translate-y-[-85%]"
             >
               <Image
-                src={
-                  " https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Orbit%20background_13.gif"
-                }
+                src={"/FImgGif/Orbit background_14.gif"}
                 width={640}
                 height={412}
                 alt=""
@@ -442,7 +438,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               <button
                 className="
                 min-w-[122px]  rounded-[8px] bg-[#1D4ED8]
-                 px-[14px] py-[10px] smm:px-[3.6vw] smm:py-[2.75vw] 
+                 px-[14px] py-[10px] smm:px-[3.2vw] smm:py-[1.9vw] 
                  "
               >
                 <p className="flex justify-center text-sm text-white smm:text-[4vw]">
@@ -565,12 +561,12 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       target="_blank"
                     >
                       <button
-                        className=" m-auto rounded-[8px] bg-[#1D4ED8] px-[14px]
-                  py-[10px]  
+                        className=" m-auto min-w-[122px] rounded-[8px] bg-[#1D4ED8]
+                  px-[14px] py-[10px]
                  hover:bg-blue-500 active:ring-blue-900 smm:px-[2vw] smm:py-[1vw] 
                  "
                       >
-                        <p className="flex justify-center text-sm text-white smm:text-[4vw]">
+                        <p className="flex justify-center text-sm text-white">
                           {"Explore"}
                         </p>
                       </button>
@@ -807,14 +803,13 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           </>
         )}
       </div>
-      {/* <div className=" fixed left-[50%] top-0 z-20 flex w-full max-w-[1920px] translate-x-[-50%] items-center justify-end px-[100px] py-[20px] lgm:hidden">
-        <Image src={logo3} alt="" className="w-[300px] z-20 "></Image>
+      <div className=" fixed left-[50%] top-0 z-50 flex w-full max-w-[1920px] translate-x-[-50%] items-center justify-end px-[100px] py-[20px] lgm:hidden">
         <Link href="/home">
           <button className="btn-primary_EnSite text-white   ">
             <p className="text-sm ">{"Enter Official Site"}</p>
           </button>
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 }

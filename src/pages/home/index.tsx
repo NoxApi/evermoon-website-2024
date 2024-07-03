@@ -4,6 +4,7 @@ import Hover from "../../components/3dHover/index";
 import Partner from "../../components/Partner/index";
 import Hero from "../../components/Hero/index";
 import Roadmap from "../../components/Roadmap/index";
+import NavBar from "../../components/Navbar/Index";
 import { Josefin_Sans } from "next/font/google";
 
 const Jose = Josefin_Sans({ subsets: ["latin"] });
@@ -23,6 +24,7 @@ const Index = () => {
     <div
       className={` flex w-full flex-col items-center bg-gradient-to-r from-[#000B1A] to-[#00112C] text-[#F1E3B5] ${Jose.className} `}
     >
+      {/* <NavBar /> */}
       <Video />
       <Hover />
       <Hero />

@@ -24,7 +24,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           Jose.className
         }
       >
-        <NavBar />
         <Component {...pageProps} />
         <Footer />
       </main>
