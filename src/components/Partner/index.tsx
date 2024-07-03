@@ -26,7 +26,6 @@ const Index = () => {
   //   { threshold: 0.2 },
   // );
   const [showFadeUp, setShowFadeUp] = useState(false);
-  const [showFadeUp2, setShowFadeUp2] = useState(false);
   const [fadeShowUp2, setFadeShowUp2] = useState(false);
 
   useEffect(() => {
