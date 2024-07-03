@@ -382,7 +382,6 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
           </div>
-
           <div
             id="5"
             className=" bgMoon  relative mx-auto  
