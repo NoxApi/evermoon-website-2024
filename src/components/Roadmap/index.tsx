@@ -373,13 +373,11 @@ const Index = () => {
                   </div>
                 </div>
                 <p className="my-[4px] text-[10px] text-[#00DDFF]">
-                  {"Pre-production & Setup"}
+                  {"The Pre-Launch Phase"}
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
-                    {
-                      " Beta Game Trailer & Beta Phase I Launch & E-Sport Events "
-                    }
+                    {" Beta I Version Game Launch "}
                   </li>
                   <li className="text-sm text-white ">
                     {" $EVM Private Sale "}
@@ -395,7 +393,7 @@ const Index = () => {
                     {" Sacred Egg Giveaway & Free Mint "}
                   </li>
                   <li className="text-sm text-white ">
-                    {" Sacred Beast & De-Zentrum Pool (DeFi) "}
+                    {" Sacred Beast DeFi Testnet "}
                   </li>
                   <li className="text-sm text-white ">
                     {" NFT Marketplace Introduction "}

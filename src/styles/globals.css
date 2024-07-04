@@ -1303,13 +1303,15 @@ input[type="number"] {
 
 .slide-in-left {
   animation: fadeInLeft;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
+  animation-delay: 300ms;
   opacity: 1;
 }
 
 .slide-in-right {
   animation: fadeInRight;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
+  animation-delay: 300ms;
   opacity: 1;
 }
 
@@ -1528,6 +1530,12 @@ iframe {
   animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1s;
   animation-delay: 500ms; /* don't forget to set a duration! */
+}
+
+.ani-text_delay_Short_1 {
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1s;
+  animation-delay: 300ms; /* don't forget to set a duration! */
 }
 
 .box-ani_delay {

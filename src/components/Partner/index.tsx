@@ -36,6 +36,7 @@ const Index = () => {
     const e5 = document.getElementById("evm5");
     const e6 = document.getElementById("evm6");
     const e7 = document.getElementById("evm7");
+    const e8 = document.getElementById("evm8");
     if (inViewport) {
       setShowFadeUp(true);
       e1!.classList.add("ani-text");
@@ -45,6 +46,7 @@ const Index = () => {
       e5!.style.opacity = "1";
       e6!.classList.add("ani-text_delay");
       e7!.style.opacity = "1";
+      e8!.style.opacity = "1";
     }
     // if (inViewport2.inViewport) {
     //   setShowFadeUp2(true);
@@ -60,12 +62,13 @@ const Index = () => {
         " h-[800px] w-full px-[32px] py-[52px] xlm:h-auto smm:py-[8.55vw] "
       }
     >
-      <div className="relative flex w-full min-w-[1920px] flex-col items-center justify-center xlm:h-auto  ">
-        <div
-          id="evm1"
-          ref={triggerRef as React.RefObject<HTMLDivElement>}
-          className=""
-        >
+      <div
+        ref={triggerRef as React.RefObject<HTMLDivElement>}
+        id="evm8"
+        className="relative flex w-full min-w-[1920px] flex-col items-center justify-center opacity-0
+        transition-opacity duration-1000 xlm:h-auto  "
+      >
+        <div id="evm1" className="">
           <p className="text-center text-4xl text-zinc-200 smm:text-2xl ">
             {"CORE TEAM"}
           </p>

@@ -90,11 +90,20 @@ export default function Home() {
     const e13 = document.getElementById("13");
     const e14 = document.getElementById("14");
     const e15 = document.getElementById("15");
+    const e16 = document.getElementById("16");
+    const e17 = document.getElementById("17");
+    const e18 = document.getElementById("18");
+    const e19 = document.getElementById("19");
+    const e20 = document.getElementById("20");
     if (inViewport) {
       e1!.style.opacity = "1";
       e3!.classList.add("slide-in-left");
       e4!.classList.add("slide-in-right");
       e5!.style.opacity = "1";
+      e15!.style.opacity = "1";
+      e16!.style.opacity = "1";
+      e17!.style.opacity = "1";
+      e18!.style.opacity = "1";
     }
     if (inViewport2.inViewport) {
       e2!.style.opacity = "1";
@@ -108,19 +117,19 @@ export default function Home() {
       e7!.style.opacity = "1";
       e6!.classList.add("ani-text");
     }
-    // if (inViewport6.inViewport) {
-    //   e12!.classList.add("ani-text");
-    //   e13!.classList.add("ani-text");
-    // }
+    if (inViewport6.inViewport) {
+    }
     if (inViewport7.inViewport) {
-      e8!.classList.add("ani-text");
+      e8!.classList.add("ani-text_delay");
       e14!.style.opacity = "1";
+      e19!.style.opacity = "1";
+      e20!.style.opacity = "1";
     }
   }, [
     inViewport,
     inViewport2.inViewport,
     inViewport4.inViewport,
-    // inViewport6.inViewport,
+    inViewport6.inViewport,
     inViewport7.inViewport,
   ]);
 
@@ -133,6 +142,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
     >
       <div className=" flex flex-col items-center">
         <div
+          ref={triggerRef as React.RefObject<HTMLDivElement>}
           className="relative  h-[1080px] w-[1920px] justify-center overflow-hidden 
         mdm:flex mdm:h-[177vw] "
         >
@@ -361,9 +371,8 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           id="evm1"
           ref={triggerRef as React.RefObject<HTMLDivElement>}
           className=" relative z-20 flex h-[820px]  w-[100%] min-w-[1920px] flex-col 
-          justify-center bg-[#01071A] p-[10px] opacity-0 transition-opacity duration-300
-           smm:h-auto smm:pb-[17vw]
-        "
+          justify-center bg-[#01071A] p-[10px]  opacity-0 transition-opacity 
+          delay-200 duration-1000 smm:h-auto smm:pb-[17vw] "
         >
           <div
             className="#01071A flex items-center justify-center pl-[50px] 
@@ -389,12 +398,14 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
             id="5"
             className=" bgMoon  relative mx-auto  
             h-[540px] w-[540px] rounded-full
-             opacity-0 transition-all delay-1000 duration-1000 smm:h-[85vw] smm:w-[90vw] "
+              opacity-0 transition-opacity delay-1000 duration-1000 smm:h-[85vw] 
+          smm:w-[90vw] "
           >
             <div
+              id="15"
               className="absolute left-[50%] top-[50%] z-50 w-[500px] 
-            translate-x-[-50%] translate-y-[-68%] mix-blend-screen smm:w-[60vw]
-             smm:translate-y-[-100%]"
+            translate-x-[-50%] translate-y-[-68%] opacity-0 mix-blend-screen
+             transition-opacity delay-[1800ms] duration-1000 smm:w-[60vw] smm:translate-y-[-100%] "
             >
               <Image
                 src={"/FImgGif/Lite_Page_Comp 1.gif"}
@@ -406,8 +417,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
             </div>
 
             <div
+              id="17"
               className="coin absolute left-[50%] top-[50%] z-40
-            w-[218px] smm:w-[30vw] "
+            w-[218px] opacity-0 transition-opacity delay-[2000ms]
+            duration-1000 smm:w-[30vw] "
             >
               <Image
                 src={
@@ -421,9 +434,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
             <div
+              id="16"
               className="absolute left-[50%] top-[50%] z-10 w-[400px] 
-            translate-x-[-50%] translate-y-[-60%] mix-blend-screen smm:w-[50vw]
-             smm:translate-y-[-85%]"
+            translate-x-[-50%] translate-y-[-60%] mix-blend-screen transition-opacity
+             delay-[1400ms] duration-1000 smm:w-[50vw] smm:translate-y-[-85%] "
             >
               <Image
                 src={"/FImgGif/Orbit background_14.gif"}
@@ -434,8 +448,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
             <div
+              id="18"
               className="absolute bottom-[20%] left-[50%] w-fit translate-x-[-50%]
-            translate-y-[-50%] smm:bottom-[24%] smm:left-[50%]  smm:translate-y-[-40%] "
+            translate-y-[-50%] opacity-0 transition-opacity  delay-[2200ms]
+            duration-1000 smm:bottom-[24%] smm:left-[50%] smm:translate-y-[-40%] "
             >
               <button
                 className="
@@ -501,7 +517,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   id="11"
                   className="absolute left-[50%] top-[51.5%] 
                     w-[400px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity
-                    delay-[2000ms] duration-1000 smm:w-[73vw]
+                    delay-[1500ms] duration-1000 smm:w-[73vw]
                     smm:translate-x-[-51%] smm:translate-y-[-68%]"
                 >
                   <Image
@@ -588,15 +604,20 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 ref={triggerRef7 as React.RefObject<HTMLDivElement>}
                 className="z-30 flex w-[1000px]  flex-col   
             items-center justify-center border-b-[1px]
-             border-[#F1E3B5] lgm:h-auto "
+             border-[#F1E3B5]  lgm:h-auto "
               >
-                <p
-                  id="8"
-                  className="z-10 mb-[45px] self-center 
-                text-[40px] text-[#F1E3B5] mdm:text-[28px] smm:mb-[6.4vw] xsmm:text-[5vw] "
+                <div
+                  id="19"
+                  className="opacity-0 transition-opacity delay-1000 duration-1000"
                 >
-                  {"NEWS"}
-                </p>
+                  <p
+                    id="8"
+                    className="z-10 mb-[45px] self-center 
+                text-[40px] text-[#F1E3B5] mdm:text-[28px] smm:mb-[6.4vw] xsmm:text-[5vw] "
+                  >
+                    {"NEWS"}
+                  </p>
+                </div>
                 <div
                   id="14"
                   className=" z-10 h-[520px] w-[1000px] 
@@ -795,12 +816,12 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               </div>
               <div
                 className=" bgMoon translate-[-50%] absolute bottom-[20%]  
-          right-[12%] h-[170px] w-[170px] rotate-90 rounded-full smm:w-[80vw] "
+                right-[12%] h-[170px] w-[170px] rotate-90 rounded-full smm:w-[80vw] "
                 // bgMoon
               />
               <div
                 className=" bgMoon absolute left-[11%] h-[300px]  
-          w-[300px] translate-y-[150%] rotate-180 rounded-full smm:w-[80vw] "
+                w-[300px] translate-y-[150%] rotate-180 rounded-full smm:w-[80vw] "
                 // bgMoon
               />
             </div>
@@ -845,9 +866,11 @@ function Mobile({
   });
   return (
     <div
+      id="20"
       {...handlersBox}
       className=" relative flex h-[100vw] w-[100vw] 
-      items-center justify-between overflow-hidden sm:hidden smm:mb-[5vw] smm:mt-[3vw]"
+      items-center justify-between overflow-hidden opacity-0 transition-opacity delay-1000
+      duration-1000 sm:hidden smm:mb-[5vw] smm:mt-[3vw]"
     >
       <div
         className={`absolute flex transition-all 
