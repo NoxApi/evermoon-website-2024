@@ -1,5 +1,4 @@
 import { useRef, MutableRefObject, useEffect } from "react";
-
 import Image from "next/image";
 
 import LinkNewTab from "../../general/LinkNewTab";
