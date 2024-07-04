@@ -632,7 +632,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   id="14"
                   className=" z-10 h-[520px] w-[1000px] 
                overflow-x-hidden bg-transparent opacity-0 transition-opacity 
-               delay-1000 duration-1000 lgm:w-[680px] lgm:overflow-auto smm:hidden "
+               delay-[1400ms] duration-1000 lgm:w-[680px] lgm:overflow-auto smm:hidden "
                 >
                   {!isfetching ? (
                     <>
