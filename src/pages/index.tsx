@@ -371,7 +371,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           id="evm1"
           ref={triggerRef as React.RefObject<HTMLDivElement>}
           className=" relative z-20 flex h-[820px]  w-[100%] min-w-[1920px] flex-col 
-          justify-center bg-[#01071A] p-[10px]  opacity-0 transition-opacity 
+          justify-center bg-[#01071A] p-[10px] opacity-0 transition-opacity
           delay-200 duration-1000 smm:h-auto smm:pb-[17vw] "
         >
           <div
@@ -403,7 +403,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           >
             <div
               id="15"
-              className="absolute left-[50%] top-[50%] z-50 w-[500px] 
+              className="absolute left-[51%] top-[50%] z-50 w-[420px] 
             translate-x-[-50%] translate-y-[-68%] opacity-0 mix-blend-screen
              transition-opacity delay-[1800ms] duration-1000 smm:w-[60vw] smm:translate-y-[-100%] "
             >
@@ -419,7 +419,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
             <div
               id="17"
               className="coin absolute left-[50%] top-[50%] z-40
-            w-[218px] opacity-0 transition-opacity delay-[2000ms]
+            w-[218px] opacity-0 transition-opacity delay-200
             duration-1000 smm:w-[30vw] "
             >
               <Image
@@ -433,24 +433,30 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 className={` smm:w-full `}
               />
             </div>
+
             <div
               id="16"
-              className="absolute left-[50%] top-[50%] z-10 w-[400px] 
-            translate-x-[-50%] translate-y-[-60%] mix-blend-screen transition-opacity
-             delay-[1400ms] duration-1000 smm:w-[50vw] smm:translate-y-[-85%] "
-            >
-              <Image
+              className=" orbit_Background absolute left-[50%] 
+              top-[50%]  z-10  translate-x-[-50%]
+              translate-y-[-60%]  opacity-0
+               transition-opacity delay-[1400ms] duration-1000
+              smm:w-[50vw] smm:translate-y-[-85%]"
+            />
+            {/* <Image
                 src={"/FImgGif/Orbit background_14.gif"}
                 width={640}
                 height={412}
                 alt=""
                 className={` w-full `}
-              />
-            </div>
+              /> w-[400px]
+                mix-blend-screen
+               
+              */}
+
             <div
               id="18"
               className="absolute bottom-[20%] left-[50%] w-fit translate-x-[-50%]
-            translate-y-[-50%] opacity-0 transition-opacity  delay-[2200ms]
+            translate-y-[-50%] opacity-0 transition-opacity  delay-[2400ms]
             duration-1000 smm:bottom-[24%] smm:left-[50%] smm:translate-y-[-40%] "
             >
               <button

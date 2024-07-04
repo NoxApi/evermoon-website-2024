@@ -19,8 +19,8 @@ const Index = () => {
     const e3 = document.getElementById("text3");
     if (inViewport2.inViewport) {
       e1!.classList.add("ani-text");
-      e2!.classList.add("ani-text_delay7");
-      e3!.style.opacity = "1";
+      // e2!.classList.add("ani-text_delay7");
+      // e3!.style.opacity = "1";
     }
   }, [inViewport2.inViewport]);
 
@@ -73,8 +73,9 @@ const Index = () => {
       </p>
 
       <div
-        id="text3"
-        className=" mt-12 w-[1200px] overflow-hidden opacity-0 transition-opacity delay-500 duration-1000 lg:w-[1020px]  2xlm:w-full lgm:w-full mdm:w-[100vw]"
+        //*TODO: id="text3" opacity-0 transition-opacity delay-500 duration-1000
+        className=" mt-12 w-[1200px] overflow-hidden 
+           2xlm:w-full lgm:w-[864px] mdm:w-[300px]"
       >
         <style>
           {`
@@ -85,11 +86,11 @@ const Index = () => {
 
         <div
           id="text2"
-          className={`roadmapdynamic flex h-[650px] w-[1280px] transition-transform smm:h-[145vw]`}
+          className={`roadmapdynamic flex h-[650px] w-[1280px] transition-transform smm:h-auto`}
         >
-          <div className=" ">
+          <div className="smm:h-auto ">
             <div className="flex h-[380px] justify-center px-[64px] smm:px-[16px]  ">
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
@@ -110,7 +111,7 @@ const Index = () => {
                     {" Game Story & Concept Teaser "}
                   </li>
                   <li className="text-sm text-white ">
-                    {" Whitepaper & Community Launch"}
+                    Whitepaper & Community <br /> Launch
                   </li>
                   <li className="text-sm text-white ">
                     {" Preliminary Website & Team Introduction"}
@@ -161,7 +162,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
@@ -227,7 +228,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
@@ -245,10 +246,10 @@ const Index = () => {
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
-                    {" Private Sale & Evermoon Comic Release "}
+                    Private Sale & Evermoon <br /> Comic Release
                   </li>
                   <li className="text-sm text-white ">
-                    {" Ongoing Development & Partner Announcements "}
+                    Ongoing Development & <br /> Partner Announcements
                   </li>
                 </ul>
                 <div className="mt-[38px] flex justify-start">
@@ -293,7 +294,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
@@ -359,7 +360,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#0B0436]  ">
@@ -387,10 +388,10 @@ const Index = () => {
                     {" $EVM Public Sale "}
                   </li>
                   <li className="text-sm text-white ">
-                    {" $EVM TGE & Listing on DEX and CEXs "}
+                    $EVM TGE & Listing on DEX <br /> and CEXs
                   </li>
                   <li className="text-sm text-white ">
-                    {" Sacred Egg Giveaway & Free Mint "}
+                    Sacred Egg Giveaway & Free <br /> Mint
                   </li>
                   <li className="text-sm text-white ">
                     {" Sacred Beast DeFi Testnet "}
@@ -441,7 +442,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#525252]  ">
@@ -462,7 +463,7 @@ const Index = () => {
                     {" $EVM Strategic Round "}
                   </li>
                   <li className="text-sm text-white ">
-                    {" Moon Mission SocialFi & Arcade Games Launch "}
+                    Moon Mission SocialFi & Arcade <br /> Games Launch
                   </li>
                   <li className="text-sm text-white ">
                     {" Sacred Egg Giveaway & Free Mint "}
@@ -529,7 +530,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#525252]  ">
@@ -552,7 +553,7 @@ const Index = () => {
                     {" Official Game Launch "}
                   </li>
                   <li className="text-sm text-white ">
-                    {" Official E-sports Tournaments "}
+                    Official E-sports <br /> Tournaments
                   </li>
                 </ul>
                 <div className="mt-[38px] flex justify-start ">
@@ -597,7 +598,7 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]">
+              <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#525252]  ">
@@ -659,11 +660,11 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col smm:w-[78vw]" />
+              <div className="relative flex h-[350px] w-[288px] flex-col " />
 
-              <div className="relative flex h-[350px] w-[288px] flex-col 2xlm:hidden smm:w-[78vw]" />
+              <div className="relative flex h-[350px] w-[288px] flex-col 2xlm:hidden smm:w-[70vw]" />
 
-              <div className="relative flex h-[350px] w-[288px] flex-col xl:hidden smm:w-[78vw] " />
+              <div className="relative flex h-[350px] w-[288px] flex-col xl:hidden smm:w-[70vw] " />
             </div>
             <div className=" h-[280px] w-full bg-bgWave bg-contain bg-repeat-x" />
           </div>
@@ -711,8 +712,8 @@ const Index = () => {
       </div>
 
       <div
-        className="absolute bottom-[20%] z-40 flex w-[185px] gap-x-[20px] 
-  xl:hidden 2xl:hidden smm:bottom-[2%] smm:w-full smm:justify-center "
+        className="absolute z-40  flex w-[185px] translate-y-[-50%] gap-x-[20px] 
+  xl:hidden 2xl:hidden smm:bottom-[10%] smm:w-full smm:justify-center "
       >
         <button
           onClick={() => nav(1)}

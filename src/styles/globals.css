@@ -1562,20 +1562,53 @@ iframe {
 .slide-text {
   animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
-  animation-delay: 200ms;
+  /* animation-delay: 200ms; */
 }
 .slide-text1 {
   animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
-  animation-delay: 500ms;
+  animation-delay: 200ms;
 }
 .slide-text2 {
   animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s; /* don't forget to set a duration! */
-  animation-delay: 500ms;
+  animation-delay: 300ms;
 }
 
-.klow {
+.orbit_Background {
+  width: 350px;
+  height: 320px;
+  border-radius: 50%;
+  /* transform: scale(0.5, 0.5); */
+  /* overflow: hidden; */
+  background-image: url("https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Star.png");
+  /* opacity: 0.4; */
+  background-position: -110px;
+  background-color: transparent;
+  border-color: transparent;
+  animation: playX 2s steps(10) infinite;
+  animation: playY 2s steps(10) infinite;
+  /* animation: catSprint 1s steps(91) infinite; */
+}
+
+@keyframes playX {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -6400px;
+  }
+}
+@keyframes playY {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -6180px;
+  }
+}
+
+/* .klow {
 }
 .klow:hover {
   background: linear-gradient(
@@ -1583,7 +1616,7 @@ iframe {
     rgba(209, 195, 252, 0.15) 0%,
     rgba(155, 196, 252, 0) 100%
   );
-}
+} */
 
 @layer base {
   .btn-primary {

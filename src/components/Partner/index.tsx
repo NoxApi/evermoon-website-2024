@@ -65,14 +65,16 @@ const Index = () => {
       <div
         ref={triggerRef as React.RefObject<HTMLDivElement>}
         id="evm8"
-        className="relative flex w-full min-w-[1920px] flex-col items-center justify-center opacity-0
-        transition-opacity duration-1000 xlm:h-auto  "
+        className="relative flex w-full min-w-[1920px] flex-col 
+        items-center justify-center opacity-0 transition-opacity delay-300
+        duration-1000 xlm:h-auto  "
       >
         <div id="evm1" className="">
           <p className="text-center text-4xl text-zinc-200 smm:text-2xl ">
             {"CORE TEAM"}
           </p>
         </div>
+
         <div className="h-[500px] min-w-[1280px] lgm:h-0 ">
           <p
             className={`text_img text-center text-[248px] 
@@ -87,7 +89,8 @@ const Index = () => {
           id="evm5"
           className=" absolute top-[-5%] flex h-[400px] 
           w-[800px] translate-y-[50%] justify-between
-      xlm:hidden"
+      opacity-0 transition-opacity
+        delay-300 duration-1000 xlm:hidden"
         >
           <div
             id="evm2"
@@ -163,6 +166,7 @@ const Index = () => {
           </div>
         </div>
 
+        {/* mobile section */}
         <div className="flex h-[760px] w-[700px] flex-col justify-center xl:hidden smm:h-auto">
           <div className="flipp m-auto h-[340px] w-[240px]">
             <div
@@ -230,6 +234,7 @@ const Index = () => {
             </div>
           </div>
         </div>
+        {/* mobile section */}
 
         <div
           id="evm7"

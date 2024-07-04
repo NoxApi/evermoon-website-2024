@@ -42,23 +42,23 @@ const Index = () => {
   }, [pick]);
 
   useEffect(() => {
-    if (window.innerWidth < 1024 && window.innerWidth >= 340) {
+    if (window.innerWidth < 1024 && window.innerWidth >= 320) {
       const element: any = document.getElementById("div3");
       element.classList.remove("coin2");
-      const ani: any = document.getElementById("box3");
-      ani.classList.remove("box-ani_delay1");
     }
     const e1 = document.getElementById("box1");
     const e2 = document.getElementById("box2");
     const e3 = document.getElementById("box3");
     const e4 = document.getElementById("box4");
     const e5 = document.getElementById("box5");
+    const e6 = document.getElementById("box6");
     if (inViewport1.inViewport) {
       e1!.classList.add("ani-text");
       e2!.classList.add("box-ani_delay");
       e3!.classList.add("box-ani_delay1");
-      // e4!.classList.add("box-ani_delay2");
+      e4!.style.opacity = "1";
       e5!.style.opacity = "1";
+      e6!.style.opacity = "1";
     }
   }, [inViewport1.inViewport]);
 
@@ -68,7 +68,11 @@ const Index = () => {
   lgm:bg-center lgm:px-[24px] lgm:py-[60px] smm:h-auto smm:bg-contain smm:px-0 smm:py-[9.3vw]"
     >
       <div className={"xlm::mx-auto max-w-[1920px] "}>
-        <div className="smm:px-[4.3vw]">
+        {/* TODO: mobile sec */}
+        <div
+          id="box4"
+          className="opacity-0 transition-opacity duration-1000 smm:px-[4.3vw]"
+        >
           <div
             className="flex flex-col items-start justify-start 
        xl:hidden"
@@ -91,6 +95,7 @@ const Index = () => {
             </p>
           </div>
         </div>
+        {/* TODO: mobile sec */}
         <div
           className="flex h-full w-full items-start justify-center gap-x-[50px]  
   xlm:flex-col-reverse xlm:gap-y-[58px] smm:gap-y-0 "
@@ -724,7 +729,11 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className=" relative flex h-auto w-full items-center justify-center smm:my-[5vw]">
+          <div
+            id="box6"
+            className=" relative flex h-auto w-full items-center justify-center opacity-0
+            transition-opacity delay-[900ms] duration-1000 smm:my-[5vw]"
+          >
             <div id="div3" className="coin2 ">
               <div
                 className="relative flex h-[500px] w-[500px] justify-center 
