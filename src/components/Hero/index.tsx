@@ -113,7 +113,7 @@ const Index = () => {
       </div>
       <div className=" relative flex  h-[730px] w-[1320px] items-center  justify-center lgm:w-full smm:w-full  ">
         <iframe
-          src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_Model_V1.4/index.html"
+          src="https://webgl-3dmodel.s3.ap-southeast-1.amazonaws.com/Evermoon_Dotler_Cinematic/index.html"
           className=" h-[730px] w-[1320px] "
           allow="camera; microphone"
         ></iframe>
