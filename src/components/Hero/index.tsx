@@ -117,8 +117,6 @@ const Index = () => {
           className=" h-[730px] w-[1320px] "
           allow="camera; microphone"
         ></iframe>
-        {/* {inViewport && ( bg-inherit
-        )} */}
         <div
           className="boxleft absolute left-[0%] top-[0%] z-30 h-[730px] w-[426px] 
        2xl:left-[0%] xlm:opacity-0 lgm:left-[0%] lgm:w-[30vw] smm:left-[0%] smm:top-[0%] smm:h-[730px] smm:w-[25vw] "
