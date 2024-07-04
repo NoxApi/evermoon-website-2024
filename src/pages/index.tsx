@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 import { Josefin_Sans } from "next/font/google";
 
 const Jose = Josefin_Sans({ subsets: ["latin"] });
@@ -133,8 +134,6 @@ export default function Home() {
     inViewport7.inViewport,
   ]);
 
-  console.log(inViewport2);
-
   return (
     <div
       className={` flex  h-auto w-full 
@@ -166,6 +165,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               </button>
             </Link>
           </div>
+
           <div className="flex w-full justify-center mdm:absolute ">
             <div
               id="layer6"
@@ -177,6 +177,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 height={4320}
                 alt="environment_13"
                 className=""
+                priority
               />
             </div>
             <div id="layer3m" className="absolute w-[100vw] md:hidden">
@@ -254,6 +255,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 height={1080}
                 alt=""
                 className={`w-100% absolute   h-[1080px] min-w-[1920px] `}
+                loading="lazy"
               />
             </div>
           </div>
@@ -269,6 +271,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 height={4321}
                 alt=""
                 className={`w-100% absolute h-[1080px] min-w-[1920px] `}
+                loading="lazy"
               />
             </div>
             <div id="layer2m" className="absolute w-[100vw] md:hidden">
@@ -278,6 +281,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 height={4320}
                 alt=""
                 className={`h-full w-full`}
+                loading="lazy"
               />
             </div>
           </div>
@@ -1063,3 +1067,7 @@ const medium = async (set: any, setdata: any, data: any) => {
       console.log(error);
     });
 };
+
+function Loading() {
+  return <h2>🌀 Loading...</h2>;
+}

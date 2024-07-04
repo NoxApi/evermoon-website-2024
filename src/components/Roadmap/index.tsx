@@ -3,7 +3,7 @@ import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
 const Index = () => {
-  const [roadmap, setroadmap] = useState(1152);
+  const [roadmap, setroadmap] = useState(0);
   // const [current, setcurrent] = useState(5);
   const triggerRef2 = useRef<HTMLElement>(null);
   const [showFadeUp, setShowFadeUp] = useState(false);
@@ -21,6 +21,16 @@ const Index = () => {
       e1!.classList.add("ani-text");
       // e2!.classList.add("ani-text_delay7");
       // e3!.style.opacity = "1";
+    }
+
+    if (window.innerWidth >= 1280) {
+      setroadmap(576);
+    } else if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
+      setroadmap(576);
+    } else if (window.innerWidth < 1024 && window.innerWidth >= 340) {
+      setroadmap(1152);
+    } else {
+      setroadmap(0);
     }
   }, [inViewport2.inViewport]);
 
@@ -75,7 +85,7 @@ const Index = () => {
       <div
         //*TODO: id="text3" opacity-0 transition-opacity delay-500 duration-1000
         className=" mt-12 w-[1200px] overflow-hidden 
-           2xlm:w-full lgm:w-[864px] mdm:w-[300px]"
+            2xlm:w-full lgm:w-[864px] mdm:w-[300px] "
       >
         <style>
           {`
@@ -672,9 +682,10 @@ const Index = () => {
         {/* absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
     lgm:bottom-[10%] lgm:hidden */}
       </div>
+
       <div
         className=" absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
-    lgm:bottom-[10%] lgm:hidden "
+     lgm:bottom-[10%] lgm:hidden "
       >
         <button
           onClick={() => nav(1)}
@@ -713,7 +724,7 @@ const Index = () => {
 
       <div
         className="absolute z-40  flex w-[185px] translate-y-[-50%] gap-x-[20px] 
-  xl:hidden 2xl:hidden smm:bottom-[10%] smm:w-full smm:justify-center "
+  md:hidden lg:hidden xl:hidden 2xl:hidden smm:bottom-[10%] smm:w-full smm:justify-center "
       >
         <button
           onClick={() => nav(1)}
