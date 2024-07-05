@@ -20,7 +20,7 @@ const Index = () => {
     if (inViewport2.inViewport) {
       e1!.classList.add("ani-text");
       // e2!.classList.add("ani-text_delay7");
-      // e3!.style.opacity = "1";
+      e3!.style.opacity = "1";
     }
 
     if (window.innerWidth >= 1280) {
@@ -83,9 +83,10 @@ const Index = () => {
       </p>
 
       <div
+        id="text3"
         //*TODO: id="text3" opacity-0 transition-opacity delay-500 duration-1000
-        className=" mt-12 w-[1200px] overflow-hidden 
-            2xlm:w-full lgm:w-[864px] mdm:w-[300px] "
+        className=" mt-12 w-[1200px] overflow-hidden opacity-0
+            transition-opacity delay-1000 duration-1000 2xlm:w-full lgm:w-[864px] mdm:w-[300px] "
       >
         <style>
           {`
