@@ -374,9 +374,9 @@ const Index = () => {
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#0B0436]  ">
+                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
                     <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state2.png"
+                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
                       width={20}
                       height={20}
                       alt=""
@@ -389,26 +389,10 @@ const Index = () => {
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
-                    {" Beta I Version Game Launch "}
+                    Beta I Version Game Launch
                   </li>
                   <li className="text-sm text-white ">
-                    {" $EVM Private Sale "}
-                  </li>
-                  <li className="text-sm text-white ">{" DeFi Testnet"}</li>
-                  <li className="text-sm text-white ">
-                    {" $EVM Public Sale "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    $EVM TGE & Listing on DEX <br /> and CEXs
-                  </li>
-                  <li className="text-sm text-white ">
-                    Sacred Egg Giveaway & Free <br /> Mint
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Sacred Beast DeFi Testnet "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" NFT Marketplace Introduction "}
+                    Sacred Beast DeFi Testnet
                   </li>
                 </ul>
                 <div className="mt-[38px] flex justify-start">
@@ -420,8 +404,8 @@ const Index = () => {
                   </p>
                 </div>
                 <div>
-                  <div className="absolute bottom-[-28%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[100px] w-[3px] bg-white" />
+                  <div className="absolute bottom-[-1%] z-30 translate-y-[50%]">
+                    <div className="ml-[33px] h-[285px] w-[3px] bg-white" />
                   </div>
                   <div className="absolute bottom-[-41%] translate-y-[50%] ">
                     <svg
@@ -456,9 +440,9 @@ const Index = () => {
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#525252]  ">
+                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#0B0436]  ">
                     <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state3.png"
+                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state2.png"
                       width={20}
                       height={20}
                       alt=""
