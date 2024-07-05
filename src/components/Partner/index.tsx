@@ -11,7 +11,6 @@ const anton = Anton({
   weight: "400",
   subsets: ["latin"],
 });
-
 const Jose = Josefin_Sans({ subsets: ["latin"] });
 
 const Index = () => {
