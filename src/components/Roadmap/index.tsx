@@ -3,7 +3,7 @@ import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
 const Index = () => {
-  const [roadmap, setroadmap] = useState(0);
+  const [roadmap, setroadmap] = useState(1440);
   // const [current, setcurrent] = useState(5);
   const triggerRef2 = useRef<HTMLElement>(null);
   const [showFadeUp, setShowFadeUp] = useState(false);
@@ -24,13 +24,11 @@ const Index = () => {
     }
 
     if (window.innerWidth >= 1280) {
-      setroadmap(576);
-    } else if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
-      setroadmap(576);
-    } else if (window.innerWidth < 1024 && window.innerWidth >= 340) {
       setroadmap(1152);
-    } else {
-      setroadmap(0);
+    } else if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
+      setroadmap(1152);
+    } else if (window.innerWidth < 1024 && window.innerWidth >= 340) {
+      setroadmap(1440);
     }
   }, [inViewport2.inViewport]);
 
@@ -670,7 +668,7 @@ const Index = () => {
 
       <div
         className=" absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
-     lgm:bottom-[10%] lgm:hidden "
+     lgm:bottom-[10%] mdm:hidden "
       >
         <button
           onClick={() => nav(1)}

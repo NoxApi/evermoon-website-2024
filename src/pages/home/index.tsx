@@ -24,7 +24,7 @@ const Index = () => {
     <div
       className={` flex w-full flex-col items-center bg-gradient-to-r from-[#000B1A] to-[#00112C] text-[#F1E3B5] ${Jose.className} `}
     >
-      {/* <NavBar /> */}
+      <NavBar />
       <Video />
       <Hover />
       <Hero />

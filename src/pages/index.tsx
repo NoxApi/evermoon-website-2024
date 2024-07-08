@@ -376,7 +376,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           ref={triggerRef as React.RefObject<HTMLDivElement>}
           className=" relative z-20 flex h-[820px]  w-[100%] min-w-[1920px] flex-col 
           justify-center bg-[#01071A] p-[10px] opacity-0 transition-opacity
-          delay-200 duration-1000 smm:h-auto smm:pb-[17vw] "
+          delay-300 duration-1000 smm:h-[150vw] smm:pb-[17vw] "
         >
           <div
             className="#01071A flex items-center justify-center pl-[50px] 
@@ -407,7 +407,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           >
             <div
               id="15"
-              className="absolute left-[51%] top-[50%] z-50 w-[420px] 
+              className=" absolute left-[51%] top-[50%] z-50 w-[420px]
             translate-x-[-50%] translate-y-[-68%] opacity-0 mix-blend-screen
              transition-opacity delay-[1800ms] duration-1000 smm:w-[60vw] smm:translate-y-[-100%] "
             >
@@ -419,7 +419,6 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 className={` w-full `}
               />
             </div>
-
             <div
               id="17"
               className="coin absolute left-[50%] top-[50%] z-40
@@ -437,15 +436,23 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 className={` smm:w-full `}
               />
             </div>
-
             <div
               id="16"
-              className=" orbit_Background absolute left-[50%] 
-              top-[50%]  z-10  translate-x-[-50%]
-              translate-y-[-60%]  opacity-0
+              className="  absolute left-[50%] 
+              top-[50%]  z-10  w-[350px]
+              translate-x-[-50%]  translate-y-[-60%] opacity-0
                transition-opacity delay-[1400ms] duration-1000
               smm:w-[50vw] smm:translate-y-[-85%]"
-            />
+            >
+              <Image
+                src={"/FImgGif/anigif.gif"}
+                width={640}
+                height={412}
+                alt=""
+                className={` w-full `}
+              />
+            </div>
+
             {/* <Image
                 src={"/FImgGif/Orbit background_14.gif"}
                 width={640}
@@ -456,7 +463,6 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 mix-blend-screen
                
               */}
-
             <div
               id="18"
               className="absolute bottom-[20%] left-[50%] w-fit translate-x-[-50%]

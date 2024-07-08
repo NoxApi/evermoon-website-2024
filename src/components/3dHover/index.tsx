@@ -786,12 +786,12 @@ const Index = () => {
                     className={` object-cover  `}
                   >
                     <source
-                      src="/FNewVideo/Valuable NFTs.webm"
-                      type="video/webm"
-                    />
-                    <source
                       src="/FNewVideo/MP4/Valuable NFTs.mp4"
                       type="video/mp4"
+                    />
+                    <source
+                      src="/FNewVideo/Valuable NFTs.webm"
+                      type="video/webm"
                     />
                   </video>
                 )}
@@ -804,12 +804,12 @@ const Index = () => {
                     className={` object-cover  `}
                   >
                     <source
-                      src="/FNewVideo/Dynamics game Economy.webm"
-                      type="video/webm"
-                    />
-                    <source
                       src="/FNewVideo/MP4/Dynamics game Economy.mp4"
                       type="video/mp4"
+                    />
+                    <source
+                      src="/FNewVideo/Dynamics game Economy.webm"
+                      type="video/webm"
                     />
                   </video>
                 )}

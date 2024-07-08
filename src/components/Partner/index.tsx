@@ -36,6 +36,9 @@ const Index = () => {
     const e6 = document.getElementById("evm6");
     const e7 = document.getElementById("evm7");
     const e8 = document.getElementById("evm8");
+    const e9 = document.getElementById("evm9");
+    const e10 = document.getElementById("evm10");
+    const e11 = document.getElementById("evm11");
     if (inViewport) {
       setShowFadeUp(true);
       e1!.classList.add("ani-text");
@@ -46,6 +49,9 @@ const Index = () => {
       e6!.classList.add("ani-text_delay");
       e7!.style.opacity = "1";
       e8!.style.opacity = "1";
+      e9!.classList.add("slide-text");
+      e10!.classList.add("slide-text1");
+      e11!.classList.add("slide-text2");
     }
     // if (inViewport2.inViewport) {
     //   setShowFadeUp2(true);
@@ -62,11 +68,10 @@ const Index = () => {
       }
     >
       <div
-        ref={triggerRef as React.RefObject<HTMLDivElement>}
         id="evm8"
+        ref={triggerRef as React.RefObject<HTMLDivElement>}
         className="relative flex w-full min-w-[1920px] flex-col 
-        items-center justify-center opacity-0 transition-opacity delay-300
-        duration-1000 xlm:h-auto  "
+        items-center justify-center  opacity-0 delay-100 duration-1000 xlm:h-auto "
       >
         <div id="evm1" className="">
           <p className="text-center text-4xl text-zinc-200 smm:text-2xl ">
@@ -167,7 +172,7 @@ const Index = () => {
 
         {/* mobile section */}
         <div className="flex h-[760px] w-[700px] flex-col justify-center xl:hidden smm:h-auto">
-          <div className="flipp m-auto h-[340px] w-[240px]">
+          <div id="evm9" className="flipp m-auto h-[340px] w-[240px]">
             <div
               className="flip flex  h-full w-full items-center
         justify-center bg-bgteam1 bg-cover pt-[190px] transition-all duration-500 "
@@ -191,7 +196,7 @@ const Index = () => {
             </div>
           </div>
           <div className="flex justify-center gap-x-[40px] smm:m-auto smm:flex-col smm:gap-y-[30px]">
-            <div className=" flipp h-[340px] w-[240px] ">
+            <div id="evm10" className=" flipp h-[340px] w-[240px] ">
               <div
                 className="flip flex  h-full w-full items-center
         justify-center bg-bgteam2 bg-cover pt-[190px] transition-all duration-500 "
@@ -208,7 +213,7 @@ const Index = () => {
                 </Transition>
               </div>
             </div>
-            <div className=" flipp h-[340px] w-[240px]">
+            <div id="evm11" className=" flipp h-[340px] w-[240px]">
               <div
                 className="flip flex  h-full w-full items-center
         justify-center bg-bgteam3 bg-cover pt-[190px] transition-all duration-500 "

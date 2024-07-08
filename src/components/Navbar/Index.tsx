@@ -12,9 +12,12 @@ export default function Navbar() {
   const [evm, setevm] = useState(0);
 
   return (
-    <div className="z-[99] flex w-full justify-center border-b-2 border-main-1 bg-[#0B0436] ">
-      <div className="relative flex h-[80px] w-[100vw] justify-between bg-[#0B0436] xlm:h-16 xlm:justify-center smm:h-[15vw]  ">
-        <div className="flex h-full items-center xlm:hidden">
+    <div className=" fixed z-[99] flex h-[80px] w-full justify-center px-[32px]  ">
+      <div
+        className=" flex h-[80px] w-full justify-between  
+          xlm:h-16 xlm:justify-center smm:h-[15vw]   "
+      >
+        <div className="flex h-full items-center gap-x-2 xlm:hidden">
           <Link href={"/"}>
             <Image
               src={
@@ -23,180 +26,42 @@ export default function Navbar() {
               alt=""
               width={224}
               height={152}
-              className="ml-4 w-[112px]"
+              className=" w-[112px]"
             />
           </Link>
-          <div className="navdiv">
-            <Link href={"/home"}>
-              <p
-                onClick={() => setpage(0)}
-                className={`navtext ml-8 mt-[5px] text-xl uppercase text-white ${
-                  page == 1 && " border-b-2 border-[#F1E3B5] "
-                }`}
-              >
-                {"home"}
-              </p>
-            </Link>
-          </div>
-          <div className="navdiv">
-            <Link
-              href={
-                "https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast"
-              }
-              target="_blank"
-            >
-              <p
-                onClick={() => setpage(0)}
-                className={`navtext ml-8 mt-[5px] text-xl uppercase text-white ${
-                  page == 2 && " border-b-2 border-[#F1E3B5] "
-                }`}
-              >
-                {"sacred beast"}
-              </p>
-            </Link>
-          </div>
-          <div className="navdiv dropdowndiv flex h-full items-center justify-center">
-            <Link
-              href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission"
-              target="_blank"
-            >
-              <p
-                className={`navtext ml-8 mt-[5px] text-xl uppercase text-white ${
-                  page == 3 && " border-b-2 border-[#F1E3B5] "
-                }`}
-              >
-                {"Moon Mission"}
-              </p>
-              {/* <svg
-              className="navvec trasition-all ml-2 duration-100"
-              width="20"
-              height="20"
-              viewBox="0 0 12 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.700048 6.6749C0.516715 6.49157 0.425049 6.25824 0.425049 5.9749C0.425049 5.69157 0.516715 5.45824 0.700048 5.2749L5.30005 0.674903C5.40005 0.574903 5.50838 0.503903 5.62505 0.461903C5.74172 0.420569 5.86672 0.399902 6.00005 0.399902C6.13338 0.399902 6.25838 0.420569 6.37505 0.461903C6.49172 0.503903 6.60005 0.574903 6.70005 0.674903L11.325 5.2999C11.5084 5.48324 11.6 5.70824 11.6 5.9749C11.6 6.24157 11.5 6.4749 11.3 6.6749C11.1167 6.85824 10.8834 6.9499 10.6 6.9499C10.3167 6.9499 10.0834 6.85824 9.90005 6.6749L6.00005 2.7749L2.07505 6.6999C1.89172 6.88324 1.66672 6.9749 1.40005 6.9749C1.13338 6.9749 0.900048 6.8749 0.700048 6.6749Z"
-                fill="black"
-              />
-            </svg> */}
-              {/* <div className="dropdown absolute bottom-[-130px] left-[430px] z-50 flex h-[150px] w-[220px]  items-end border-[#F1E3B5] transition-all duration-100 ">
-              <div className="h-[120px] w-[220px] rounded-2xl border-2 border-[#F1E3B5] bg-[#0B0436]">
-                <div className="navdiv mt-5">
-                  <Link href={"/pool"}>
-                    <p
-                      onClick={() => setpage(0)}
-                      className={`sublink ml-4 mt-[5px] text-xl uppercase text-white `}
-                    >
-                      {"deposit"}
-                    </p>
-                  </Link>
-                </div>
-                <div className="navdiv mt-5">
-                  <Link href={"/lottery"}>
-                    <p
-                      onClick={() => setpage(0)}
-                      className={`sublink ml-4 mt-[5px] text-xl uppercase text-white `}
-                    >
-                      {"lottery"}
-                    </p>
-                  </Link>
-                </div>
-              </div>
-            </div> */}
-            </Link>
-          </div>
-          <div className="navdiv flex items-center">
-            <Link
-              href={
-                "https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/marketplace"
-              }
-            >
-              <p
-                onClick={() => setpage(0)}
-                className={`navtext ml-8 mt-[5px] text-xl uppercase text-white ${
-                  page == 4 && " border-b-2 border-[#F1E3B5] "
-                }`}
-              >
-                {"marketplace"}
-              </p>
-            </Link>
-            <svg
-              className="navmarket ml-2 transition-all duration-100 "
-              width="30px"
-              height="30px"
-              viewBox="0 0 50 40"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g
-                id="Lager_80"
-                data-name="Lager 80"
-                transform="translate(0 0.822)"
-              >
-                <path
-                  id="Path_89"
-                  data-name="Path 89"
-                  d="M24,22v5a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V9A1,1,0,0,1,5,8h5a2,2,0,0,0,2-2h0a2,2,0,0,0-2-2H3A3,3,0,0,0,0,7V29a3,3,0,0,0,3,3H25a3,3,0,0,0,3-3V22a2,2,0,0,0-2-2h0A2,2,0,0,0,24,22Z"
-                  fill="#000000"
-                />
-                <g
-                  className="externalvec transition-all duration-100"
-                  id="group_1"
-                >
-                  <rect
-                    id="Rectangle_40"
-                    data-name="Rectangle 40"
-                    width="16"
-                    height="4"
-                    rx="2"
-                    transform="translate(16 0)"
-                    fill="#000000"
-                  />
-                  <rect
-                    id="Rectangle_41"
-                    data-name="Rectangle 41"
-                    width="16"
-                    height="4"
-                    rx="2"
-                    transform="translate(32 0) rotate(90)"
-                    fill="#000000"
-                  />
-                  <g id="Group_37" data-name="Group 37">
-                    <rect
-                      id="Rectangle_42"
-                      data-name="Rectangle 42"
-                      width="32.296"
-                      height="3.971"
-                      rx="1.986"
-                      transform="translate(7.178 22.014) rotate(-45)"
-                      fill="#000000"
-                    />
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </div>
-        </div>
-
-        <div className="flex h-full items-center justify-center xl:hidden">
-          <Link href={"/"}>
+          <p className="text-sm text-white">|</p>
+          <Link href={" https://matr1x.io/"} target="_blank">
             <Image
               src={
-                "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/logo2.png"
+                "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/MATR1X_Horizontal_White.png"
               }
               alt=""
-              width={160}
-              height={100}
-              className="w-[160px] smm:w-[35vw]"
+              width={224}
+              height={152}
+              className=" w-[112px]"
             />
           </Link>
         </div>
-        <div className=" absolute right-[10vw] top-[50%] translate-y-[-50%]">
-          <HeaderMobile />
-        </div>
-        <div className=" absolute left-[10vw] top-[50%] translate-y-[-50%]">
-          <HeaderMobile2 set={setpage} page={page} evm={evm} />
-        </div>
+      </div>
+
+      {/* <div className="flex h-full items-center justify-center xl:hidden">
+        <Link href={"/"}>
+          <Image
+            src={
+              "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/logo2.png"
+            }
+            alt=""
+            width={160}
+            height={100}
+            className="w-[160px] smm:w-[35vw]"
+          />
+        </Link>
+      </div> */}
+      <div className=" absolute left-[0vw] top-[50%] translate-y-[-50%]">
+        <HeaderMobile />
+      </div>
+      <div className=" absolute left-[0vw] top-[50%] translate-y-[-50%]">
+        <HeaderMobile2 set={setpage} page={page} evm={evm} />
       </div>
     </div>
   );
@@ -271,8 +136,33 @@ const HeaderMobile2 = ({
     setIsOpen(false);
   };
   return (
-    <div className="flex w-full justify-end xl:hidden">
-      <button
+    <div className="flex w-full justify-start md:px-[24px] xl:hidden  smm:px-[4.5vw]">
+      <div className="flex items-center gap-x-2">
+        <Link href={" https://matr1x.io/"}>
+          <Image
+            src={
+              "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/logo1.png"
+            }
+            width={354}
+            height={240}
+            alt=""
+            className="w-[118px] mdm:w-[20vw]"
+          />
+        </Link>
+        <p className="text-sm text-white">|</p>
+        <Link href={" https://matr1x.io/"} target="_blank">
+          <Image
+            src={
+              "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/MATR1X_Horizontal_White.png"
+            }
+            alt=""
+            width={224}
+            height={152}
+            className=" w-[112px] mdm:w-[20vw]"
+          />
+        </Link>
+      </div>
+      {/* <button
         type="button"
         onClick={openModal}
         className="ml-[-5vw] flex justify-center smm:ml-[-5vw]  smm:w-[10vw] xsmm:ml-[-7vw]"
@@ -408,56 +298,7 @@ const HeaderMobile2 = ({
                           {"Moon Mission "}
                         </p>
                       </Link>
-                      {/* <svg
-                        className={`ml-3  mt-1 smm:ml-[1vw] smm:mt-0 smm:h-auto smm:w-[4vw] ${
-                          issubnav ? " rotate-180 " : " "
-                        } `}
-                        width="20"
-                        height="20"
-                        viewBox="0 0 12 7"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0.700048 6.6749C0.516715 6.49157 0.425049 6.25824 0.425049 5.9749C0.425049 5.69157 0.516715 5.45824 0.700048 5.2749L5.30005 0.674903C5.40005 0.574903 5.50838 0.503903 5.62505 0.461903C5.74172 0.420569 5.86672 0.399902 6.00005 0.399902C6.13338 0.399902 6.25838 0.420569 6.37505 0.461903C6.49172 0.503903 6.60005 0.574903 6.70005 0.674903L11.325 5.2999C11.5084 5.48324 11.6 5.70824 11.6 5.9749C11.6 6.24157 11.5 6.4749 11.3 6.6749C11.1167 6.85824 10.8834 6.9499 10.6 6.9499C10.3167 6.9499 10.0834 6.85824 9.90005 6.6749L6.00005 2.7749L2.07505 6.6999C1.89172 6.88324 1.66672 6.9749 1.40005 6.9749C1.13338 6.9749 0.900048 6.8749 0.700048 6.6749Z"
-                          fill="white"
-                        />
-                      </svg> */}
                     </div>
-                    {/* {page == 0 && (
-                      <div
-                        onClick={() => closeModal()}
-                        className="m ml-8 mt-4 smm:ml-[5vw] smm:mt-[10vw]"
-                      >
-                        <Link href={"/pool"}>
-                          <p
-                            onClick={() => set(0)}
-                            className={`text-md navtext ml-8 mt-[5px] cursor-pointer uppercase text-white smm:ml-[5vw] smm:mr-[15vw] smm:mt-[0] smm:text-[5vw] smm:leading-[4vw] ${
-                              page == 2 && " border-b-2 border-[#F1E3B5] "
-                            }`}
-                          >
-                            {"deposit"}
-                          </p>
-                        </Link>
-                      </div>
-                    )}
-                    {page == 0 && (
-                      <div
-                        onClick={() => closeModal()}
-                        className="m ml-8 mt-4 smm:ml-[5vw] smm:mt-[10vw]"
-                      >
-                        <Link href={"/lottery"}>
-                          <p
-                            onClick={() => set(0)}
-                            className={`text-md navtext ml-8 mt-[5px] cursor-pointer uppercase text-white smm:ml-[5vw] smm:mr-[15vw] smm:mt-[0] smm:text-[5vw] smm:leading-[4vw] ${
-                              page == 2 && " border-b-2 border-[#F1E3B5] "
-                            }`}
-                          >
-                            {"lottery"}
-                          </p>
-                        </Link>
-                      </div>
-                    )} */}
                   </div>
                   <div className="navdiv m mt-8 flex items-center smm:mt-[10vw]">
                     <Link
@@ -529,7 +370,7 @@ const HeaderMobile2 = ({
             </Transition.Child>
           </div>
         </Dialog>
-      </Transition>
+      </Transition> */}
     </div>
   );
 };
