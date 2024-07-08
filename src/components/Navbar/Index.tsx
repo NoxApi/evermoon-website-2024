@@ -149,7 +149,7 @@ const HeaderMobile2 = ({
             className="w-[118px] mdm:w-[20vw]"
           />
         </Link>
-        <p className="text-sm text-white">|</p>
+        <p className="text-[4vw] text-sm text-white">|</p>
         <Link href={" https://matr1x.io/"} target="_blank">
           <Image
             src={
