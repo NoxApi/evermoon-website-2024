@@ -8,7 +8,6 @@ import NavBar from "../../components/Navbar/Index";
 import { Josefin_Sans } from "next/font/google";
 
 const Jose = Josefin_Sans({ subsets: ["latin"] });
-
 const Index = () => {
   // const [isfullscreen, setisfullscreen] = useState(false);
   //   const [isloaded, setisloaded] = useState(false);
