@@ -46,7 +46,6 @@ export default function Home() {
   if (mediumdata.length != 0) {
     mediums1 = mediumdata.slice(0, 3);
   }
-
   useEffect(() => {
     setisshow(true);
     if (window.innerWidth > 768) {
