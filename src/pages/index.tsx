@@ -29,15 +29,12 @@ export default function Home() {
     { threshold: 1 },
   );
   const triggerRef7 = useRef<HTMLElement>(null);
-  const triggerRef6 = useRef<HTMLElement>(null);
+
   const inViewport2 = useInViewport(
     triggerRef2 as MutableRefObject<HTMLElement>,
     { threshold: 0.3 },
   );
-  const inViewport6 = useInViewport(
-    triggerRef6 as MutableRefObject<HTMLElement>,
-    { threshold: 0.3 },
-  );
+
   const inViewport7 = useInViewport(
     triggerRef7 as MutableRefObject<HTMLElement>,
     { threshold: 0.1 },
@@ -77,25 +74,14 @@ export default function Home() {
 
   useEffect(() => {
     const e1 = document.getElementById("evm1");
-    const e2 = document.getElementById("egg");
     const e3 = document.getElementById("3");
     const e4 = document.getElementById("4");
     const e5 = document.getElementById("5");
-    const e6 = document.getElementById("6");
-    const e7 = document.getElementById("7");
-    const e8 = document.getElementById("8");
-    const e9 = document.getElementById("9");
-    const e10 = document.getElementById("10");
-    const e11 = document.getElementById("11");
-    const e12 = document.getElementById("12");
-    const e13 = document.getElementById("13");
-    const e14 = document.getElementById("14");
     const e15 = document.getElementById("15");
     const e16 = document.getElementById("16");
     const e17 = document.getElementById("17");
     const e18 = document.getElementById("18");
-    const e19 = document.getElementById("19");
-    const e20 = document.getElementById("20");
+
     if (inViewport) {
       e1!.style.opacity = "1";
       e3!.classList.add("slide-in-left");
@@ -106,6 +92,16 @@ export default function Home() {
       e17!.style.opacity = "1";
       e18!.style.opacity = "1";
     }
+  }, [inViewport]);
+
+  useEffect(() => {
+    const e2 = document.getElementById("egg");
+    const e9 = document.getElementById("9");
+    const e10 = document.getElementById("10");
+    const e11 = document.getElementById("11");
+    const e12 = document.getElementById("12");
+    const e13 = document.getElementById("13");
+
     if (inViewport2.inViewport) {
       e2!.style.opacity = "1";
       e9!.style.opacity = "1";
@@ -114,25 +110,31 @@ export default function Home() {
       e12!.classList.add("ani-text_delay");
       e13!.style.opacity = "1";
     }
+  }, [inViewport2.inViewport]);
+
+  useEffect(() => {
+    const e6 = document.getElementById("6");
+    const e7 = document.getElementById("7");
+
     if (inViewport4.inViewport) {
       e7!.style.opacity = "1";
       e6!.classList.add("ani-text");
     }
-    if (inViewport6.inViewport) {
-    }
+  }, [inViewport4.inViewport]);
+
+  useEffect(() => {
+    const e8 = document.getElementById("8");
+    const e14 = document.getElementById("14");
+    const e19 = document.getElementById("19");
+    const e20 = document.getElementById("20");
+
     if (inViewport7.inViewport) {
       e8!.classList.add("ani-text_delay");
       e14!.style.opacity = "1";
       e19!.style.opacity = "1";
       e20!.style.opacity = "1";
     }
-  }, [
-    inViewport,
-    inViewport2.inViewport,
-    inViewport4.inViewport,
-    inViewport6.inViewport,
-    inViewport7.inViewport,
-  ]);
+  }, [inViewport7.inViewport]);
 
   return (
     <div
@@ -611,13 +613,11 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               </div>
             </div>
             <div
-              className=" 
-          relative flex w-full justify-center bg-gradient-to-b
-          from-[#000B1A] via-[#01193F] to-[#01071A] py-[60px]
-          "
+              ref={triggerRef7 as React.RefObject<HTMLDivElement>}
+              className=" relative flex w-full justify-center bg-gradient-to-b
+          from-[#000B1A] via-[#01193F] to-[#01071A] py-[60px] "
             >
               <div
-                ref={triggerRef7 as React.RefObject<HTMLDivElement>}
                 className="z-30 flex w-[1000px]  flex-col   
             items-center justify-center border-b-[1px]
              border-[#F1E3B5]  lgm:h-auto "
@@ -1073,7 +1073,3 @@ const medium = async (set: any, setdata: any, data: any) => {
       console.log(error);
     });
 };
-
-function Loading() {
-  return <h2>🌀 Loading...</h2>;
-}

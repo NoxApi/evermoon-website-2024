@@ -30,7 +30,6 @@ const Index = () => {
           className={` w-full object-cover 3xl:w-[100vw] smm:object-contain `}
         >
           <source src="/FNewVideo/Lysia_Animate_Loop.mp4" type="video/mp4" />
-          <source src="/FNewVideo/Lysia_Animate_Loop.mp4" type="video/mp4" />
         </video>
         <div
           className=" absolute left-[31%] top-[50%] flex h-full w-[50%] max-w-[1280px] 
