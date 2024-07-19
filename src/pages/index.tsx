@@ -998,12 +998,9 @@ function Mobile({
                               className="truncate text-[12px] leading-tight
                                     text-white smm:text-[3vw] "
                             >
-                              {/* {x.content
-                                .split("</figure>")[1]
+                              {x.content
                                 .split("<p>")[1]
-                                .split("</p>")[0]
-                                .replace(/(<([^>]+)>)/gi, "")} */}
-                              {x.content}
+                                .replace(/(<([^>]+)>)/gi, "")}
                             </p>
                           </div>
                           <div className="my-[12px]">
