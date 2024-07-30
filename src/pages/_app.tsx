@@ -14,9 +14,9 @@ const MyApp: AppType = ({ Component, pageProps }) => {
     <Layout>
       <Head>
         <title>Evermoon</title>
-        <meta name="description" content="Evermoon is world first 5v5 MOBA" />
+        <meta name="description" content="Evermoon's NFT Marketplace" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Evermoon-Account.ico" />
       </Head>
       <main
         className={
