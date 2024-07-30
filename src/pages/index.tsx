@@ -134,7 +134,6 @@ export default function Home() {
       e20!.style.opacity = "1";
     }
   }, [inViewport7.inViewport]);
-
   return (
     <div
       className={` flex  h-auto w-full 
@@ -611,7 +610,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
               </div>
             </div>
-            {/* <div
+            <div
               ref={triggerRef7 as React.RefObject<HTMLDivElement>}
               className=" relative flex w-full justify-center bg-gradient-to-b
           from-[#000B1A] via-[#01193F] to-[#01071A] py-[60px] "
@@ -644,6 +643,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       {mediumdata.length > 0 ? (
                         <>
                           {mediumdata.map((x: any) => {
+                            console.log(x)
                             return (
                               <div
                                 key={x.title}
@@ -686,10 +686,11 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                   text-white smm:text-[3vw] "
                                     >
                                       {x.content
-                                        .split("</figure>")[1]
+                                        //.split("<figure>")[1]
+                                        //.split("</figure>")[1]
                                         .split("<p>")[1]
-                                        .split("</p>")[0]
-                                        .replace(/(<([^>]+)>)/gi, "") + "..."}
+                                        // .split("</p>")[0]
+                                        .replace(/(<([^>]+)>)/gi, "") + "..."}                                  
                                     </p>
                                   </div>
                                   <div className="my-[7px]">
@@ -839,7 +840,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 w-[300px] translate-y-[150%] rotate-180 rounded-full smm:w-[80vw] "
                 // bgMoon
               />
-            </div> */}
+            </div>
           </>
         )}
       </div>
@@ -998,9 +999,7 @@ function Mobile({
                                     text-white smm:text-[3vw] "
                             >
                               {x.content
-                                .split("</figure>")[1]
                                 .split("<p>")[1]
-                                .split("</p>")[0]
                                 .replace(/(<([^>]+)>)/gi, "")}
                             </p>
                           </div>
@@ -1066,7 +1065,8 @@ const medium = async (set: any, setdata: any, data: any) => {
   })
     .then(function (response: any) {
       set(false);
-      if (data.length == 1) setdata(response.data.items);
+      if (data.length == 0) setdata(response.data.items);
+      // console.log(response.data.items)
     })
     .catch(function (error: any) {
       console.log(error);
