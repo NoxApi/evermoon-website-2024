@@ -6,9 +6,56 @@ import Hero from "../../components/Hero/index";
 import Roadmap from "../../components/Roadmap/index";
 import NavBar from "../../components/Navbar/Index";
 import { Josefin_Sans } from "next/font/google";
+import Loading from "../Loading";
 
 const Jose = Josefin_Sans({ subsets: ["latin"] });
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [load, setLoad] = useState(true);
+  const [load1, setLoad1] = useState("");
+  // function show() {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 1000);
+  // }
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 20000);
+      // alert("Your page is loaded");
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad(); // Call immediately if the page is already loaded
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   if (document.readyState == "complete") {
+  //     alert("Your page is loaded");
+  //   } else {
+  //     window.addEventListener(
+  //       "load",
+  //       function () {
+  //         alert("Your page is loaded");
+  //       },
+  //       false,
+  //     );
+  //   }
+  //   // setTimeout(() => {
+  //   //   setIsLoading(false);
+  //   // }, 5000);
+  // }, []);
+
   // const [isfullscreen, setisfullscreen] = useState(false);
   //   const [isloaded, setisloaded] = useState(false);
   // const fullscreen = useRef<null | HTMLDivElement>(null);
@@ -27,8 +74,12 @@ const Index = () => {
       <Video />
       <Hover />
       <Hero />
-      <Partner />
-      <Roadmap />
+      {isLoading == false && (
+        <>
+          <Partner />
+          <Roadmap />
+        </>
+      )}
     </div>
   );
 };

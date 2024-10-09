@@ -41,11 +41,13 @@ export default function Home() {
   );
   const [isfetching, setisfetching] = useState(false);
   const [mediumdata, setmediumdata] = useState(Array);
+  const [isLoading, setIsLoading] = useState(true);
   let mediums1: any[] = [];
   medium(setisfetching, setmediumdata, mediumdata);
   if (mediumdata.length != 0) {
     mediums1 = mediumdata.slice(0, 3);
   }
+
   useEffect(() => {
     setisshow(true);
     if (window.innerWidth > 768) {
@@ -643,7 +645,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       {mediumdata.length > 0 ? (
                         <>
                           {mediumdata.map((x: any) => {
-                            console.log(x)
+                            // console.log(x);
                             return (
                               <div
                                 key={x.title}
@@ -690,7 +692,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                                         //.split("</figure>")[1]
                                         .split("<p>")[1]
                                         // .split("</p>")[0]
-                                        .replace(/(<([^>]+)>)/gi, "") + "..."}                                  
+                                        .replace(/(<([^>]+)>)/gi, "") + "..."}
                                     </p>
                                   </div>
                                   <div className="my-[7px]">

@@ -1,9 +1,10 @@
+import Circle from "evm/svg/Circle";
 import Image from "next/image";
 import { useRef, MutableRefObject, useEffect, useState } from "react";
 import { useInViewport } from "react-in-viewport";
 
 const Index = () => {
-  const [roadmap, setroadmap] = useState(1440);
+  const [roadmap, setroadmap] = useState(1152);
   // const [current, setcurrent] = useState(5);
   const triggerRef2 = useRef<HTMLElement>(null);
   const [showFadeUp, setShowFadeUp] = useState(false);
@@ -24,11 +25,11 @@ const Index = () => {
     }
 
     if (window.innerWidth >= 1280) {
-      setroadmap(1152);
+      setroadmap(576);
     } else if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
       setroadmap(1152);
     } else if (window.innerWidth < 1024 && window.innerWidth >= 340) {
-      setroadmap(1440);
+      setroadmap(1152);
     }
   }, [inViewport2.inViewport]);
 
@@ -56,13 +57,13 @@ const Index = () => {
     );
     setvw(width);
     if (window.innerWidth >= 1280) {
-      setvw(4);
+      setvw(2);
     } else if (window.innerWidth < 1280 && window.innerWidth >= 1024) {
-      setvw(4);
+      setvw(2);
     } else if (window.innerWidth < 1024 && window.innerWidth >= 340) {
-      setvw(6);
+      setvw(3);
     } else {
-      setvw(7);
+      setvw(4);
     }
   }, []);
 
@@ -99,9 +100,10 @@ const Index = () => {
         >
           <div className="smm:h-auto ">
             <div className="flex h-[380px] justify-center px-[64px] smm:px-[16px]  ">
+              {/* Q1-Q4 year 2022 */}
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
-                  <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
+                  <p className="mt-[4px] text-[28px]">{"Q1-Q4"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
@@ -113,7 +115,7 @@ const Index = () => {
                   </div>
                 </div>
                 <p className="my-[4px] text-[10px] text-[#00DDFF]">
-                  {"Pre-production & Setup"}
+                  {"Pre-production & Early Production"}
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
@@ -123,10 +125,7 @@ const Index = () => {
                     Whitepaper & Community <br /> Launch
                   </li>
                   <li className="text-sm text-white ">
-                    {" Preliminary Website & Team Introduction"}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Progress Updates & Seed Sale "}
+                    {" Alpha I Version Game Launch"}
                   </li>
                 </ul>
                 <div className="mt-[38px] flex justify-start">
@@ -137,109 +136,18 @@ const Index = () => {
                     {"2022"}
                   </p>
                 </div>
-                <div>
-                  <div className="absolute bottom-[-10%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[190px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-36%] translate-y-[50%]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                <div className="absolute bottom-[-65%] translate-y-[-50%]">
+                  <div className="ml-[33px] h-[214px] w-[3px] bg-white" />
+                  <div className="mt-[-8px]">
+                    <Circle width="24" height="8" className="ml-[23px]" />
                   </div>
                 </div>
+                {/* absolute bottom-[-19%] translate-y-[50%] absolute bottom-[4%] z-30 translate-y-[50%] */}
               </div>
+              {/* Q1-Q4 year 2023 */}
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
-                  <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
-                    <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
-                      width={20}
-                      height={20}
-                      alt=""
-                      className="w-[14px]"
-                    />
-                  </div>
-                </div>
-                <p className="my-[4px] text-[10px] text-[#00DDFF]">
-                  {"Beginning of Production"}
-                </p>
-                <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
-                  <li className="text-sm text-white ">
-                    {" Alpha Gameplay Trailer "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Alpha Version, Phase I "}
-                  </li>
-                </ul>
-                <div className="mt-[38px] flex justify-start">
-                  <p
-                    className="inline-block bg-gradient-to-r
-            from-[#25C6FA] to-[#4267BF] bg-clip-text text-[30px] font-extrabold text-transparent "
-                  >
-                    {"2022"}
-                  </p>
-                </div>
-                <div>
-                  <div className="absolute bottom-[8%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[210px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-21%] translate-y-[50%]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col ">
-                <div className="flex items-center gap-x-[12px] py-[8px]">
-                  <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
+                  <p className="mt-[4px] text-[28px]">{"Q1-Q4"}</p>
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
@@ -255,76 +163,13 @@ const Index = () => {
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
-                    Private Sale & Evermoon <br /> Comic Release
-                  </li>
-                  <li className="text-sm text-white ">
                     Ongoing Development & <br /> Partner Announcements
                   </li>
-                </ul>
-                <div className="mt-[38px] flex justify-start">
-                  <p
-                    className="inline-block bg-gradient-to-r
-            from-[#25C6FA] to-[#4267BF] bg-clip-text text-[30px] font-extrabold text-transparent "
-                  >
-                    {"2023"}
-                  </p>
-                </div>
-                <div>
-                  <div className="absolute bottom-[-4%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[210px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-33%] translate-y-[50%]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-              <div className="relative flex h-[350px] w-[288px] flex-col ">
-                <div className="flex items-center gap-x-[12px] py-[8px]">
-                  <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
-                    <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
-                      width={20}
-                      height={20}
-                      alt=""
-                      className="w-[14px]"
-                    />
-                  </div>
-                </div>
-                <p className="my-[4px] text-[10px] text-[#00DDFF]">
-                  {"Advancing to Pre-Beta"}
-                </p>
-                <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
-                    {" Advancing to Pre-Beta "}
+                    Alpha II Version Game Launch <br /> & E-Sport Events
                   </li>
                   <li className="text-sm text-white ">
-                    {" Pre-Beta Trailer & Game Test "}
+                    {" Pre-Beta Version Game Launch "}
                   </li>
                 </ul>
                 <div className="mt-[38px] flex justify-start">
@@ -335,40 +180,14 @@ const Index = () => {
                     {"2023"}
                   </p>
                 </div>
-                <div>
-                  <div className="absolute bottom-[10%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[218px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-20.25%] translate-y-[50%]">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                <div className="absolute bottom-[-45%] translate-y-[-50%]">
+                  <div className="ml-[33px] h-[154px] w-[3px] bg-white" />
+                  <div className="mt-[-8px]">
+                    <Circle width="24" height="8" className="ml-[23px]" />
                   </div>
                 </div>
               </div>
+              {/* Q1-Q2 year 2024 */}
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
@@ -401,46 +220,20 @@ const Index = () => {
                     {"2024"}
                   </p>
                 </div>
-                <div>
-                  <div className="absolute bottom-[-1%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[285px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-41%] translate-y-[50%] ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                <div className="absolute bottom-[-70%] translate-y-[-50%]">
+                  <div className="ml-[33px] h-[254px] w-[3px] bg-white" />
+                  <div className="mt-[-8px]">
+                    <Circle width="24" height="8" className="ml-[23px]" />
                   </div>
                 </div>
               </div>
+              {/* Q3-Q4 year 2024 */}
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#0B0436]  ">
+                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
                     <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state2.png"
+                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
                       width={20}
                       height={20}
                       alt=""
@@ -453,35 +246,19 @@ const Index = () => {
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
                   <li className="text-sm text-white ">
-                    {" $EVM Strategic Round "}
+                    $EVM Pre-Seed & Seed Round
                   </li>
                   <li className="text-sm text-white ">
-                    Moon Mission SocialFi & Arcade <br /> Games Launch
+                    Moon Mission SocialFi & <br /> Minigame (Airdrop)
                   </li>
                   <li className="text-sm text-white ">
-                    {" Sacred Egg Giveaway & Free Mint "}
+                    Marketplace Phase I & Capsule Opening Ceremony
                   </li>
                   <li className="text-sm text-white ">
-                    {" NFT Marketplace Introduction "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Beta II Version Game Launch "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Marketplace Phase I "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Beta III Version Game Launch "}
-                  </li>
-                  <li className="text-sm text-white ">
-                    {" Play-To-Airdrop Events "}
-                  </li>
-                  <li className="text-sm text-white ">{" $ES Launch "}</li>
-                  <li className="text-sm text-white ">
-                    {" Building Challenge & Synthesis "}
+                    Beta II Version Game Launch
                   </li>
                 </ul>
-                <div className="mt-[30px] flex justify-start">
+                <div className="mt-[38px] flex justify-start">
                   <p
                     className="inline-block bg-gradient-to-r
             from-[#25C6FA] to-[#4267BF] bg-clip-text text-[30px] font-extrabold text-transparent "
@@ -489,46 +266,20 @@ const Index = () => {
                     {"2024"}
                   </p>
                 </div>
-                <div>
-                  <div className="absolute bottom-[-19%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[35px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-22.75%] translate-y-[50%] ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                <div className="absolute bottom-[-40%] translate-y-[-50%]">
+                  <div className="ml-[33px] h-[134px] w-[3px] bg-white" />
+                  <div className="mt-[-8px]">
+                    <Circle width="24" height="8" className="ml-[23px]" />
                   </div>
                 </div>
               </div>
+              {/* Q1-Q2 year 2025 */}
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#525252]  ">
+                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-blue-600  ">
                     <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state3.png"
+                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state2.png"
                       width={20}
                       height={20}
                       alt=""
@@ -540,57 +291,37 @@ const Index = () => {
                   {"The Grand Launch"}
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
-                  <li className="text-sm text-white ">{" Soft Launch "}</li>
+                  <li className="text-sm text-white ">
+                    Play-To-Airdrop Events <br /> (Global Open Beta)
+                  </li>
+                  <li className="text-sm text-white ">Soft Game Launch</li>
+                  <li className="text-sm text-white ">
+                    Sacred Egg Giveaway & <br /> Free Mint
+                  </li>
                   <li className="text-sm text-white ">{" $EVM Launch "}</li>
                   <li className="text-sm text-white ">
                     {" Official Game Launch "}
                   </li>
                   <li className="text-sm text-white ">
-                    Official E-sports <br /> Tournaments
+                    {" Official E-sports Tournaments "}
                   </li>
                 </ul>
-                <div className="mt-[38px] flex justify-start ">
+                <div className="mt-[30px] flex justify-start">
                   <p
                     className="inline-block bg-gradient-to-r
             from-[#25C6FA] to-[#4267BF] bg-clip-text text-[30px] font-extrabold text-transparent "
                   >
-                    {"2025"}
+                    {"2024"}
                   </p>
                 </div>
-                <div>
-                  <div className="absolute bottom-[-4%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[200px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-31.5%] translate-y-[50%] ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                <div className="absolute bottom-[-63%] translate-y-[-50%]">
+                  <div className="ml-[33px] h-[164px] w-[3px] bg-white" />
+                  <div className="mt-[-8px]">
+                    <Circle width="24" height="8" className="ml-[23px]" />
                   </div>
                 </div>
               </div>
+              {/* Q3-Q4 year 2025 */}
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
@@ -605,11 +336,16 @@ const Index = () => {
                   </div>
                 </div>
                 <p className="my-[4px] text-[10px] text-[#00DDFF]">
-                  {"Post-Launch"}
+                  {"Post-Launch Expansion"}
                 </p>
                 <ul className="flex w-full list-disc flex-col pl-[20px] pr-[16px]">
+                  <li className="text-sm text-white ">{" $ES Launch "}</li>
                   <li className="text-sm text-white ">{" DAO Vote "}</li>
-                  <li className="text-sm text-white ">{" More features "}</li>
+                  <li className="text-sm text-white ">{" Guild War "}</li>
+                  <li className="text-sm text-white ">
+                    Building Challenge & Synthesis
+                  </li>
+                  <li className="text-sm text-white ">More features</li>
                 </ul>
                 <div className="mt-[38px] flex justify-start ">
                   <p
@@ -619,40 +355,14 @@ const Index = () => {
                     {"2025"}
                   </p>
                 </div>
-                <div>
-                  <div className="absolute bottom-[-1%] z-30 translate-y-[50%]">
-                    <div className="ml-[33px] h-[220px] w-[3px] bg-white" />
-                  </div>
-                  <div className="absolute bottom-[-31.5%] translate-y-[50%] ">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="8"
-                      viewBox="0 0 24 8"
-                      fill="none"
-                      className="ml-[23px]"
-                    >
-                      <path
-                        d="M24 4C24 6.20914 18.6274 8 12 8C5.37258 8 0 6.20914 0 4C0 1.79086 5.37258 0 12 0C18.6274 0 24 1.79086 24 4Z"
-                        fill="url(#paint0_linear_7547_1964)"
-                      />
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_7547_1964"
-                          x1="0"
-                          y1="4"
-                          x2="24"
-                          y2="4"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#7BD2EE" />
-                          <stop offset="1" stop-color="#076CC0" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                <div className="absolute bottom-[-45%] translate-y-[-50%]">
+                  <div className="ml-[33px] h-[158px] w-[3px] bg-white" />
+                  <div className="mt-[-8px]">
+                    <Circle width="24" height="8" className="ml-[23px]" />
                   </div>
                 </div>
               </div>
+
               <div className="relative flex h-[350px] w-[288px] flex-col " />
 
               <div className="relative flex h-[350px] w-[288px] flex-col 2xlm:hidden smm:w-[70vw]" />
@@ -665,10 +375,10 @@ const Index = () => {
         {/* absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
     lgm:bottom-[10%] lgm:hidden */}
       </div>
-
+      {/* desktop */}
       <div
         className=" absolute bottom-[20%] z-40  flex w-[185px] gap-x-[20px] 
-     lgm:bottom-[10%] mdm:hidden "
+     lgm:bottom-[10%] lgm:hidden "
       >
         <button
           onClick={() => nav(1)}
@@ -687,9 +397,8 @@ const Index = () => {
         </button>
         <button
           onClick={() => nav(2)}
-          className={`btn-primary flex w-full max-w-[122px] items-center 
-        justify-center gap-x-[8px] px-[14px] py-[10px] 
-        ${roadmap === 1440 && "btn-primary_disable"}
+          className={` flex w-full max-w-[122px] items-center justify-center gap-x-[8px] px-[14px] py-[10px] 
+        ${roadmap === 864 ? "btn-primary_disable" : "btn-primary "}
         `}
 
           // ${roadmap == 1728 && 1440 && 1152 && 864 ? "btn-primary_disable" : "btn-primary"}
@@ -704,7 +413,47 @@ const Index = () => {
           />
         </button>
       </div>
+      {/* tablet */}
+      <div
+        className="absolute bottom-[20%]  z-40 flex w-[185px] translate-y-[-50%] gap-x-[20px] 
+   lg:hidden xl:hidden 2xl:hidden smm:hidden "
+      >
+        <button
+          onClick={() => nav(1)}
+          className={`flex w-full max-w-[122px] items-center justify-center 
+    gap-x-[8px] px-[14px] py-[10px] 
+    ${roadmap === 0 ? "btn-primary_disable" : "btn-primary "}`}
+        >
+          <Image
+            src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/Arrow_left.png"
+            width={49}
+            height={48}
+            alt="Arrow_Left"
+            className="w-[16px]"
+          />
+          <p className="text-sm text-white">{"Prev"}</p>
+        </button>
+        <button
+          onClick={() => nav(2)}
+          className={` flex w-full max-w-[122px] items-center 
+    justify-center gap-x-[8px] px-[14px] py-[10px]
+    ${roadmap === 1152 ? "btn-primary_disable" : "btn-primary "}
+    
+    `}
 
+          // ${roadmap ==  && 1440 && 1152 && 864 ? "btn-primary_disable" : "btn-primary"}
+        >
+          <p className="text-sm text-white">{"Next"}</p>
+          <Image
+            src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/Arrow_right.png"
+            width={49}
+            height={48}
+            alt="Arrow_right"
+            className="w-[16px]"
+          />
+        </button>
+      </div>
+      {/* mobile */}
       <div
         className="absolute z-40  flex w-[185px] translate-y-[-50%] gap-x-[20px] 
   md:hidden lg:hidden xl:hidden 2xl:hidden smm:bottom-[10%] smm:w-full smm:justify-center "
@@ -728,7 +477,7 @@ const Index = () => {
           onClick={() => nav(2)}
           className={` flex w-full max-w-[122px] items-center 
     justify-center gap-x-[8px] px-[14px] py-[10px]
-    ${roadmap === 2016 ? "btn-primary_disable" : "btn-primary "}
+    ${roadmap === 1440 ? "btn-primary_disable" : "btn-primary "}
     
     `}
 
