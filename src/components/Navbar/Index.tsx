@@ -30,7 +30,7 @@ export default function Navbar() {
             />
           </Link>
           <p className="text-sm text-white">|</p>
-          <Link href={" https://matr1x.io"} target="_blank">
+          <Link href={"https:matr1x.io"} target="_blank">
             <Image
               src={
                 "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/MATR1X_Horizontal_White.png"
@@ -150,7 +150,7 @@ const HeaderMobile2 = ({
           />
         </Link>
         <p className="text-[4vw] text-sm text-white">|</p>
-        <Link href={" https://matr1x.io"} target="_blank">
+        <Link href={" https:matr1x.io"} target="_blank">
           <Image
             src={
               "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Navbar/MATR1X_Horizontal_White.png"

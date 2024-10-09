@@ -21,9 +21,10 @@ const Index = () => {
 
   useEffect(() => {
     const handleLoad = () => {
+      setIsLoading(false);
       setTimeout(() => {
-        setIsLoading(false);
-      }, 20000);
+        setLoad(false);
+      }, 5000);
       // alert("Your page is loaded");
     };
 
@@ -66,20 +67,52 @@ const Index = () => {
   //     }
   //   }
   // }, [isfullscreen]);
+
+  function IsLoadScreen() {
+    if (isLoading) {
+      return <Loading />;
+    } else if (!load) {
+      return (
+        <>
+          <Video />
+          <Hover />
+          <Hero />
+          <Partner />
+          <Roadmap />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Video />
+          <Hover />
+          <Hero />
+        </>
+      );
+    }
+  }
   return (
     <div
       className={` flex w-full flex-col items-center bg-gradient-to-r from-[#000B1A] to-[#00112C] text-[#F1E3B5] ${Jose.className} `}
     >
       <NavBar />
-      <Video />
-      <Hover />
-      <Hero />
-      {isLoading == false && (
+      {IsLoadScreen()}
+      {/* {isLoading == false ? (
         <>
-          <Partner />
-          <Roadmap />
+          <Video />
+          <Hover />
+          <Hero />
         </>
-      )}
+      ) : (
+        <>
+          {!load && (
+            <>
+              <Partner />
+              <Roadmap />
+            </>
+          )}
+        </>
+      )} */}
     </div>
   );
 };
