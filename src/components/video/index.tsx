@@ -11,7 +11,6 @@ import { Transition } from "@headlessui/react";
 
 const Index = () => {
   const [isshow, setisshow] = useState(false);
-  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     setisshow(true);

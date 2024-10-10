@@ -85,7 +85,7 @@ const Index = () => {
         id="text3"
         //*TODO: id="text3" opacity-0 transition-opacity delay-500 duration-1000
         className=" mt-12 w-[1200px] overflow-hidden opacity-0
-            transition-opacity delay-1000 duration-1000 2xlm:w-full lgm:w-[864px] mdm:w-[300px] "
+            transition-opacity delay-1000 duration-1000 2xlm:w-fit lgm:w-[864px] mdm:w-[300px] "
       >
         <style>
           {`
@@ -295,9 +295,6 @@ const Index = () => {
                     Play-To-Airdrop Events <br /> (Global Open Beta)
                   </li>
                   <li className="text-sm text-white ">Soft Game Launch</li>
-                  <li className="text-sm text-white ">
-                    Sacred Egg Giveaway & <br /> Free Mint
-                  </li>
                   <li className="text-sm text-white ">{" $EVM Launch "}</li>
                   <li className="text-sm text-white ">
                     {" Official Game Launch "}
@@ -311,7 +308,7 @@ const Index = () => {
                     className="inline-block bg-gradient-to-r
             from-[#25C6FA] to-[#4267BF] bg-clip-text text-[30px] font-extrabold text-transparent "
                   >
-                    {"2024"}
+                    {"2025"}
                   </p>
                 </div>
                 <div className="absolute bottom-[-63%] translate-y-[-50%]">
@@ -363,11 +360,11 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="relative flex h-[350px] w-[288px] flex-col " />
+              {/* <div className="relative flex h-[350px] w-[288px] flex-col " />
 
               <div className="relative flex h-[350px] w-[288px] flex-col 2xlm:hidden smm:w-[70vw]" />
 
-              <div className="relative flex h-[350px] w-[288px] flex-col xl:hidden smm:w-[70vw] " />
+              <div className="relative flex h-[350px] w-[288px] flex-col xl:hidden smm:w-[70vw] " /> */}
             </div>
             <div className=" h-[280px] w-full bg-bgWave bg-contain bg-repeat-x" />
           </div>

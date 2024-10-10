@@ -19,12 +19,37 @@ const Index = () => {
   //   }, 1000);
   // }
 
+  function IsLoadScreen() {
+    if (isLoading) {
+      return <Loading />;
+    } else if (!load) {
+      return (
+        <>
+          <Video />
+          <Hover />
+          <Hero />
+          <Partner />
+          <Roadmap />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Video />
+          <Hover />
+          <Hero />
+        </>
+      );
+    }
+  }
+
   useEffect(() => {
     const handleLoad = () => {
+      setLoad1("invisible");
       setIsLoading(false);
       setTimeout(() => {
         setLoad(false);
-      }, 5000);
+      }, 4000);
       // alert("Your page is loaded");
     };
 
@@ -32,6 +57,7 @@ const Index = () => {
       handleLoad(); // Call immediately if the page is already loaded
     } else {
       window.addEventListener("load", handleLoad);
+      // method attaches an event handler to a window
     }
 
     // Cleanup the event listener when the component unmounts
@@ -39,6 +65,14 @@ const Index = () => {
       window.removeEventListener("load", handleLoad);
     };
   }, []);
+
+  // const timing = performance.getEntriesByType("navigation")[0];
+
+  // console.log(timing);
+
+  if (load) {
+    return <Loading />;
+  }
 
   // useEffect(() => {
   //   if (document.readyState == "complete") {
@@ -68,52 +102,16 @@ const Index = () => {
   //   }
   // }, [isfullscreen]);
 
-  function IsLoadScreen() {
-    if (isLoading) {
-      return <Loading />;
-    } else if (!load) {
-      return (
-        <>
-          <Video />
-          <Hover />
-          <Hero />
-          <Partner />
-          <Roadmap />
-        </>
-      );
-    } else {
-      return (
-        <>
-          <Video />
-          <Hover />
-          <Hero />
-        </>
-      );
-    }
-  }
   return (
-    <div
-      className={` flex w-full flex-col items-center bg-gradient-to-r from-[#000B1A] to-[#00112C] text-[#F1E3B5] ${Jose.className} `}
-    >
-      <NavBar />
-      {IsLoadScreen()}
-      {/* {isLoading == false ? (
-        <>
-          <Video />
-          <Hover />
-          <Hero />
-        </>
-      ) : (
-        <>
-          {!load && (
-            <>
-              <Partner />
-              <Roadmap />
-            </>
-          )}
-        </>
-      )} */}
-    </div>
+    <>
+      <div
+        className={` flex w-full flex-col items-center bg-gradient-to-r from-[#000B1A] to-[#00112C] text-[#F1E3B5] ${Jose.className} `}
+      >
+        <NavBar />
+
+        {IsLoadScreen()}
+      </div>
+    </>
   );
 };
 
