@@ -49,7 +49,7 @@ const Index = () => {
       setIsLoading(false);
       setTimeout(() => {
         setLoad(false);
-      }, 4000);
+      }, 5000);
       // alert("Your page is loaded");
     };
 
@@ -73,23 +73,6 @@ const Index = () => {
   if (load) {
     return <Loading />;
   }
-
-  // useEffect(() => {
-  //   if (document.readyState == "complete") {
-  //     alert("Your page is loaded");
-  //   } else {
-  //     window.addEventListener(
-  //       "load",
-  //       function () {
-  //         alert("Your page is loaded");
-  //       },
-  //       false,
-  //     );
-  //   }
-  //   // setTimeout(() => {
-  //   //   setIsLoading(false);
-  //   // }, 5000);
-  // }, []);
 
   // const [isfullscreen, setisfullscreen] = useState(false);
   //   const [isloaded, setisloaded] = useState(false);

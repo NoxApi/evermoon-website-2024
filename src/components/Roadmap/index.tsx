@@ -231,15 +231,17 @@ const Index = () => {
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q3-Q4"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#52C460]  ">
+                  {/* fix style for correct */}
+                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-blue-600  ">
                     <Image
-                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state1.png"
+                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state2.png"
                       width={20}
                       height={20}
                       alt=""
                       className="w-[14px]"
                     />
                   </div>
+                  {/* fix style for correct */}
                 </div>
                 <p className="my-[4px] text-[10px] text-[#00DDFF]">
                   {"Launch Preparations"}
@@ -277,7 +279,16 @@ const Index = () => {
               <div className="relative flex h-[350px] w-[288px] flex-col ">
                 <div className="flex items-center gap-x-[12px] py-[8px]">
                   <p className="mt-[4px] text-[28px]">{"Q1-Q2"}</p>
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-blue-600  ">
+                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-[#525252]  ">
+                    <Image
+                      src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state3.png"
+                      width={20}
+                      height={20}
+                      alt=""
+                      className="w-[14px]"
+                    />
+                  </div>
+                  {/* <div className="flex h-[26px] w-[26px] items-center justify-center rounded-[50%] border-2  border-[#F1E3B5] bg-blue-600  ">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/state2.png"
                       width={20}
@@ -285,7 +296,7 @@ const Index = () => {
                       alt=""
                       className="w-[14px]"
                     />
-                  </div>
+                  </div> */}
                 </div>
                 <p className="my-[4px] text-[10px] text-[#00DDFF]">
                   {"The Grand Launch"}
