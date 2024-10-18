@@ -23,6 +23,8 @@ export default {
           "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/road-repeat.webp')",
         bgTribe:
           "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Hero/Tribe%20-%20Ethern.png')",
+          bgWeeklyCalm:
+          "url('https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/weekly%20horizontal.png')",
       },
       screens: {
         xsm: "400px",

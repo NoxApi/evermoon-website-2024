@@ -376,9 +376,9 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
         <div
           id="evm1"
           ref={triggerRef as React.RefObject<HTMLDivElement>}
-          className=" relative z-20 flex h-[820px]  w-[100%] min-w-[1920px] flex-col 
-          justify-center bg-[#01071A] p-[10px] opacity-0 transition-opacity
-          delay-300 duration-1000 smm:h-[150vw] smm:pb-[17vw] "
+          className=" relative flex h-auto  w-[100%] min-w-[1920px] flex-col 
+          justify-center bg-[#01071A] py-[26px] opacity-0 transition-opacity
+          delay-300 duration-1000 "
         >
           <div
             className="#01071A flex items-center justify-center pl-[50px] 
@@ -400,18 +400,18 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
           </div>
-          <div className="flex h-[730px] w-full gap-x-[10px]">
+          <div className="flex h-[540px] w-full gap-x-[10px] mb-[60px]">
             <div></div>
             <div
               id="5"
-              className=" bgMoon  relative mx-auto h-[540px] w-[540px] rounded-full smm:h-[85vw] smm:w-[90vw]  "
+              className=" bgMoon  relative mx-auto h-full w-[540px] rounded-full smm:h-[85vw] smm:w-[90vw]  "
             >
-              <div className="bgNewMoon h-full w-full  pb-[60px] pt-[80px]" />
+              <div className="bgNewMoon h-full w-full  pb-[60px] pt-[80px] " />
+              <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-10 h-full w-full bg-bgWeeklyCalm bg-cover bg-no-repeat" />
               <div
                 id="15"
-                className=" absolute left-[50%] top-[50%] z-50 w-[420px]
-            translate-x-[-50%] translate-y-[-50%]  smm:w-[60vw] "
-              >
+                className=" absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20 w-[316px] "
+              >            
                 <Image
                   src={
                     "https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/ayla-moonpower-mascot_NEW.png"
@@ -424,6 +424,18 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               </div>
             </div>
             <div></div>
+          </div>
+          <div className="flex flex-col items-center justify-center gap-y-5">
+            <div><h1 className="text-6xl">Moon Mission</h1></div>
+            <div><h3 className="text-3xl">Complete social quests, earn Moon Power, and unlock amazing prizes!</h3></div>
+            <div className="flex gap-x-3 mt-12">
+            <Link href={"https://moonmission.evermoon.games"} target="_blank">
+              <button className="text-lg px-[10px] py-[6px] text-white">Let&apos;s Start it</button>
+              </Link>
+              <Link href={"https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission"} target="_blank">
+              <button className="text-lg px-[10px] py-[6px] text-white">Read More</button>
+              </Link>
+            </div>
           </div>
           {/* <div
             id="5"
@@ -514,24 +526,76 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
         {isshow && (
           <>
             <div
-              className="bgFull relative flex h-[824px] w-screen 
-             min-w-[1900px] flex-col items-center justify-center p-[95px]  smm:h-auto smm:p-0 smm:pt-[10vw] "
+              className="bgFull  flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto "
             >
+              <div className="flex flex-col gap-y-9 items-center py-[80px]">
               <div
-                className="flex justify-center opacity-0
-                transition-opacity delay-300 duration-300"
+                className="flex justify-center opacity-0 transition-opacity delay-300 duration-300 w-[480px] h-[48px] relative"
                 id="7"
               >
                 <p
                   id="6"
                   ref={triggerRef4 as React.RefObject<HTMLDivElement>}
-                  className="translate-[50%] absolute
-                top-[10%] text-[40px] text-[#F1E3B5] mdm:text-[24px] "
+                  className="translate-x-[-50%] translate-y-[-50%] absolute text-5xl z-20
+                  top-[50%] left-[50%] text-[#F1E3B5] w-[100%] text-center "
                 >
-                  {"SACRED BEAST"}
+                  {"Next-Gen 5v5 MOBA"}
                 </p>
               </div>
-              <div
+              <div className="relative z-10 flex h-[386px] 
+              w-[660px] items-center justify-center ">
+                <div
+                  id="9"
+                  className=" layer1a absolute z-20  w-[286px] opacity-0
+                transition-opacity delay-[500ms] duration-300
+                md:w-[275px] lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
+                >
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
+                    }
+                    width={300}
+                    height={300}
+                    alt=""
+                    className="w-full"
+                  />
+                </div>
+                <div
+                  id="10"
+                  className=" layer3a absolute z-20  w-[286px] opacity-0
+                  transition-opacity delay-[500ms] duration-300 md:w-[275px] 
+                lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
+                >
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
+                    }
+                    width={300}
+                    height={300}
+                    alt=""
+                    className="w-full"
+                  />
+                </div>
+              </div>
+              <div className="w-[600px] h-[80px] relative">
+                <div className="w-full h-full absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">
+                  <h5 className="text-[30px] text-white text-center">Experience intense battles, strategic teamwork, and real rewards!</h5>
+                </div>
+              </div>
+              <div className="w-[362px] h-[32px] relative">
+              <div className="flex gap-x-[11px] justify-center w-full h-full absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">
+                <div></div>
+                <p className="text-[#F1E3B5] font-light">Coming Soon</p>
+                <div></div>
+              </div>
+              </div>
+              </div>
+              <div className="w-[160px] h-[40px] relative mb-[40px]">
+                <Link href="https://www.evermoon.games/home">
+                <button className="px-[10px] py-[6px] text-lg w-full h-full absolute translate-x-[-50%] translate-y-[-50%] left-[50%] top-[50%] text-white">Explore More</button>
+                </Link>
+              </div>
+              {/* <div
                 ref={triggerRef2 as React.RefObject<HTMLDivElement>}
                 className="relative z-10 flex h-[600px] 
               w-[540px] items-center justify-center mdm:mb-[30px] 
@@ -577,7 +641,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   id="9"
-                  className=" layer1a absolute z-20  w-[320px] opacity-0
+                  className=" layer1a absolute z-20  w-[286px] opacity-0
                 transition-opacity delay-[500ms] duration-300
                 md:w-[275px] lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
                 >
@@ -592,7 +656,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   id="10"
-                  className=" layer3a absolute z-20  w-[320px] opacity-0
+                  className=" layer3a absolute z-20  w-[286px] opacity-0
                   transition-opacity delay-[500ms] duration-300 md:w-[275px] 
                 lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
                 >
@@ -605,38 +669,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                     alt=""
                   />
                 </div>
-                {/* <div
-                  id="13"
-                  className="translate-[50%] duration-2000 absolute 
-                bottom-[3%] mt-[22px] flex flex-col justify-center
-                gap-y-5 opacity-0 transition-opacity delay-[2250ms] duration-1000
-
-                "
-                >
-                  <div id="12" className="">
-                    <h2 className=" text-center text-[20px]  smm:text-[12px]">
-                      FEED YOUR BEAST TO EARN MORE <br /> EXCLUSIVE NFTs ASSET
-                    </h2>
-                  </div>
-                  <div className="flex justify-center  ">
-                    <Link
-                      href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast"
-                      target="_blank"
-                    >
-                      <button
-                        className=" m-auto min-w-[122px] rounded-[8px] bg-[#1D4ED8]
-                  px-[14px] py-[10px]
-                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2.7vw] smm:py-[1.6vw] 
-                 "
-                      >
-                        <p className="flex justify-center text-sm text-white">
-                          {"Explore"}
-                        </p>
-                      </button>
-                    </Link>
-                  </div>
-                </div> */}
-              </div>
+              </div> */}
             </div>
             <div
               ref={triggerRef7 as React.RefObject<HTMLDivElement>}
