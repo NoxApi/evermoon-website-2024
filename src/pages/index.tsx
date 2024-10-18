@@ -88,10 +88,10 @@ export default function Home() {
       e3!.classList.add("slide-in-left");
       e4!.classList.add("slide-in-right");
       e5!.style.opacity = "1";
-      e15!.style.opacity = "1";
-      e16!.style.opacity = "1";
-      e17!.style.opacity = "1";
-      e18!.style.opacity = "1";
+      // e15!.style.opacity = "1";
+      // e16!.style.opacity = "1";
+      // e17!.style.opacity = "1";
+      // e18!.style.opacity = "1";
     }
   }, [inViewport]);
 
@@ -104,12 +104,12 @@ export default function Home() {
     const e13 = document.getElementById("13");
 
     if (inViewport2.inViewport) {
-      e2!.style.opacity = "1";
+      // e2!.style.opacity = "1";
       e9!.style.opacity = "1";
       e10!.style.opacity = "1";
-      e11!.style.opacity = "1";
-      e12!.classList.add("ani-text_delay");
-      e13!.style.opacity = "1";
+      // e11!.style.opacity = "1";
+      // e12!.classList.add("ani-text_delay");
+      // e13!.style.opacity = "1";
     }
   }, [inViewport2.inViewport]);
 
@@ -400,7 +400,32 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
           </div>
-          <div
+          <div className="flex h-[730px] w-full gap-x-[10px]">
+            <div></div>
+            <div
+              id="5"
+              className=" bgMoon  relative mx-auto h-[540px] w-[540px] rounded-full smm:h-[85vw] smm:w-[90vw]  "
+            >
+              <div className="bgNewMoon h-full w-full  pb-[60px] pt-[80px]" />
+              <div
+                id="15"
+                className=" absolute left-[50%] top-[50%] z-50 w-[420px]
+            translate-x-[-50%] translate-y-[-50%]  smm:w-[60vw] "
+              >
+                <Image
+                  src={
+                    "https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/ayla-moonpower-mascot_NEW.png"
+                  }
+                  width={2000}
+                  height={2000}
+                  alt=""
+                  className={` w-full `}
+                />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          {/* <div
             id="5"
             className=" bgMoon  relative mx-auto  
             h-[540px] w-[540px] rounded-full
@@ -455,16 +480,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               />
             </div>
 
-            {/* <Image
-                src={"/FImgGif/Orbit background_14.gif"}
-                width={640}
-                height={412}
-                alt=""
-                className={` w-full `}
-              /> w-[400px]
-                mix-blend-screen
-               
-              */}
+            
             <div
               id="18"
               className="absolute bottom-[20%] left-[50%] w-fit translate-x-[-50%]
@@ -483,7 +499,17 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </p>
               </button>
             </div>
-          </div>
+          </div> */}
+          {/* <Image
+                src={"/FImgGif/Orbit background_14.gif"}
+                width={640}
+                height={412}
+                alt=""
+                className={` w-full `}
+              /> w-[400px]
+                mix-blend-screen
+               
+              */}
         </div>
         {isshow && (
           <>
@@ -579,7 +605,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                     alt=""
                   />
                 </div>
-                <div
+                {/* <div
                   id="13"
                   className="translate-[50%] duration-2000 absolute 
                 bottom-[3%] mt-[22px] flex flex-col justify-center
@@ -609,7 +635,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       </button>
                     </Link>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div

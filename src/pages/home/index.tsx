@@ -12,7 +12,6 @@ const Jose = Josefin_Sans({ subsets: ["latin"] });
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [load, setLoad] = useState(true);
-  const [load1, setLoad1] = useState("");
   // function show() {
   //   setTimeout(() => {
   //     setIsLoading(false);
@@ -45,7 +44,6 @@ const Index = () => {
 
   useEffect(() => {
     const handleLoad = () => {
-      setLoad1("invisible");
       setIsLoading(false);
       setTimeout(() => {
         setLoad(false);
