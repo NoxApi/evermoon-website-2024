@@ -642,12 +642,13 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                     {"Next-Gen 5v5 MOBA"}
                   </p>
                 </div>
+                {/* add new style  */}
                 <div
                   ref={div2Ref}
                   className={`relative z-10 flex h-[386px] w-[660px] items-center justify-center transition-opacity duration-1000 smm:h-[93.75vw] smm:w-[90vw]
                     ${div2Animated ? "opacity-100" : "opacity-0"}`}
                 >
-                  <div className="layer1a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
+                  <div ref={div2Ref} className={`layer1a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] transition-opacity duration-1000 delay-[800ms] ${div2Animated ? "opacity-100" : "opacity-0"}`}>
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
                       width={300}
@@ -656,7 +657,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="w-full"
                     />
                   </div>
-                  <div className="layer3a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
+                  <div ref={div2Ref} className={`layer3a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] transition-opacity duration-1000 delay-[800ms] ${div2Animated ? "opacity-100" : "opacity-0"}`}>
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
                       width={300}
@@ -665,7 +666,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="w-full"
                     />
                   </div>
-                  <div className="h-full w-full bg-bgLights bg-cover bg-no-repeat mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center" />
+                  <div ref={div2Ref} className={`h-full w-full bg-bgLights bg-cover bg-no-repeat mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center transition-opacity duration-1000 delay-[1600ms] ${div2Animated ? "opacity-100" : "opacity-0"} `}/>
                   <div className="absolute z-30 h-[184px] w-[184px] mdm:h-fit mdm:w-[43.75vw] smm:top-[30%]">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/app-icon.png"
@@ -676,6 +677,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                     />
                   </div>
                 </div>
+                {/* add new style  */}
                 <div
                   ref={div3Ref}
                   className={`relative h-[80px] w-[600px] transition-opacity duration-1000 smm:w-[90vw]
