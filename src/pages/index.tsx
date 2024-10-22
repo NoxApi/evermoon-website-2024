@@ -56,13 +56,17 @@ export default function Home() {
     mediums1 = mediumdata.slice(0, 3);
   }
 
-  const bgFullRef = useRef<HTMLDivElement>(null);
-  const { inViewport: bgFullInViewport } = useInViewport(
-    bgFullRef as MutableRefObject<HTMLDivElement>,
-    { threshold: 0.1 },
-  );
+  const div1Ref = useRef<HTMLDivElement>(null);
+  const div2Ref = useRef<HTMLDivElement>(null);
+  const div3Ref = useRef<HTMLDivElement>(null);
+  const div4Ref = useRef<HTMLDivElement>(null);
+  const div5Ref = useRef<HTMLDivElement>(null);
 
-  const [bgFullAnimated, setBgFullAnimated] = useState(false);
+  const { inViewport: div1InView } = useInViewport(div1Ref, { threshold: 0.5 });
+  const { inViewport: div2InView } = useInViewport(div2Ref, { threshold: 0.5 });
+  const { inViewport: div3InView } = useInViewport(div3Ref, { threshold: 0.5 });
+  const { inViewport: div4InView } = useInViewport(div4Ref, { threshold: 0.5 });
+  const { inViewport: div5InView } = useInViewport(div5Ref, { threshold: 0.5 });
 
   useEffect(() => {
     setisshow(true);
@@ -192,13 +196,6 @@ export default function Home() {
   //     e20!.style.opacity = "1";
   //   }
   // }, [inViewport7.inViewport]);
-
-  useEffect(() => {
-    if (bgFullInViewport && !bgFullAnimated) {
-      // console.log('bgFull div is now visible');
-      setBgFullAnimated(true);
-    }
-  }, [bgFullInViewport, bgFullAnimated]);
 
   return (
     <div
@@ -573,28 +570,21 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
         </div>
         {isshow && (
           <>
-            <div
-              ref={bgFullRef}
-              className={`bgFull flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto 
-                transition-all duration-500 ease-out
-                ${bgFullAnimated 
-                  ? 'opacity-100 translate-y-0 scale-100' 
-                  : 'opacity-0 translate-y-20 scale-95'}`}
-            >
-              <div
-                className="flex flex-col items-center gap-y-9 py-[80px] smm:py-[12.5vw]"
-              >
+            <div className="bgFull flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto">
+              <div className="flex flex-col items-center gap-y-9 py-[80px] smm:py-[12.5vw]">
                 <div
+                  ref={div1Ref}
                   className={`relative flex h-[48px] w-[480px] justify-center transition-opacity duration-500 
-                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
+                    ${div1InView ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <p className="absolute left-[50%] top-[50%] z-20 w-[100%] translate-x-[-50%] translate-y-[-50%] text-center text-5xl text-[#F1E3B5] smm:text-3xl ">
                     {"Next-Gen 5v5 MOBA"}
                   </p>
                 </div>
                 <div
+                  ref={div2Ref}
                   className={`relative z-10 flex h-[386px] w-[660px] items-center justify-center transition-opacity duration-1000 smm:h-[93.75vw] smm:w-[90vw]
-                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
+                    ${div2InView ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <div className="layer1a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
                     <Image
@@ -626,8 +616,9 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   </div>
                 </div>
                 <div
+                  ref={div3Ref}
                   className={`relative h-[80px] w-[600px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
+                    ${div3InView ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <div className="absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%]">
                     <h5 className="text-center text-[30px] text-white smm:text-xl ">
@@ -637,8 +628,9 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   </div>
                 </div>
                 <div
+                  ref={div4Ref}
                   className={`relative h-[32px] w-[432px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
+                    ${div4InView ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <div className="absolute left-[50%] top-[50%] flex h-full w-full translate-x-[-50%] translate-y-[-50%] justify-center ">
                     <div className="mr-[-24px] w-[168px] smm:w-[35.6vw]">
@@ -676,8 +668,9 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
               </div>
               <div
+                ref={div5Ref}
                 className={`relative mb-[40px] h-[40px] w-[160px] transition-opacity duration-1000
-                  ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
+                  ${div5InView ? 'opacity-100' : 'opacity-0'}`}
               >
                 <Link href="https://www.evermoon.games/home">
                   <button className="button-outline1_no-m-auto absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%] text-lg text-white smm:text-sm">
