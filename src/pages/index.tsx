@@ -14,6 +14,7 @@ import { useEffect, useState, useRef, MutableRefObject } from "react";
 import { useInViewport } from "react-in-viewport";
 
 import "animate.css";
+import Star from "evm/svg/Star";
 
 export default function Home() {
   const [isshow, setisshow] = useState(false);
@@ -24,6 +25,7 @@ export default function Home() {
   );
   const triggerRef2 = useRef<HTMLElement>(null);
   const triggerRef4 = useRef<HTMLElement>(null);
+  const triggerRef8 = useRef<HTMLElement>(null);
   const inViewport4 = useInViewport(
     triggerRef4 as MutableRefObject<HTMLElement>,
     { threshold: 1 },
@@ -39,6 +41,12 @@ export default function Home() {
     triggerRef7 as MutableRefObject<HTMLElement>,
     { threshold: 0.1 },
   );
+
+  const inViewport8 = useInViewport(
+    triggerRef8 as MutableRefObject<HTMLElement>,
+    { threshold: 0.1 },
+  );
+
   const [isfetching, setisfetching] = useState(false);
   const [mediumdata, setmediumdata] = useState(Array);
   const [isLoading, setIsLoading] = useState(true);
@@ -75,67 +83,107 @@ export default function Home() {
 
   useEffect(() => {
     const e1 = document.getElementById("evm1");
+    const e2 = document.getElementById("2");
     const e3 = document.getElementById("3");
     const e4 = document.getElementById("4");
     const e5 = document.getElementById("5");
+    const e11 = document.getElementById("11");
     const e15 = document.getElementById("15");
     const e16 = document.getElementById("16");
-    const e17 = document.getElementById("17");
-    const e18 = document.getElementById("18");
 
     if (inViewport) {
       e1!.style.opacity = "1";
-      e3!.classList.add("slide-in-left");
-      e4!.classList.add("slide-in-right");
-      e5!.style.opacity = "1";
-      // e15!.style.opacity = "1";
-      // e16!.style.opacity = "1";
-      // e17!.style.opacity = "1";
-      // e18!.style.opacity = "1";
+      e2!.style.opacity = "1";
+      e3!.style.opacity = "1";
+      e4!.style.opacity = "1";
+      // e5!.style.opacity = "1";
+      // e3!.classList.add("slide-in-left");
+      // e4!.classList.add("slide-in-right");
+      // e5!.classList.add("fade_inUpBIG1");
+      e11!.style.opacity = "1";
+      // e15!.classList.add("fadeCus1");
+      // e16!.classList.add("fade_inUpBIG");
     }
   }, [inViewport]);
 
   useEffect(() => {
-    const e2 = document.getElementById("egg");
-    const e9 = document.getElementById("9");
-    const e10 = document.getElementById("10");
-    const e11 = document.getElementById("11");
-    const e12 = document.getElementById("12");
-    const e13 = document.getElementById("13");
-
-    if (inViewport2.inViewport) {
-      // e2!.style.opacity = "1";
-      e9!.style.opacity = "1";
-      e10!.style.opacity = "1";
-      // e11!.style.opacity = "1";
-      // e12!.classList.add("ani-text_delay");
-      // e13!.style.opacity = "1";
-    }
-  }, [inViewport2.inViewport]);
-
-  useEffect(() => {
     const e6 = document.getElementById("6");
     const e7 = document.getElementById("7");
-
+    const e8 = document.getElementById("8");
+    const e9 = document.getElementById("9");
+    const e10 = document.getElementById("10");
     if (inViewport4.inViewport) {
+      e6!.style.opacity = "1";
       e7!.style.opacity = "1";
-      e6!.classList.add("ani-text");
+      e8!.style.opacity = "1";
+      e9!.style.opacity = "1";
+      e10!.style.opacity = "1";
+      // e6!.classList.add("fade-NEW");
+      // e7!.style.opacity = "1";
+      // e8!.classList.add("fade-NEW");
+      // e9!.classList.add("fade-NEW");
+      // e10!.classList.add("fade-NEW");
     }
   }, [inViewport4.inViewport]);
 
   useEffect(() => {
-    const e8 = document.getElementById("8");
+    const e12 = document.getElementById("12");
+    const e13 = document.getElementById("13");
     const e14 = document.getElementById("14");
-    const e19 = document.getElementById("19");
-    const e20 = document.getElementById("20");
-
     if (inViewport7.inViewport) {
-      // e8!.classList.add("ani-text_delay");
+      e12!.style.opacity = "1";
+      e13!.style.opacity = "1";
+      // e13!.classList.add("fadeCus2");
       e14!.style.opacity = "1";
-      e19!.style.opacity = "1";
-      e20!.style.opacity = "1";
     }
   }, [inViewport7.inViewport]);
+
+  useEffect(() => {
+    const e17 = document.getElementById("17");
+    const e18 = document.getElementById("18");
+    const e19 = document.getElementById("19");
+    const e20 = document.getElementById("20");
+    if (inViewport2.inViewport) {
+      e17!.style.opacity = "1";
+      e18!.style.opacity = "1";
+      e19!.style.opacity = "1";
+      // e18!.classList.add("fade-NEW");
+      // e19!.classList.add("fade-NEW1");
+      // e20!.classList.add("fade-NEW");
+    }
+  }, [inViewport2.inViewport]);
+
+  // useEffect(() => {
+  //   const e2 = document.getElementById("egg");
+  //   const e9 = document.getElementById("9");
+  //   const e10 = document.getElementById("10");
+  //   const e11 = document.getElementById("11");
+  //   const e12 = document.getElementById("12");
+  //   const e13 = document.getElementById("13");
+
+  //   if (inViewport2.inViewport) {
+  //     // e2!.style.opacity = "1";
+  //     e9!.style.opacity = "1";
+  //     e10!.style.opacity = "1";
+  //     // e11!.style.opacity = "1";
+  //     // e12!.classList.add("ani-text_delay");
+  //     // e13!.style.opacity = "1";
+  //   }
+  // }, [inViewport2.inViewport]);
+
+  // useEffect(() => {
+  //   // const e8 = document.getElementById("8");
+  //   const e14 = document.getElementById("14");
+  //   const e19 = document.getElementById("19");
+  //   const e20 = document.getElementById("20");
+
+  //   if (inViewport7.inViewport) {
+  //     // e8!.classList.add("ani-text_delay");
+  //     e14!.style.opacity = "1";
+  //     e19!.style.opacity = "1";
+  //     e20!.style.opacity = "1";
+  //   }
+  // }, [inViewport7.inViewport]);
   return (
     <div
       className={` flex  h-auto w-full 
@@ -377,304 +425,256 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           id="evm1"
           ref={triggerRef as React.RefObject<HTMLDivElement>}
           className=" relative flex h-auto  w-[100%] min-w-[1920px] flex-col 
-          justify-center bg-[#01071A] py-[26px] opacity-0 transition-opacity
-          delay-300 duration-1000 "
+          items-center bg-[#01071A] py-[26px]  "
         >
-          <div
-            className="#01071A flex items-center justify-center pl-[50px] 
-          lgm:mr-2 smm:flex-col smm:pr-[30px]"
-          >
-            <div id="3" className="flex justify-center pr-4 pt-3 opacity-0 ">
-              <p className="text-[36px] text-white  mdm:text-[28px] smm:text-[5.75vw] ">
-                {"Powered by"}
-              </p>
-            </div>
-            <div id="4" className="pr-[16px] opacity-0 smm:m-auto">
-              <Image
-                src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/immutable.png"
-                width={1005}
-                height={270}
-                alt=""
-                priority={true}
-                className="w-[334px] smm:w-[52vw] "
-              />
-            </div>
-          </div>
-          <div className="flex h-[540px] w-full gap-x-[10px] mb-[60px]">
-            <div></div>
+          {/* opacity-0 transition-opacity
+          delay-300 duration-1000 */}
+          <div className="saveZone relative flex w-full max-w-[1360px] flex-col items-center xlm:w-full">
             <div
-              id="5"
-              className=" bgMoon  relative mx-auto h-full w-[540px] rounded-full smm:h-[85vw] smm:w-[90vw]  "
+              id="2"
+              className="#01071A flex items-center justify-center py-[26px] pl-[50px]
+          opacity-0 transition-opacity duration-1000 lgm:mr-2
+          smm:flex-col smm:pr-[30px]"
             >
-              <div className="bgNewMoon h-full w-full  pb-[60px] pt-[80px] " />
-              <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-10 h-full w-full bg-bgWeeklyCalm bg-cover bg-no-repeat" />
+              <div className="flex justify-center pr-4 pt-3  ">
+                <p
+                  // id="3"
+                  className="text-[36px] text-white  mdm:text-[28px] smm:text-[5.75vw] "
+                >
+                  {"Powered by"}
+                </p>
+              </div>
               <div
-                id="15"
-                className=" absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] z-20 w-[316px] "
-              >            
+                // id="4"
+                className="pr-[16px] smm:m-auto"
+              >
                 <Image
-                  src={
-                    "https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/ayla-moonpower-mascot_NEW.png"
-                  }
-                  width={2000}
-                  height={2000}
+                  src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/immutable.png"
+                  width={1005}
+                  height={270}
                   alt=""
-                  className={` w-full `}
+                  priority={true}
+                  className="w-[334px] smm:w-[52vw] "
                 />
               </div>
             </div>
-            <div></div>
-          </div>
-          <div className="flex flex-col items-center justify-center gap-y-5">
-            <div><h1 className="text-6xl">Moon Mission</h1></div>
-            <div><h3 className="text-3xl">Complete social quests, earn Moon Power, and unlock amazing prizes!</h3></div>
-            <div className="flex gap-x-3 mt-12">
-            <Link href={"https://moonmission.evermoon.games"} target="_blank">
-              <button className="text-lg px-[10px] py-[6px] text-white">Let&apos;s Start it</button>
-              </Link>
-              <Link href={"https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission"} target="_blank">
-              <button className="text-lg px-[10px] py-[6px] text-white">Read More</button>
-              </Link>
-            </div>
-          </div>
-          {/* <div
-            id="5"
-            className=" bgMoon  relative mx-auto  
-            h-[540px] w-[540px] rounded-full
-              opacity-0 transition-opacity delay-1000 duration-1000 smm:h-[85vw] 
-          smm:w-[90vw] "
-          >
-            <div
-              id="15"
-              className=" absolute left-[51%] top-[50%] z-50 w-[420px]
-            translate-x-[-50%] translate-y-[-68%] opacity-0 mix-blend-screen
-             transition-opacity delay-[1800ms] duration-1000 smm:w-[60vw] smm:translate-y-[-100%] "
-            >
-              <Image
-                src={"/FImgGif/Lite_Page_Comp 1.gif"}
-                width={640}
-                height={412}
-                alt=""
-                className={` w-full `}
-              />
-            </div>
-            <div
-              id="17"
-              className="coin absolute left-[50%] top-[50%] z-40
-            w-[218px] opacity-0 transition-opacity delay-200
-            duration-1000 smm:w-[30vw] "
-            >
-              <Image
-                src={
-                  "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/EVM.png"
-                }
-                width={300}
-                height={300}
-                alt=""
-                priority={true}
-                className={` smm:w-full `}
-              />
-            </div>
-            <div
-              id="16"
-              className="  absolute left-[50%] 
-              top-[50%]  z-10  w-[350px]
-              translate-x-[-50%]  translate-y-[-60%] opacity-0
-               transition-opacity delay-[1400ms] duration-1000
-              smm:w-[50vw] smm:translate-y-[-85%]"
-            >
-              <Image
-                src={"/FImgGif/anigif.gif"}
-                width={640}
-                height={412}
-                alt=""
-                className={` w-full `}
-              />
-            </div>
-
-            
-            <div
-              id="18"
-              className="absolute bottom-[20%] left-[50%] w-fit translate-x-[-50%]
-            translate-y-[-50%] opacity-0 transition-opacity  delay-[2400ms]
-            duration-1000 smm:bottom-[24%] smm:left-[50%] smm:translate-y-[-40%] "
-            >
-              <button
-                className="
-                min-w-[122px] rounded-[8px] bg-[#1D4ED8]
-                  px-[14px] py-[10px]
-                 hover:bg-blue-500 active:ring-blue-900 smm:px-[2.7vw] smm:py-[1.6vw]
-                 "
+            <div className="mb-[60px] flex h-[540px] w-full justify-center gap-x-[10px] smm:h-fit">
+              <div
+                id="11"
+                // id="5"
+                className=" w-[360px] pb-[211px] pl-[127px] pr-[67px] pt-[127px] opacity-0 transition-opacity delay-[1000ms] duration-1000 lgm:hidden"
               >
-                <p className="flex justify-center text-sm text-white">
-                  {"$EVM Coming Soon"}
-                </p>
-              </button>
+                <div className="robot-animation opacity-70">
+                  <Image
+                    src="https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/decorate_robot-1.png"
+                    width={471}
+                    height={498}
+                    alt=""
+                    className="w-full "
+                  />
+                </div>
+              </div>
+              <div
+                id="3"
+                // id="15"
+                className=" bgMoon  relative h-full w-[540px] rounded-full opacity-0 transition-opacity delay-[300ms] duration-1000 smm:h-[85vw] smm:w-[90vw]  "
+              >
+                <div className="bgNewMoon h-full w-full  pb-[60px] pt-[80px] " />
+                <div className="absolute left-[50%] top-[50%] z-10 h-full w-full translate-x-[-50%] translate-y-[-50%] bg-bgWeeklyCalm bg-contain bg-no-repeat" />
+                <div className=" absolute left-[50%] top-[50%] z-20 w-[316px] translate-x-[-50%] translate-y-[-50%] smm:w-[66.5vw]   ">
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/ayla-moonpower-mascot_NEW.png"
+                    }
+                    width={2000}
+                    height={2000}
+                    alt=""
+                    className={` w-full `}
+                  />
+                </div>
+              </div>
+              <div
+                id="4"
+                // id="16"
+                className="w-[360px] pb-[218px] pl-[60px] pr-[130px] pt-[130px] opacity-0 transition-opacity delay-[900ms] duration-1000 lgm:hidden"
+              >
+                <div className="robot-animation1 opacity-70">
+                  <Image
+                    src="https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/11_mini_01.png"
+                    width={342}
+                    height={410}
+                    alt=""
+                    className="w-[140px] "
+                  />
+                </div>
+              </div>
             </div>
-          </div> */}
-          {/* <Image
-                src={"/FImgGif/Orbit background_14.gif"}
-                width={640}
-                height={412}
-                alt=""
-                className={` w-full `}
-              /> w-[400px]
-                mix-blend-screen
-               
-              */}
+            <div
+              ref={triggerRef2 as React.RefObject<HTMLDivElement>}
+              className=""
+            >
+              <div
+                // id="18"
+                className="flex flex-col items-center gap-y-5 xlm:w-[696px] smm:w-[80vw]  "
+              >
+                <h1
+                  id="17"
+                  className="text-gradient text-6xl opacity-0 transition-opacity delay-200 duration-1000 smm:text-4xl "
+                >
+                  Moon Mission
+                </h1>
+
+                <h3
+                  id="18"
+                  className="text-3xl opacity-0 transition-opacity delay-500 duration-1000 xlm:text-center smm:text-xl"
+                >
+                  Complete social quests, earn Moon Power, and unlock amazing
+                  prizes!
+                </h3>
+              </div>
+              <div
+                id="19"
+                className="mt-12 flex justify-center gap-x-3 opacity-0 transition-opacity delay-[800ms] duration-1000 smm:mt-[7.5vw] smm:w-[90vw]"
+              >
+                <Link href={"https://moonmission.evermoon.games"}>
+                  <button className="btn-primary w-[160px] text-lg smm:w-[38.12vw] smm:text-sm">
+                    Let&apos;s Start it
+                  </button>
+                </Link>
+                <Link
+                  href={
+                    "https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/moon-mission"
+                  }
+                  target="_blank"
+                >
+                  <button className="button-outline1_no-m-auto w-[160px] text-lg text-white smm:w-[38.12vw] smm:text-sm">
+                    Read More
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
         {isshow && (
           <>
-            <div
-              className="bgFull  flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto "
-            >
-              <div className="flex flex-col gap-y-9 items-center py-[80px]">
+            <div className="bgFull  flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto ">
               <div
-                className="flex justify-center opacity-0 transition-opacity delay-300 duration-300 w-[480px] h-[48px] relative"
-                id="7"
+                ref={triggerRef4 as React.RefObject<HTMLDivElement>}
+                className="flex flex-col items-center gap-y-9 py-[80px]  smm:py-[12.5vw] "
               >
-                <p
+                <div
                   id="6"
-                  ref={triggerRef4 as React.RefObject<HTMLDivElement>}
-                  className="translate-x-[-50%] translate-y-[-50%] absolute text-5xl z-20
-                  top-[50%] left-[50%] text-[#F1E3B5] w-[100%] text-center "
+                  className="relative flex h-[48px] w-[480px] justify-center opacity-0 transition-opacity duration-500 "
                 >
-                  {"Next-Gen 5v5 MOBA"}
-                </p>
-              </div>
-              <div className="relative z-10 flex h-[386px] 
-              w-[660px] items-center justify-center ">
-                <div
-                  id="9"
-                  className=" layer1a absolute z-20  w-[286px] opacity-0
-                transition-opacity delay-[500ms] duration-300
-                md:w-[275px] lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
-                >
-                  <Image
-                    src={
-                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
-                    }
-                    width={300}
-                    height={300}
-                    alt=""
-                    className="w-full"
-                  />
+                  {/* opacity-0 transition-opacity delay-300 duration-300 opacity-0 transition-opacity delay-[500ms] duration-300 opacity-0
+                  transition-opacity delay-[500ms] duration-300 */}
+                  <p className="absolute left-[50%] top-[50%] z-20 w-[100%] translate-x-[-50%] translate-y-[-50%] text-center text-5xl text-[#F1E3B5] smm:text-3xl ">
+                    {"Next-Gen 5v5 MOBA"}
+                  </p>
                 </div>
                 <div
-                  id="10"
-                  className=" layer3a absolute z-20  w-[286px] opacity-0
-                  transition-opacity delay-[500ms] duration-300 md:w-[275px] 
-                lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
+                  id="7"
+                  className="relative z-10 flex h-[386px] w-[660px] items-center justify-center opacity-0 transition-opacity delay-100 duration-1000 smm:h-[93.75vw] smm:w-[90vw] "
                 >
-                  <Image
-                    src={
-                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
-                    }
-                    width={300}
-                    height={300}
-                    alt=""
-                    className="w-full"
-                  />
-                </div>
-              </div>
-              <div className="w-[600px] h-[80px] relative">
-                <div className="w-full h-full absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">
-                  <h5 className="text-[30px] text-white text-center">Experience intense battles, strategic teamwork, and real rewards!</h5>
-                </div>
-              </div>
-              <div className="w-[362px] h-[32px] relative">
-              <div className="flex gap-x-[11px] justify-center w-full h-full absolute translate-x-[-50%] translate-y-[-50%] top-[50%] left-[50%]">
-                <div></div>
-                <p className="text-[#F1E3B5] font-light">Coming Soon</p>
-                <div></div>
-              </div>
-              </div>
-              </div>
-              <div className="w-[160px] h-[40px] relative mb-[40px]">
-                <Link href="https://www.evermoon.games/home">
-                <button className="px-[10px] py-[6px] text-lg w-full h-full absolute translate-x-[-50%] translate-y-[-50%] left-[50%] top-[50%] text-white">Explore More</button>
-                </Link>
-              </div>
-              {/* <div
-                ref={triggerRef2 as React.RefObject<HTMLDivElement>}
-                className="relative z-10 flex h-[600px] 
-              w-[540px] items-center justify-center mdm:mb-[30px] 
-              mdm:mt-[30px] smm:h-[99vw] smm:w-[100vw] "
-              >
-                <div
-                  id="egg"
-                  className="absolute z-30 translate-x-[13px]
-                translate-y-[10px] opacity-0 transition-opacity 
-                delay-[1000ms] duration-1000 smm:w-[90vw] smm:translate-x-[2vw] smm:translate-y-[0vw]"
-                >
-                  <div className=" h-[400px] w-[400px] smm:h-[50vw] smm:w-[50vw] ">
+                  <div className=" layer1a absolute z-20  w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
                     <Image
                       src={
-                        "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/sacred%20beast_no_shadow.png"
+                        "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
                       }
                       width={300}
                       height={300}
                       alt=""
-                      priority={true}
-                      className="absolute left-[10%] top-[9.75%] z-20
-                    smm:left-[17%] smm:top-[-24%] smm:w-[55vw]"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className=" layer3a absolute z-20  w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
+                    <Image
+                      src={
+                        "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
+                      }
+                      width={300}
+                      height={300}
+                      alt=""
+                      className="w-full"
+                    />
+                  </div>
+                  <div className=" h-full w-full bg-bgLights bg-cover bg-no-repeat mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center" />
+                  <div className=" absolute z-30 h-[184px] w-[184px] mdm:h-fit mdm:w-[43.75vw] smm:top-[30%] ">
+                    <Image
+                      src={
+                        "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/app-icon.png"
+                      }
+                      width={824}
+                      height={824}
+                      alt=""
+                      className="w-full"
                     />
                   </div>
                 </div>
                 <div
-                  id="11"
-                  className="absolute left-[50%] top-[51.5%] 
-                    w-[400px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity
-                    delay-[1500ms] duration-1000 smm:w-[73vw]
-                    smm:translate-x-[-51%] smm:translate-y-[-68%]"
+                  id="8"
+                  className="relative h-[80px] w-[600px] opacity-0 transition-opacity delay-[300ms] duration-1000 smm:w-[90vw]"
                 >
-                  <Image
-                    src={
-                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/Aura_Egg.png"
-                    }
-                    width={300}
-                    height={300}
-                    alt=""
-                    className="egg_glow w-full "
-                    id=""
-                  />
+                  <div className="absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%]">
+                    <h5 className="text-center text-[30px] text-white smm:text-xl ">
+                      Experience intense battles, strategic teamwork, and real
+                      rewards!
+                    </h5>
+                  </div>
                 </div>
                 <div
                   id="9"
-                  className=" layer1a absolute z-20  w-[286px] opacity-0
-                transition-opacity delay-[500ms] duration-300
-                md:w-[275px] lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
+                  className="relative h-[32px] w-[432px] opacity-0 transition-opacity delay-[500ms] duration-1000 smm:w-[90vw] "
                 >
-                  <Image
-                    src={
-                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
-                    }
-                    width={300}
-                    height={300}
-                    alt=""
-                  />
+                  <div className="absolute left-[50%] top-[50%] flex h-full w-full translate-x-[-50%] translate-y-[-50%] justify-center ">
+                    <div className="mr-[-24px] w-[168px] smm:w-[35.6vw]">
+                      <Star
+                        width={20}
+                        height={20}
+                        className="absolute left-[25%] top-[50%] translate-x-[-50%] translate-y-[-50%] smm:top-[36%] smm:w-[7.5vw] smm:translate-x-[-60%] "
+                      />
+                      <Image
+                        src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/decorate_flare-1.png"
+                        width={566}
+                        height={107}
+                        alt=""
+                        className="w-full"
+                      />
+                    </div>
+                    <p className=" text-2xl font-light text-[#F1E3B5] smm:text-lg">
+                      Coming Soon
+                    </p>
+                    <div className="ml-[-24px] w-[168px] smm:w-[35.6vw]">
+                      <Star
+                        width={20}
+                        height={20}
+                        className="absolute right-[22%] top-[50%] translate-x-[-50%] translate-y-[-50%] smm:top-[36%] smm:w-[7.5vw] smm:translate-x-[2vw] "
+                      />
+                      <Image
+                        src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/decorate_flare-1.png"
+                        width={566}
+                        height={107}
+                        alt=""
+                        className="w-full"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div
-                  id="10"
-                  className=" layer3a absolute z-20  w-[286px] opacity-0
-                  transition-opacity delay-[500ms] duration-300 md:w-[275px] 
-                lg:w-[275px] smm:top-[15%] smm:w-[50vw]"
-                >
-                  <Image
-                    src={
-                      "https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
-                    }
-                    width={300}
-                    height={300}
-                    alt=""
-                  />
-                </div>
-              </div> */}
+              </div>
+              <div
+                id="10"
+                className="relative mb-[40px] h-[40px] w-[160px] opacity-0 transition-opacity delay-[600ms] duration-1000"
+              >
+                <Link href="https://www.evermoon.games/home">
+                  <button className="button-outline1_no-m-auto absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%] text-lg text-white smm:text-sm">
+                    Explore More
+                  </button>
+                </Link>
+              </div>
             </div>
             <div
               ref={triggerRef7 as React.RefObject<HTMLDivElement>}
-              className=" relative flex w-full justify-center bg-gradient-to-b
-          from-[#000B1A] via-[#01193F] to-[#01071A] py-[60px] "
+              className=" bg_new relative flex w-full justify-center py-[60px] "
             >
               <div
                 className="z-30 flex w-[1000px]  flex-col   
@@ -682,13 +682,12 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
              border-[#F1E3B5]  lgm:h-auto "
               >
                 <div
-                  id="19"
-                  className="opacity-0 transition-opacity delay-1000 duration-1000"
+                  id="12"
+                  className="opacity-0 transition-opacity delay-200 duration-1000"
                 >
                   <p
-                    id="8"
-                    className="z-10 mb-[45px] self-center 
-                text-[40px] text-[#F1E3B5] mdm:text-[28px] smm:mb-[6.4vw] xsmm:text-[5vw] "
+                    id="13"
+                    className="z-10 mb-[45px] self-center text-[40px] text-[#F1E3B5] mdm:text-[28px] smm:mb-[6.4vw] xsmm:text-[5vw] "
                   >
                     {"NEWS"}
                   </p>
@@ -697,7 +696,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   id="14"
                   className=" z-10 h-[520px] w-[1000px] 
                overflow-x-hidden bg-transparent opacity-0 transition-opacity 
-               delay-[1400ms] duration-1000 lgm:w-[680px] lgm:overflow-auto smm:hidden "
+               delay-[700ms] duration-1000 lgm:w-[680px] lgm:overflow-auto smm:hidden "
                 >
                   {!isfetching ? (
                     <>
@@ -897,6 +896,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 // bgMoon
               />
               <div
+                id="19"
                 className=" bgMoon absolute left-[11%] h-[300px]  
                 w-[300px] translate-y-[150%] rotate-180 rounded-full smm:w-[80vw] "
                 // bgMoon

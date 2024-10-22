@@ -23,8 +23,10 @@ export default {
           "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Roadmap/road-repeat.webp')",
         bgTribe:
           "url('https://storage.googleapis.com/evermoon_website_bucket/HOME_IMG/component_HomePage_Hero/Tribe%20-%20Ethern.png')",
-          bgWeeklyCalm:
-          "url('https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/weekly%20horizontal.png')",
+        bgWeeklyCalm:
+          "url('https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/STAR.png')",
+        bgLights:
+          "url('https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/decorate_flare-app.png')",
       },
       screens: {
         xsm: "400px",

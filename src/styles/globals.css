@@ -1330,9 +1330,9 @@ input[type="number"] {
     border-right: 70px solid transparent;
     margin-bottom: 10px;
   }
-  .bgMoon {
+  /* .bgMoon {
     opacity: 0.35;
-  }
+  } */
   .orbit {
     transform: scale(0.4);
     background-position: 30px 0px;
@@ -1672,6 +1672,121 @@ iframe {
   }
 }
 
+/* add new class animation */
+.robot-animation {
+  width: 166px;
+  height: 166px;
+  animation: play 4s infinite;
+}
+
+@keyframes play {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px); /* Adjust the height of the bounce */
+  }
+}
+
+.robot-animation1 {
+  width: 166px;
+  height: 166px;
+  animation: play 4s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes play1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the height of the bounce */
+  }
+}
+
+.fadeCus1 {
+  width: 540px;
+  height: 540px;
+  animation: fadeInDownCustom 2s;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInDownCustom {
+  from {
+    opacity: 0;
+    transform: translateY(
+      -60px
+    ); /* Adjust this value to control the distance */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeCus2 {
+  /* width: 540px;
+  height: 540px; */
+  animation: fadeInDownCustom 1s;
+  animation-delay: 300ms;
+}
+
+@keyframes fadeInDownCustom {
+  from {
+    opacity: 0;
+    transform: translateY(
+      -100px
+    ); /* Adjust this value to control the distance */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bg_new {
+  background: linear-gradient(180deg, #01071a 0%, #01193f 50%, #01071a 100%);
+}
+
+.fade_inUpBIG {
+  animation: fadeInUpBig;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  opacity: 1;
+}
+
+.fade-NEW {
+  animation: fadeInDown;
+  animation-duration: 1s;
+  animation-delay: 300ms;
+  opacity: 1;
+}
+
+.fade-NEW1 {
+  animation: fadeInDown;
+  animation-duration: 1s;
+  animation-delay: 1200ms;
+  opacity: 1;
+}
+
+.fade_inUpBIG1 {
+  animation: fadeInUpBig;
+  animation-duration: 1.5s;
+  animation-delay: 1.8s;
+  opacity: 1;
+}
+
+.fadely {
+  animation: fadeIn;
+  animation-duration: 1s;
+  /* animation-delay: 800ms;
+  opacity: 1; */
+}
+
+/* add new class animation */
+
 .custom-loader {
   width: 10px;
   height: 6px;
@@ -1696,10 +1811,22 @@ iframe {
   );
 } */
 
+/* add new class */
+.text-gradient {
+  background: linear-gradient(to right, #9dc4fc 0%, #d0c3fc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+}
+/* add new class */
+
 @layer base {
   .btn-primary {
-    @apply rounded-[8px]    
-        bg-[#1D4ED8] px-[14px] py-[10px];
+    @apply rounded-lg bg-blue-700 px-[10px] py-[6px]
+    text-white hover:bg-blue-500 focus:outline-none focus:ring-4
+    focus:ring-blue-900 active:bg-blue-600;
   }
   .btn-primary_disable {
     @apply rounded-[8px]    
@@ -1712,4 +1839,15 @@ iframe {
   .icon_hover {
     @apply h-[34px] w-[34px] fill-white hover:fill-[#F1E3B5] smm:w-[6vw];
   }
+  /* add class for reuse style */
+  .button-outline1_no-m-auto {
+    @apply rounded-lg border-[1px] border-blue-700 bg-transparent 
+    px-[9px] py-[5px] text-blue-700
+    hover:border-blue-500 hover:text-blue-500 active:border-blue-600
+    active:text-blue-600;
+  }
+  .saveZone {
+    @apply px-[32px] lgm:px-[24px] smm:px-[16px];
+  }
+  /* add class for reuse style */
 }
