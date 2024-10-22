@@ -62,6 +62,8 @@ export default function Home() {
     { threshold: 0.1 },
   );
 
+  const [bgFullAnimated, setBgFullAnimated] = useState(false);
+
   useEffect(() => {
     setisshow(true);
     if (window.innerWidth > 768) {
@@ -192,10 +194,11 @@ export default function Home() {
   // }, [inViewport7.inViewport]);
 
   useEffect(() => {
-    if (bgFullInViewport) {
+    if (bgFullInViewport && !bgFullAnimated) {
       // console.log('bgFull div is now visible');
+      setBgFullAnimated(true);
     }
-  }, [bgFullInViewport]);
+  }, [bgFullInViewport, bgFullAnimated]);
 
   return (
     <div
@@ -574,7 +577,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               ref={bgFullRef}
               className={`bgFull flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto 
                 transition-all duration-500 ease-out
-                ${bgFullInViewport 
+                ${bgFullAnimated 
                   ? 'opacity-100 translate-y-0 scale-100' 
                   : 'opacity-0 translate-y-20 scale-95'}`}
             >
@@ -583,7 +586,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               >
                 <div
                   className={`relative flex h-[48px] w-[480px] justify-center transition-opacity duration-500 
-                    ${bgFullInViewport ? 'opacity-100' : 'opacity-0'}`}
+                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <p className="absolute left-[50%] top-[50%] z-20 w-[100%] translate-x-[-50%] translate-y-[-50%] text-center text-5xl text-[#F1E3B5] smm:text-3xl ">
                     {"Next-Gen 5v5 MOBA"}
@@ -591,7 +594,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   className={`relative z-10 flex h-[386px] w-[660px] items-center justify-center transition-opacity duration-1000 smm:h-[93.75vw] smm:w-[90vw]
-                    ${bgFullInViewport ? 'opacity-100' : 'opacity-0'}`}
+                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <div className="layer1a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
                     <Image
@@ -624,7 +627,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   className={`relative h-[80px] w-[600px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${bgFullInViewport ? 'opacity-100' : 'opacity-0'}`}
+                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <div className="absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%]">
                     <h5 className="text-center text-[30px] text-white smm:text-xl ">
@@ -635,7 +638,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   className={`relative h-[32px] w-[432px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${bgFullInViewport ? 'opacity-100' : 'opacity-0'}`}
+                    ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
                 >
                   <div className="absolute left-[50%] top-[50%] flex h-full w-full translate-x-[-50%] translate-y-[-50%] justify-center ">
                     <div className="mr-[-24px] w-[168px] smm:w-[35.6vw]">
@@ -674,7 +677,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               </div>
               <div
                 className={`relative mb-[40px] h-[40px] w-[160px] transition-opacity duration-1000
-                  ${bgFullInViewport ? 'opacity-100' : 'opacity-0'}`}
+                  ${bgFullAnimated ? 'opacity-100' : 'opacity-0'}`}
               >
                 <Link href="https://www.evermoon.games/home">
                   <button className="button-outline1_no-m-auto absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%] text-lg text-white smm:text-sm">
