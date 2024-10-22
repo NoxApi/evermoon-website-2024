@@ -1676,10 +1676,11 @@ iframe {
 .robot-animation {
   width: 166px;
   height: 166px;
-  animation: play 4s infinite;
+  /* fix err  */
+  animation: play1 4s infinite;
 }
 
-@keyframes play {
+@keyframes play1 {
   0%,
   100% {
     transform: translateY(0);
@@ -1692,11 +1693,11 @@ iframe {
 .robot-animation1 {
   width: 166px;
   height: 166px;
-  animation: play 4s infinite;
+  animation: play2 4s infinite;
   animation-delay: 1s;
 }
 
-@keyframes play1 {
+@keyframes play2 {
   0%,
   100% {
     transform: translateY(0);
