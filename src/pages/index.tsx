@@ -61,18 +61,27 @@ export default function Home() {
   const div3Ref = useRef<HTMLDivElement>(null);
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
+  const div6Ref = useRef<HTMLDivElement>(null);
+  const div7Ref = useRef<HTMLDivElement>(null);
+  const div8Ref = useRef<HTMLDivElement>(null);
 
   const { inViewport: div1InView } = useInViewport(div1Ref, { threshold: 0.5 });
   const { inViewport: div2InView } = useInViewport(div2Ref, { threshold: 0.5 });
   const { inViewport: div3InView } = useInViewport(div3Ref, { threshold: 0.5 });
   const { inViewport: div4InView } = useInViewport(div4Ref, { threshold: 0.5 });
   const { inViewport: div5InView } = useInViewport(div5Ref, { threshold: 0.5 });
+  const { inViewport: div6InView } = useInViewport(div6Ref, { threshold: 0.5 });
+  const { inViewport: div7InView } = useInViewport(div7Ref, { threshold: 0.5 });
+  const { inViewport: div8InView } = useInViewport(div8Ref, { threshold: 0.5 });
 
   const [div1Animated, setDiv1Animated] = useState(false);
   const [div2Animated, setDiv2Animated] = useState(false);
   const [div3Animated, setDiv3Animated] = useState(false);
   const [div4Animated, setDiv4Animated] = useState(false);
   const [div5Animated, setDiv5Animated] = useState(false);
+  const [div6Animated, setDiv6Animated] = useState(false);
+  const [div7Animated, setDiv7Animated] = useState(false);
+  const [div8Animated, setDiv8Animated] = useState(false);
 
   useEffect(() => {
     setisshow(true);
@@ -232,6 +241,22 @@ export default function Home() {
       setDiv5Animated(true);
     }
   }, [div5InView, div5Animated]);
+
+  useEffect(() => {
+    if (div6InView && !div6Animated) {
+      setDiv6Animated(true);
+    }
+  }, [div6InView, div6Animated]);
+  useEffect(() => {
+    if (div7InView && !div7Animated) {
+      setDiv7Animated(true);
+    }
+  }, [div7InView, div7Animated]);
+  useEffect(() => {
+    if (div8InView && !div8Animated) {
+      setDiv8Animated(true);
+    }
+  }, [div8InView, div8Animated]);
 
   return (
     <div
