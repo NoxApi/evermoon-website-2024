@@ -49,7 +49,7 @@ export default function Home() {
 
   const [isfetching, setisfetching] = useState(false);
   const [mediumdata, setmediumdata] = useState(Array);
-
+  const [isLoading, setIsLoading] = useState(true);
   let mediums1: any[] = [];
   medium(setisfetching, setmediumdata, mediumdata);
   if (mediumdata.length != 0) {
@@ -61,9 +61,6 @@ export default function Home() {
   const div3Ref = useRef<HTMLDivElement>(null);
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
-  const div6Ref = useRef<HTMLDivElement>(null);
-  const div7Ref = useRef<HTMLDivElement>(null);
-  const div8Ref = useRef<HTMLDivElement>(null);
 
   const { inViewport: div1InView } = useInViewport(div1Ref, { threshold: 0.5 });
   const { inViewport: div2InView } = useInViewport(div2Ref, { threshold: 0.5 });
@@ -614,7 +611,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 <div
                   ref={div1Ref}
                   className={`relative flex h-[48px] w-[480px] justify-center transition-opacity duration-500 
-                    ${div1InView ? 'opacity-100' : 'opacity-0'}`}
+                    ${div1Animated ? "opacity-100" : "opacity-0"}`}
                 >
                   <p className="absolute left-[50%] top-[50%] z-20 w-[100%] translate-x-[-50%] translate-y-[-50%] text-center text-5xl text-[#F1E3B5] smm:text-3xl ">
                     {"Next-Gen 5v5 MOBA"}
@@ -623,12 +620,9 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 <div
                   ref={div2Ref}
                   className={`relative z-10 flex h-[386px] w-[660px] items-center justify-center transition-opacity duration-1000 smm:h-[93.75vw] smm:w-[90vw]
-                    ${div2InView ? 'opacity-100' : 'opacity-0'}`}
+                    ${div2Animated ? "opacity-100" : "opacity-0"}`}
                 >
-                  <div
-                    ref={div6Ref}
-                    className={`layer1a absolute z-20 w-[286px] transition-opacity delay-[1.6s] duration-1000 md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] ${div6InView ? "opacity-100" : "opacity-0"}`}
-                  >
+                  <div className="layer1a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
                       width={300}
@@ -637,10 +631,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="w-full"
                     />
                   </div>
-                  <div
-                    ref={div7Ref}
-                    className={`layer3a absolute z-20 w-[286px] transition-opacity delay-[800ms] duration-1000 md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] ${div7InView ? "opacity-100" : "opacity-0"}`}
-                  >
+                  <div className="layer3a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw]">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
                       width={300}
@@ -649,10 +640,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="w-full"
                     />
                   </div>
-                  <div
-                    ref={div8Ref}
-                    className="h-full w-full bg-bgLights bg-cover bg-no-repeat transition-opacity delay-[800ms] duration-1000 mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center"
-                  />
+                  <div className="h-full w-full bg-bgLights bg-cover bg-no-repeat mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center" />
                   <div className="absolute z-30 h-[184px] w-[184px] mdm:h-fit mdm:w-[43.75vw] smm:top-[30%]">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/app-icon.png"
@@ -666,7 +654,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 <div
                   ref={div3Ref}
                   className={`relative h-[80px] w-[600px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${div3InView ? 'opacity-100' : 'opacity-0'}`}
+                    ${div3Animated ? "opacity-100" : "opacity-0"}`}
                 >
                   <div className="absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%]">
                     <h5 className="text-center text-[30px] text-white smm:text-xl ">
@@ -678,7 +666,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 <div
                   ref={div4Ref}
                   className={`relative h-[32px] w-[432px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${div4InView ? 'opacity-100' : 'opacity-0'}`}
+                    ${div4Animated ? "opacity-100" : "opacity-0"}`}
                 >
                   <div className="absolute left-[50%] top-[50%] flex h-full w-full translate-x-[-50%] translate-y-[-50%] justify-center ">
                     <div className="mr-[-24px] w-[168px] smm:w-[35.6vw]">
@@ -718,7 +706,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               <div
                 ref={div5Ref}
                 className={`relative mb-[40px] h-[40px] w-[160px] transition-opacity duration-1000
-                  ${div5InView ? 'opacity-100' : 'opacity-0'}`}
+                  ${div5Animated ? "opacity-100" : "opacity-0"}`}
               >
                 <Link href="https://www.evermoon.games/home">
                   <button className="button-outline1_no-m-auto absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%] text-lg text-white smm:text-sm">
