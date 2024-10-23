@@ -78,6 +78,9 @@ export default function Home() {
   const [div6Animated, setDiv6Animated] = useState(false);
 
   useEffect(() => {
+    // Scroll to the top of the page when the component mounts
+    window.scrollTo(0, 0);
+
     setisshow(true);
     if (window.innerWidth > 768) {
       const l8 = document.getElementById("layer8");
