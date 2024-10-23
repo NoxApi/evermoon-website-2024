@@ -35,12 +35,14 @@ const Footer = () => {
     <div
       ref={triggerRef as React.RefObject<HTMLDivElement>}
       className={`relative z-50 flex h-[258px]  w-[100%] min-w-[1914px] 
-  flex-col bg-[#01071a] pt-[20px]  smm:h-[105vw] ${Jose.className}`}
+  flex-col bg-[#01071a] pt-[20px] mdm:h-[112.5vw] ${Jose.className}`}
+      // fix style
     >
       <div className="absolute bottom-0 left-0 h-[32px] w-full translate-y-[8px] bg-[#01071a]  "></div>
       <div
         className="trapezoid absolute bottom-[-14px] left-[50%] flex translate-x-[-50%] items-center 
-  justify-center  "
+  justify-center smm:bottom-[-20px]  "
+        // fix style
       >
         <div className="relative mt-[80px] flex w-full items-center justify-center ">
           <p className="text-[18px]  text-white mdm:bottom-[0] mdm:text-[3vw] mdm:leading-[4vw] smm:w-[90vw]">
@@ -407,8 +409,8 @@ const Footer = () => {
       </div>
       <div
         id="spray"
-        className=" opacity-0 mix-blend-screen
-            transition-all delay-500 duration-1000"
+        className=" opacity-0 mix-blend-screen transition-all delay-500 duration-1000"
+        // fix style
       >
         <div
           id="te-xtnav"
@@ -418,7 +420,8 @@ const Footer = () => {
             <LinkNewTab href="/home">
               <button
                 className="mr-4 p-[8px] text-[14px] text-white
-        hover:text-[#F1E3B5] mdm:text-[15px] smm:ml-[0vw]"
+        hover:text-[#F1E3B5] mdm:text-xs smm:ml-[0vw]"
+                // fix style
               >
                 {"HOME"}
               </button>
@@ -427,7 +430,8 @@ const Footer = () => {
             <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/defi/sacred-beast">
               <button
                 className="mr-4 p-[8px] text-[14px] text-white
-        hover:text-[#F1E3B5] mdm:text-[15px] smm:ml-[0vw]"
+        hover:text-[#F1E3B5] mdm:text-xs smm:ml-[0vw]"
+                // fix style
               >
                 {"SACRED BEAST"}
               </button>
@@ -441,7 +445,8 @@ const Footer = () => {
               <LinkNewTab href=" https://moonmission.evermoon.games">
                 <button
                   className="mr-4 p-[8px] text-[14px] uppercase
-          text-white hover:text-[#F1E3B5] mdm:text-[15px] smm:ml-[0vw]"
+          text-white hover:text-[#F1E3B5] mdm:text-xs smm:ml-[0vw]"
+                  // fix style
                 >
                   {"Moon Mission"}
                 </button>
@@ -451,7 +456,8 @@ const Footer = () => {
               <LinkNewTab href="https://docs.evermoon.games/evermoon">
                 <button
                   className="mr-4 p-[8px] text-[14px] uppercase text-white
-          hover:text-[#F1E3B5] mdm:text-[15px] smm:ml-[0vw]"
+          hover:text-[#F1E3B5] mdm:text-xs smm:ml-[0vw]"
+                  // fix style
                 >
                   {"Whitepaper"}
                 </button>
@@ -463,7 +469,8 @@ const Footer = () => {
               <LinkNewTab href="https://docs.evermoon.games/evermoon/evermoon-economy/play-and-earn/marketplace">
                 <button
                   className="p-[8px] text-[14px] text-white hover:text-[#F1E3B5]
-          mdm:text-[15px] smm:ml-[0vw]"
+          mdm:text-xs smm:ml-[0vw]"
+                  // fix style
                 >
                   {"MARKETPLACE"}
                 </button>
