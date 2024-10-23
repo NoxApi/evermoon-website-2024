@@ -1310,19 +1310,23 @@ input[type="number"] {
   opacity: 0.5;
 }
 
+/* edit class style */
 .slide-in-left {
   animation: fadeInLeft;
-  animation-duration: 1.5s;
-  animation-delay: 300ms;
+  animation-duration: 1s;
+  /* animation-delay: 300ms; */
   opacity: 1;
 }
+/* edit class style */
 
+/* edit class style */
 .slide-in-right {
   animation: fadeInRight;
-  animation-duration: 1.5s;
-  animation-delay: 300ms;
+  animation-duration: 1s;
+  /* animation-delay: 300ms; */
   opacity: 1;
 }
+/* edit class style */
 
 @media only screen and (max-width: 600px) {
   .trapezoid {
@@ -1707,12 +1711,13 @@ iframe {
   }
 }
 
+/* edit class style */
 .fadeCus1 {
-  width: 540px;
-  height: 540px;
-  animation: fadeInDownCustom 2s;
-  animation-delay: 1s;
+  /* width: 540px;
+  height: 540px; */
+  animation: fadeInDownCustom 1.5s;
 }
+/* edit class style */
 
 @keyframes fadeInDownCustom {
   from {
@@ -1727,14 +1732,15 @@ iframe {
   }
 }
 
+/* edit class style */
 .fadeCus2 {
   /* width: 540px;
   height: 540px; */
-  animation: fadeInDownCustom 1s;
-  animation-delay: 300ms;
+  animation: fadeInDownCustom1 1s;
+  /* animation-delay: 300ms; */
 }
 
-@keyframes fadeInDownCustom {
+@keyframes fadeInDownCustom1 {
   from {
     opacity: 0;
     transform: translateY(
@@ -1746,45 +1752,55 @@ iframe {
     transform: translateY(0);
   }
 }
+/* edit class style */
 
 .bg_new {
   background: linear-gradient(180deg, #01071a 0%, #01193f 50%, #01071a 100%);
 }
 
+/* edit class style */
 .fade_inUpBIG {
   animation: fadeInUpBig;
-  animation-duration: 1.5s;
-  animation-delay: 1.5s;
+  animation-duration: 700ms;
+  /* animation-delay: 400ms; */
   opacity: 1;
 }
+/* edit class style */
 
+/* edit class style */
 .fade-NEW {
   animation: fadeInDown;
   animation-duration: 1s;
-  animation-delay: 300ms;
+  /* animation-delay: 300ms; */
   opacity: 1;
 }
+/* edit class style */
 
+/* edit class style */
 .fade-NEW1 {
   animation: fadeInDown;
-  animation-duration: 1s;
-  animation-delay: 1200ms;
+  animation-duration: 1.5s;
+  /* animation-delay: 1200ms; */
   opacity: 1;
 }
+/* edit class style */
 
+/* edit class style */
+.fade-NEW2 {
+  animation: fadeInDown;
+  animation-duration: 2s;
+  /* animation-delay: 1200ms; */
+  opacity: 1;
+}
+/* edit class style */
+
+/* edit class style */
 .fade_inUpBIG1 {
   animation: fadeInUpBig;
-  animation-duration: 1.5s;
-  animation-delay: 1.8s;
+  animation-duration: 1s;
   opacity: 1;
 }
-
-.fadely {
-  animation: fadeIn;
-  animation-duration: 1s;
-  /* animation-delay: 800ms;
-  opacity: 1; */
-}
+/* edit class style */
 
 /* add new class animation */
 

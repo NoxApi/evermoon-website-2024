@@ -62,17 +62,13 @@ export default function Home() {
   const div4Ref = useRef<HTMLDivElement>(null);
   const div5Ref = useRef<HTMLDivElement>(null);
   const div6Ref = useRef<HTMLDivElement>(null);
-  const div7Ref = useRef<HTMLDivElement>(null);
-  const div8Ref = useRef<HTMLDivElement>(null);
 
   const { inViewport: div1InView } = useInViewport(div1Ref, { threshold: 0.5 });
   const { inViewport: div2InView } = useInViewport(div2Ref, { threshold: 0.5 });
   const { inViewport: div3InView } = useInViewport(div3Ref, { threshold: 0.5 });
   const { inViewport: div4InView } = useInViewport(div4Ref, { threshold: 0.5 });
   const { inViewport: div5InView } = useInViewport(div5Ref, { threshold: 0.5 });
-  const { inViewport: div6InView } = useInViewport(div6Ref, { threshold: 0.5 });
-  const { inViewport: div7InView } = useInViewport(div7Ref, { threshold: 0.5 });
-  const { inViewport: div8InView } = useInViewport(div8Ref, { threshold: 0.5 });
+  const { inViewport: div6InView } = useInViewport(div6Ref, { threshold: 1 });
 
   const [div1Animated, setDiv1Animated] = useState(false);
   const [div2Animated, setDiv2Animated] = useState(false);
@@ -80,8 +76,6 @@ export default function Home() {
   const [div4Animated, setDiv4Animated] = useState(false);
   const [div5Animated, setDiv5Animated] = useState(false);
   const [div6Animated, setDiv6Animated] = useState(false);
-  const [div7Animated, setDiv7Animated] = useState(false);
-  const [div8Animated, setDiv8Animated] = useState(false);
 
   useEffect(() => {
     setisshow(true);
@@ -111,25 +105,17 @@ export default function Home() {
   useEffect(() => {
     const e1 = document.getElementById("evm1");
     const e2 = document.getElementById("2");
-    const e3 = document.getElementById("3");
-    const e4 = document.getElementById("4");
-    const e5 = document.getElementById("5");
-    const e11 = document.getElementById("11");
-    const e15 = document.getElementById("15");
-    const e16 = document.getElementById("16");
+    const e3 = document.getElementById("s3");
+    const e4 = document.getElementById("s4");
+    const e21 = document.getElementById("21");
 
     if (inViewport) {
       e1!.style.opacity = "1";
       e2!.style.opacity = "1";
-      e3!.style.opacity = "1";
-      e4!.style.opacity = "1";
-      // e5!.style.opacity = "1";
-      // e3!.classList.add("slide-in-left");
-      // e4!.classList.add("slide-in-right");
-      // e5!.classList.add("fade_inUpBIG1");
-      e11!.style.opacity = "1";
+      e3!.classList.add("slide-in-left");
+      e4!.classList.add("slide-in-right");
       // e15!.classList.add("fadeCus1");
-      // e16!.classList.add("fade_inUpBIG");
+      e21!.style.opacity = "1";
     }
   }, [inViewport]);
 
@@ -157,60 +143,37 @@ export default function Home() {
     const e12 = document.getElementById("12");
     const e13 = document.getElementById("13");
     const e14 = document.getElementById("14");
+    const e20 = document.getElementById("20");
     if (inViewport7.inViewport) {
-      e12!.style.opacity = "1";
+      e12!.classList.add("fade-NEW");
+      // e12!.style.opacity = "1";
       e13!.style.opacity = "1";
       // e13!.classList.add("fadeCus2");
-      e14!.style.opacity = "1";
+      e14!.classList.add("fadeCus1");
+      e20!.style.opacity = "1";
     }
   }, [inViewport7.inViewport]);
 
   useEffect(() => {
+    const e5 = document.getElementById("b5");
+    const e16 = document.getElementById("b16");
     const e17 = document.getElementById("17");
     const e18 = document.getElementById("18");
     const e19 = document.getElementById("19");
-    const e20 = document.getElementById("20");
+
     if (inViewport2.inViewport) {
-      e17!.style.opacity = "1";
-      e18!.style.opacity = "1";
-      e19!.style.opacity = "1";
+      e5!.classList.add("fade_inUpBIG1");
+      e16!.classList.add("fade_inUpBIG");
+      e17!.classList.add("fade-NEW");
+      e18!.classList.add("fade-NEW1");
+      e19!.classList.add("fade-NEW2");
+      // e17!.style.opacity = "1";
+      // e18!.style.opacity = "1";
+      // e19!.style.opacity = "1";
       // e18!.classList.add("fade-NEW");
       // e19!.classList.add("fade-NEW1");
-      // e20!.classList.add("fade-NEW");
     }
   }, [inViewport2.inViewport]);
-
-  // useEffect(() => {
-  //   const e2 = document.getElementById("egg");
-  //   const e9 = document.getElementById("9");
-  //   const e10 = document.getElementById("10");
-  //   const e11 = document.getElementById("11");
-  //   const e12 = document.getElementById("12");
-  //   const e13 = document.getElementById("13");
-
-  //   if (inViewport2.inViewport) {
-  //     // e2!.style.opacity = "1";
-  //     e9!.style.opacity = "1";
-  //     e10!.style.opacity = "1";
-  //     // e11!.style.opacity = "1";
-  //     // e12!.classList.add("ani-text_delay");
-  //     // e13!.style.opacity = "1";
-  //   }
-  // }, [inViewport2.inViewport]);
-
-  // useEffect(() => {
-  //   // const e8 = document.getElementById("8");
-  //   const e14 = document.getElementById("14");
-  //   const e19 = document.getElementById("19");
-  //   const e20 = document.getElementById("20");
-
-  //   if (inViewport7.inViewport) {
-  //     // e8!.classList.add("ani-text_delay");
-  //     e14!.style.opacity = "1";
-  //     e19!.style.opacity = "1";
-  //     e20!.style.opacity = "1";
-  //   }
-  // }, [inViewport7.inViewport]);
 
   useEffect(() => {
     if (div1InView && !div1Animated) {
@@ -247,16 +210,6 @@ export default function Home() {
       setDiv6Animated(true);
     }
   }, [div6InView, div6Animated]);
-  useEffect(() => {
-    if (div7InView && !div7Animated) {
-      setDiv7Animated(true);
-    }
-  }, [div7InView, div7Animated]);
-  useEffect(() => {
-    if (div8InView && !div8Animated) {
-      setDiv8Animated(true);
-    }
-  }, [div8InView, div8Animated]);
 
   return (
     <div
@@ -510,18 +463,13 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           opacity-0 transition-opacity duration-1000 lgm:mr-2
           smm:flex-col smm:pr-[30px]"
             >
-              <div className="flex justify-center pr-4 pt-3  ">
-                <p
-                  // id="3"
-                  className="text-[36px] text-white  mdm:text-[28px] smm:text-[5.75vw] "
-                >
+              {/* edit style  */}
+              <div id="s3" className="flex justify-center pr-4 pt-3 opacity-0 ">
+                <p className="text-[36px] text-white  mdm:text-[28px] smm:text-[5.75vw] ">
                   {"Powered by"}
                 </p>
               </div>
-              <div
-                // id="4"
-                className="pr-[16px] smm:m-auto"
-              >
+              <div id="s4" className="pr-[16px] opacity-0 smm:m-auto">
                 <Image
                   src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/immutable.png"
                   width={1005}
@@ -531,12 +479,13 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   className="w-[334px] smm:w-[52vw] "
                 />
               </div>
+              {/* edit style  */}
             </div>
             <div className="mb-[60px] flex h-[540px] w-full justify-center gap-x-[10px] smm:h-fit">
+              {/* edit style  */}
               <div
-                id="11"
-                // id="5"
-                className=" w-[360px] pb-[211px] pl-[127px] pr-[67px] pt-[127px] opacity-0 transition-opacity delay-[1000ms] duration-1000 lgm:hidden"
+                id="b5"
+                className=" w-[360px] pb-[211px] pl-[127px] pr-[67px] pt-[127px] opacity-0 lgm:hidden"
               >
                 <div className="robot-animation opacity-70">
                   <Image
@@ -548,14 +497,13 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                   />
                 </div>
               </div>
-              <div
-                id="3"
-                // id="15"
-                className=" bgMoon  relative h-full w-[540px] rounded-full opacity-0 transition-opacity delay-[300ms] duration-1000 smm:h-[85vw] smm:w-[90vw]  "
-              >
+              <div className=" bgMoon relative h-full w-[540px] rounded-full  smm:h-[85vw] smm:w-[90vw]  ">
                 <div className="bgNewMoon h-full w-full  pb-[60px] pt-[80px] " />
                 <div className="absolute left-[50%] top-[50%] z-10 h-full w-full translate-x-[-50%] translate-y-[-50%] bg-bgWeeklyCalm bg-contain bg-no-repeat" />
-                <div className=" absolute left-[50%] top-[50%] z-20 w-[316px] translate-x-[-50%] translate-y-[-50%] smm:w-[66.5vw]   ">
+                <div
+                  ref={div6Ref}
+                  className={` absolute left-[50%] top-[50%] z-20 w-[316px] translate-x-[-50%] transition duration-1000 smm:w-[66.5vw] ${div6Animated ? "translate-y-[-50%] opacity-100" : "translate-y-[-100%] opacity-0"} smm:hidden `}
+                >
                   <Image
                     src={
                       "https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/ayla-moonpower-mascot_NEW.png"
@@ -566,11 +514,26 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                     className={` w-full `}
                   />
                 </div>
+                <div
+                  id="21"
+                  className={` absolute left-[50%] top-[50%] z-20 w-[316px] translate-x-[-50%] translate-y-[-50%] opacity-0 transition-opacity delay-700 duration-1000 md:hidden lg:hidden xl:hidden smm:w-[66.5vw] `}
+                >
+                  <Image
+                    src={
+                      "https://storage.googleapis.com/evermoon_website_bucket/Social_fi_IMGS/ayla-moonpower-mascot_NEW.png"
+                    }
+                    width={2000}
+                    height={2000}
+                    alt=""
+                    className={` w-full `}
+                  />
+                </div>
+                {/* edit style  */}
               </div>
+              {/* edit style  */}
               <div
-                id="4"
-                // id="16"
-                className="w-[360px] pb-[218px] pl-[60px] pr-[130px] pt-[130px] opacity-0 transition-opacity delay-[900ms] duration-1000 lgm:hidden"
+                id="b16"
+                className="w-[360px] pb-[218px] pl-[60px] pr-[130px] pt-[130px] opacity-0 lgm:hidden"
               >
                 <div className="robot-animation1 opacity-70">
                   <Image
@@ -583,32 +546,27 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
               </div>
             </div>
-            <div
-              ref={triggerRef2 as React.RefObject<HTMLDivElement>}
-              className=""
-            >
+            {/* edit style  */}
+            <div ref={triggerRef2 as React.RefObject<HTMLDivElement>}>
               <div
-                // id="18"
-                className="flex flex-col items-center gap-y-5 xlm:w-[696px] smm:w-[80vw]  "
+                // id="18" opacity-0 transition-opacity delay-200 duration-1000 opacity-0 transition-opacity delay-500 duration-1000 opacity-0 transition-opacity delay-[800ms] duration-1000
+                className="flex flex-col items-center gap-y-5 xlm:w-[696px] smm:mx-auto smm:w-[80vw]  "
               >
                 <h1
                   id="17"
-                  className="text-gradient text-6xl opacity-0 transition-opacity delay-200 duration-1000 smm:text-4xl "
+                  className="text-gradient text-6xl opacity-0 smm:text-4xl "
                 >
                   Moon Mission
                 </h1>
 
-                <h3
-                  id="18"
-                  className="text-3xl opacity-0 transition-opacity delay-500 duration-1000 xlm:text-center smm:text-xl"
-                >
+                <h3 id="18" className="text-3xl xlm:text-center smm:text-xl">
                   Complete social quests, earn Moon Power, and unlock amazing
                   prizes!
                 </h3>
               </div>
               <div
                 id="19"
-                className="mt-12 flex justify-center gap-x-3 opacity-0 transition-opacity delay-[800ms] duration-1000 smm:mt-[7.5vw] smm:w-[90vw]"
+                className="mt-12 flex justify-center gap-x-3 smm:mt-[7.5vw] smm:w-[90vw]"
               >
                 <Link href={"https://moonmission.evermoon.games"}>
                   <button className="btn-primary w-[160px] text-lg smm:w-[38.12vw] smm:text-sm">
@@ -633,22 +591,28 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
           <>
             <div className="bgFull flex h-auto w-[100%] min-w-[1920px] flex-col items-center justify-center smm:h-auto">
               <div className="flex flex-col items-center gap-y-9 py-[80px] smm:py-[12.5vw]">
+                {/* edit style  */}
                 <div
                   ref={div1Ref}
-                  className={`relative flex h-[48px] w-[480px] justify-center transition-opacity duration-500 
-                    ${div1Animated ? "opacity-100" : "opacity-0"}`}
+                  className={`relative flex h-[48px] w-[480px] justify-center `}
+                  // transition-opacity duration-500 opacity-100 opacity-0
                 >
-                  <p className="absolute left-[50%] top-[50%] z-20 w-[100%] translate-x-[-50%] translate-y-[-50%] text-center text-5xl text-[#F1E3B5] smm:text-3xl ">
+                  <p
+                    className={`absolute left-[50%] top-[50%] z-20 w-[100%] translate-x-[-50%] text-center text-5xl  text-[#F1E3B5] transition-all duration-1000 smm:text-3xl ${div1Animated ? "translate-y-[-50%] opacity-100" : " translate-y-[-200%] opacity-0"} `}
+                  >
                     {"Next-Gen 5v5 MOBA"}
                   </p>
                 </div>
-                {/* add new style  */}
+                {/* edit style  */}
                 <div
                   ref={div2Ref}
                   className={`relative z-10 flex h-[386px] w-[660px] items-center justify-center transition-opacity duration-1000 smm:h-[93.75vw] smm:w-[90vw]
                     ${div2Animated ? "opacity-100" : "opacity-0"}`}
                 >
-                  <div ref={div2Ref} className={`layer1a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] transition-opacity duration-1000 delay-[800ms] ${div2Animated ? "opacity-100" : "opacity-0"}`}>
+                  <div
+                    ref={div2Ref}
+                    className={`layer1a absolute z-20 w-[286px] transition-opacity delay-[800ms] duration-1000 md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] ${div2Animated ? "opacity-100" : "opacity-0"}`}
+                  >
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon.png"
                       width={300}
@@ -657,7 +621,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="w-full"
                     />
                   </div>
-                  <div ref={div2Ref} className={`layer3a absolute z-20 w-[286px] md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] transition-opacity duration-1000 delay-[800ms] ${div2Animated ? "opacity-100" : "opacity-0"}`}>
+                  <div
+                    ref={div2Ref}
+                    className={`layer3a absolute z-20 w-[286px] transition-opacity delay-[800ms] duration-1000 md:w-[275px] lg:w-[275px] smm:top-[20%] smm:w-[68.75vw] ${div2Animated ? "opacity-100" : "opacity-0"}`}
+                  >
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/smooth%20rotate%20icon2.png"
                       width={300}
@@ -666,7 +633,10 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       className="w-full"
                     />
                   </div>
-                  <div ref={div2Ref} className={`h-full w-full bg-bgLights bg-cover bg-no-repeat mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center transition-opacity duration-1000 delay-[1600ms] ${div2Animated ? "opacity-100" : "opacity-0"} `}/>
+                  <div
+                    ref={div2Ref}
+                    className={`h-full w-full bg-bgLights bg-cover bg-no-repeat transition-opacity delay-[1600ms] duration-1000 mdm:h-[60vw] mdm:w-[90vw] mdm:bg-center ${div2Animated ? "opacity-100" : "opacity-0"} `}
+                  />
                   <div className="absolute z-30 h-[184px] w-[184px] mdm:h-fit mdm:w-[43.75vw] smm:top-[30%]">
                     <Image
                       src="https://storage.googleapis.com/evermoon_website_bucket/Lite_Page/app-icon.png"
@@ -677,25 +647,28 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                     />
                   </div>
                 </div>
-                {/* add new style  */}
+                {/* edit style  */}
                 <div
                   ref={div3Ref}
-                  className={`relative h-[80px] w-[600px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${div3Animated ? "opacity-100" : "opacity-0"}`}
+                  className={`relative h-[80px] w-[600px] smm:w-[90vw]`}
                 >
-                  <div className="absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%]">
+                  <div
+                    className={`absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] transition duration-1000  ${div3Animated ? "translate-y-[-50%] opacity-100" : "translate-y-[-200%] opacity-0"}`}
+                  >
                     <h5 className="text-center text-[30px] text-white smm:text-xl ">
                       Experience intense battles, strategic teamwork, and real
                       rewards!
                     </h5>
                   </div>
                 </div>
+                {/* edit style  */}
                 <div
                   ref={div4Ref}
-                  className={`relative h-[32px] w-[432px] transition-opacity duration-1000 smm:w-[90vw]
-                    ${div4Animated ? "opacity-100" : "opacity-0"}`}
+                  className={`relative h-[32px] w-[432px] smm:w-[90vw]`}
                 >
-                  <div className="absolute left-[50%] top-[50%] flex h-full w-full translate-x-[-50%] translate-y-[-50%] justify-center ">
+                  <div
+                    className={`absolute left-[50%] top-[50%] flex h-full w-full translate-x-[-50%] translate-y-[-50%] justify-center transition duration-1000 ${div4Animated ? "translate-y-[-50%] opacity-100" : "translate-y-[-200%] opacity-0"} `}
+                  >
                     <div className="mr-[-24px] w-[168px] smm:w-[35.6vw]">
                       <Star
                         width={20}
@@ -728,15 +701,20 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                       />
                     </div>
                   </div>
+                  {/* edit style  */}
                 </div>
               </div>
+            </div>
+            {/* edit style  */}
+            <div className="flex h-fit w-full justify-center ">
               <div
                 ref={div5Ref}
-                className={`relative mb-[40px] h-[40px] w-[160px] transition-opacity duration-1000
-                  ${div5Animated ? "opacity-100" : "opacity-0"}`}
+                className={`relative mb-[40px] h-[40px] w-[160px]`}
               >
                 <Link href="https://www.evermoon.games/home">
-                  <button className="button-outline1_no-m-auto absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] translate-y-[-50%] text-lg text-white smm:text-sm">
+                  <button
+                    className={`button-outline1_no-m-auto absolute left-[50%] top-[50%] h-full w-full translate-x-[-50%] text-lg text-white transition duration-1000 smm:text-sm ${div5Animated ? " translate-y-[-50%] opacity-100" : " translate-y-[-200%] opacity-0"}`}
+                  >
                     Explore More
                   </button>
                 </Link>
@@ -746,11 +724,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
               ref={triggerRef7 as React.RefObject<HTMLDivElement>}
               className=" bg_new relative flex w-full justify-center py-[60px] "
             >
-              <div
-                className="z-30 flex w-[1000px]  flex-col   
-            items-center justify-center border-b-[1px]
-             border-[#F1E3B5]  lgm:h-auto "
-              >
+              <div className="z-30 flex w-[1000px] flex-col items-center justify-center border-b-[1px] border-[#F1E3B5]  lgm:h-auto ">
                 <div
                   id="12"
                   className="opacity-0 transition-opacity delay-200 duration-1000"
@@ -764,9 +738,7 @@ min-w-[1920px] justify-center bg-[#01071A] ${Jose.className}`}
                 </div>
                 <div
                   id="14"
-                  className=" z-10 h-[520px] w-[1000px] 
-               overflow-x-hidden bg-transparent opacity-0 transition-opacity 
-               delay-[700ms] duration-1000 lgm:w-[680px] lgm:overflow-auto smm:hidden "
+                  className=" z-10 h-[520px] w-[1000px] overflow-x-hidden bg-transparent lgm:w-[700px] lgm:overflow-auto smm:hidden "
                 >
                   {!isfetching ? (
                     <>
@@ -1013,11 +985,10 @@ function Mobile({
   });
   return (
     <div
+      // edit style
       id="20"
       {...handlersBox}
-      className=" relative flex h-[100vw] w-[100vw] 
-      items-center justify-between overflow-hidden opacity-0 transition-opacity delay-1000
-      duration-1000 sm:hidden smm:mb-[5vw] smm:mt-[3vw]"
+      className=" relative flex h-[100vw] w-[100vw] items-center justify-between overflow-hidden opacity-0 transition-opacity delay-200 duration-1000 sm:hidden smm:mb-[5vw] smm:mt-[3vw]"
     >
       <div
         className={`absolute flex transition-all 
